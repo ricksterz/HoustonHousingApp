@@ -1,0 +1,27 @@
+{
+ "mortgage_rate_30yr": {
+  "value": 6.48,
+  "date": "2026-06-04",
+  "series": "MORTGAGE30US"
+ },
+ "houston_hpi": {
+  "value": 410.73,
+  "date": "2026-01-01",
+  "series": "ATNHPIUS26420Q"
+ },
+ "houston_active_listings": {
+  "value": 33872.0,
+  "date": "2026-05-01",
+  "series": "ACTLISCOU26420"
+ },
+ "houston_median_dom": {
+  "value": 49.0,
+  "date": "2026-05-01",
+  "series": "MEDDAYONMAR26420"
+ },
+ "houston_list_price_sqft": {
+  "value": 173.0,
+  "date": "2026-05-01",
+  "series": "MEDLISPRIPERSQUFEE26420"
+ }
+}
