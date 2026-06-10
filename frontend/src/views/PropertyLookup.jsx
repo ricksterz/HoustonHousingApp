@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { getPropertyLookup } from "../api";
+import { useEffect, useState } from "react";
+import { getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
 import Collapsible from "../components/Collapsible";
 import Table from "../components/Table";
 import { colors, fmt } from "../components/theme";
@@ -9,12 +9,17 @@ export default function PropertyLookup() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [bundled, setBundled] = useState([]);
 
-  function search() {
+  useEffect(() => {
+    if (IS_STATIC) getStaticMeta().then((m) => setBundled(m?.addresses ?? []));
+  }, []);
+
+  function search(addr = address) {
     setLoading(true);
     setError(null);
     setData(null);
-    getPropertyLookup(address)
+    getPropertyLookup(addr)
       .then(setData)
       .catch((e) => setError(e.message))
       .finally(() => setLoading(false));
@@ -22,6 +27,35 @@ export default function PropertyLookup() {
 
   return (
     <div>
+      {IS_STATIC && bundled.length > 0 && (
+        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
+          <span style={{ fontSize: 11, color: colors.textDimmer, fontFamily: "monospace" }}>
+            Available properties:
+          </span>
+          {bundled.map(({ address: addr }) => (
+            <button
+              key={addr}
+              onClick={() => {
+                setAddress(addr);
+                search(addr);
+              }}
+              style={{
+                background: "transparent",
+                border: `1px solid ${colors.border}`,
+                color: colors.zip77008,
+                borderRadius: 999,
+                padding: "4px 12px",
+                fontSize: 11,
+                fontFamily: "monospace",
+                cursor: "pointer",
+              }}
+            >
+              {addr}
+            </button>
+          ))}
+        </div>
+      )}
+
       <div style={{ display: "flex", gap: 10, marginBottom: 24 }}>
         <input
           value={address}
@@ -41,7 +75,7 @@ export default function PropertyLookup() {
           }}
         />
         <button
-          onClick={search}
+          onClick={() => search()}
           disabled={loading}
           style={{
             background: loading ? colors.panel : `linear-gradient(135deg, ${colors.accentGold}, #A06010)`,

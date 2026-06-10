@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { getMacroSnapshot } from "./api";
+import { getMacroSnapshot, getStaticMeta, IS_STATIC } from "./api";
+import Footer from "./components/Footer";
 import MacroHeader from "./components/MacroHeader";
 import { colors } from "./components/theme";
 import PropertyLookup from "./views/PropertyLookup";
@@ -9,12 +10,14 @@ export default function App() {
   const [view, setView] = useState("overview");
   const [macro, setMacro] = useState(null);
   const [macroLoading, setMacroLoading] = useState(true);
+  const [meta, setMeta] = useState(null);
 
   useEffect(() => {
     getMacroSnapshot()
       .then(setMacro)
       .catch(() => setMacro(null))
       .finally(() => setMacroLoading(false));
+    if (IS_STATIC) getStaticMeta().then(setMeta);
   }, []);
 
   return (
@@ -24,56 +27,92 @@ export default function App() {
         minHeight: "100vh",
         color: colors.text,
         fontFamily: "'Inter', system-ui, sans-serif",
-        padding: "32px 24px",
-        maxWidth: 1100,
-        margin: "0 auto",
-        boxSizing: "border-box",
+        display: "flex",
+        flexDirection: "column",
       }}
     >
-      <div style={{ marginBottom: 24 }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 6 }}>
-          <div
+      <div style={{ padding: "36px 24px 0", maxWidth: 1100, margin: "0 auto", width: "100%", boxSizing: "border-box", flex: 1 }}>
+        <header style={{ marginBottom: 28 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
+            <div
+              style={{
+                width: 6,
+                height: 30,
+                background: `linear-gradient(180deg, ${colors.accentGold}, #8B5CF6)`,
+                borderRadius: 3,
+              }}
+            />
+            <span
+              style={{
+                fontSize: 11,
+                fontFamily: "monospace",
+                color: colors.accentGold,
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+              }}
+            >
+              The Heights · Rice Military · Near Northside
+            </span>
+            {IS_STATIC && meta?.generated && (
+              <span
+                style={{
+                  marginLeft: "auto",
+                  fontSize: 10,
+                  fontFamily: "monospace",
+                  color: colors.textDimmer,
+                  border: `1px solid ${colors.border}`,
+                  borderRadius: 999,
+                  padding: "3px 10px",
+                }}
+              >
+                Snapshot · data as of {meta.generated.slice(0, 10)}
+              </span>
+            )}
+          </div>
+          <h1
             style={{
-              width: 6,
-              height: 24,
-              background: "linear-gradient(180deg, #C8851A, #8B5CF6)",
-              borderRadius: 3,
-            }}
-          />
-          <span
-            style={{
-              fontSize: 11,
-              fontFamily: "monospace",
-              color: colors.textDimmer,
-              letterSpacing: "0.12em",
-              textTransform: "uppercase",
+              margin: 0,
+              fontSize: 34,
+              fontWeight: 800,
+              letterSpacing: "-0.03em",
+              lineHeight: 1.15,
+              background: `linear-gradient(90deg, ${colors.textBright} 30%, ${colors.accentGold})`,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
             }}
           >
-            Houston Housing Analytics
-          </span>
+            Houston Heights Housing Analytics
+          </h1>
+          <p style={{ margin: "10px 0 0", color: colors.textDim, fontSize: 14, maxWidth: 640 }}>
+            Home values, market velocity, and property records for ZIP codes{" "}
+            <Zip color={colors.zip77007}>77007</Zip>, <Zip color={colors.zip77008}>77008</Zip> and{" "}
+            <Zip color={colors.zip77009}>77009</Zip> — built on MLS (HAR), Zillow ZHVI, Redfin, HCAD,
+            and FRED data.
+          </p>
+        </header>
+
+        <MacroHeader macro={macro} loading={macroLoading} />
+
+        <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+          <NavButton active={view === "overview"} onClick={() => setView("overview")}>
+            Market Overview
+          </NavButton>
+          <NavButton active={view === "property"} onClick={() => setView("property")}>
+            Property Lookup
+          </NavButton>
         </div>
-        <h1 style={{ margin: 0, fontSize: 26, fontWeight: 700, color: colors.textBright, letterSpacing: "-0.02em" }}>
-          77007 / 77008 / 77009 Market Dashboard
-        </h1>
-        <p style={{ margin: "8px 0 0", color: colors.textDimmer, fontSize: 13 }}>
-          MLS (HAR) · Zillow ZHVI · Redfin · HCAD · FRED
-        </p>
+
+        {view === "overview" ? <ZipOverview /> : <PropertyLookup />}
       </div>
 
-      <MacroHeader macro={macro} loading={macroLoading} />
-
-      <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
-        <NavButton active={view === "overview"} onClick={() => setView("overview")}>
-          Market Overview
-        </NavButton>
-        <NavButton active={view === "property"} onClick={() => setView("property")}>
-          Property Lookup
-        </NavButton>
-      </div>
-
-      {view === "overview" ? <ZipOverview /> : <PropertyLookup />}
+      <Footer generated={meta?.generated} />
     </div>
   );
+}
+
+function Zip({ color, children }) {
+  return <span style={{ color, fontFamily: "monospace", fontWeight: 700 }}>{children}</span>;
 }
 
 function NavButton({ active, onClick, children }) {

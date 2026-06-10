@@ -55,6 +55,30 @@ Open http://localhost:5173.
 | `GET /api/property/lookup?address=726 E 21ST ST` | HCAD valuation, buildings, ownership, permits, MLS history |
 | `GET /api/macro/snapshot` | Live FRED macro stats (1-hour cache) |
 
+## Hosting on GitHub Pages (static mode)
+
+The site can run without the backend: `etl/export_static.py` bakes the API
+responses into `frontend/public/data/*.json`, and the frontend reads those when
+built with `VITE_STATIC_DATA=true`.
+
+```bash
+# Re-export data (run whenever the DuckDB or FRED values should refresh)
+python etl/export_static.py
+git add frontend/public/data && git commit -m "Refresh data snapshot" && git push
+```
+
+Pushing to `main` triggers `.github/workflows/deploy-pages.yml`, which builds
+the static site and deploys it to GitHub Pages (enable in repo Settings → Pages
+→ Source: GitHub Actions).
+
+Notes:
+- Property lookup on the static site only works for the addresses listed in
+  `ADDRESSES` in `etl/export_static.py`.
+- Owner names are redacted in the static export by default
+  (`REDACT_OWNER_NAMES`), since the Pages site is publicly accessible.
+- FRED values are baked in at export time — they go stale until re-exported.
+  The API key itself is never shipped to the browser.
+
 ## Data sources
 
 | Table | Source | Rows |
