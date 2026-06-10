@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
+import { getAddressIndex, getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
 import Collapsible from "../components/Collapsible";
 import Table from "../components/Table";
 import { colors, fmt } from "../components/theme";
@@ -9,13 +9,18 @@ export default function PropertyLookup() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [bundled, setBundled] = useState([]);
+  const [propertyCount, setPropertyCount] = useState(null);
+  const [suggestions, setSuggestions] = useState([]);
 
   useEffect(() => {
-    if (IS_STATIC) getStaticMeta().then((m) => setBundled(m?.addresses ?? []));
+    if (IS_STATIC) {
+      getStaticMeta().then((m) => setPropertyCount(m?.property_count ?? null));
+      getAddressIndex(); // warm the index for autocomplete
+    }
   }, []);
 
   function search(addr = address) {
+    setSuggestions([]);
     setLoading(true);
     setError(null);
     setData(null);
@@ -25,41 +30,33 @@ export default function PropertyLookup() {
       .finally(() => setLoading(false));
   }
 
+  async function onInput(value) {
+    setAddress(value);
+    if (!IS_STATIC) return;
+    const needle = value.trim().toUpperCase().replace(/\s+/g, " ");
+    if (needle.length < 3) {
+      setSuggestions([]);
+      return;
+    }
+    const index = await getAddressIndex();
+    const starts = index.filter((a) => a.startsWith(needle));
+    const contains =
+      starts.length >= 8 ? [] : index.filter((a) => !a.startsWith(needle) && a.includes(needle));
+    setSuggestions([...starts, ...contains].slice(0, 8));
+  }
+
   return (
     <div>
-      {IS_STATIC && bundled.length > 0 && (
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
-          <span style={{ fontSize: 11, color: colors.textDimmer, fontFamily: "monospace" }}>
-            Available properties:
-          </span>
-          {bundled.map(({ address: addr }) => (
-            <button
-              key={addr}
-              onClick={() => {
-                setAddress(addr);
-                search(addr);
-              }}
-              style={{
-                background: "transparent",
-                border: `1px solid ${colors.border}`,
-                color: colors.zip77008,
-                borderRadius: 999,
-                padding: "4px 12px",
-                fontSize: 11,
-                fontFamily: "monospace",
-                cursor: "pointer",
-              }}
-            >
-              {addr}
-            </button>
-          ))}
+      {IS_STATIC && propertyCount && (
+        <div style={{ fontSize: 11, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 10 }}>
+          {propertyCount.toLocaleString()} properties available across 77007 / 77008 / 77009
         </div>
       )}
 
-      <div style={{ display: "flex", gap: 10, marginBottom: 24 }}>
+      <div style={{ display: "flex", gap: 10, marginBottom: 24, position: "relative" }}>
         <input
           value={address}
-          onChange={(e) => setAddress(e.target.value)}
+          onChange={(e) => onInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && search()}
           placeholder="Street address, e.g. 726 E 21ST ST"
           style={{
@@ -74,6 +71,43 @@ export default function PropertyLookup() {
             outline: "none",
           }}
         />
+        {suggestions.length > 0 && (
+          <div
+            style={{
+              position: "absolute",
+              top: "calc(100% + 4px)",
+              left: 0,
+              right: 110,
+              background: colors.panelAlt,
+              border: `1px solid ${colors.border}`,
+              borderRadius: 6,
+              zIndex: 10,
+              overflow: "hidden",
+            }}
+          >
+            {suggestions.map((addr) => (
+              <div
+                key={addr}
+                onMouseDown={() => {
+                  setAddress(addr);
+                  search(addr);
+                }}
+                style={{
+                  padding: "7px 12px",
+                  fontSize: 12,
+                  fontFamily: "monospace",
+                  color: colors.text,
+                  cursor: "pointer",
+                  borderBottom: `1px solid ${colors.borderAlt}`,
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = colors.panel)}
+                onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
+              >
+                {addr}
+              </div>
+            ))}
+          </div>
+        )}
         <button
           onClick={() => search()}
           disabled={loading}

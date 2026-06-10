@@ -40,12 +40,28 @@ export function getMarketCompare() {
   return get(`/api/market/compare`);
 }
 
-export function getPropertyLookup(address) {
+// Sorted list of every exported property address, fetched once and cached.
+let addressIndexPromise = null;
+export function getAddressIndex() {
+  if (!addressIndexPromise) {
+    addressIndexPromise = getStatic("addresses.json").catch(() => []);
+  }
+  return addressIndexPromise;
+}
+
+export async function getPropertyLookup(address) {
   if (IS_STATIC) {
-    return getStatic(
-      `property/${slugify(address)}.json`,
-      `'${address.trim()}' is not included in this static site. Only pre-exported addresses are available.`
-    );
+    const needle = address.trim().toUpperCase().replace(/\s+/g, " ");
+    try {
+      return await getStatic(`property/${slugify(address)}.json`);
+    } catch {
+      // Mirror the backend's exact-then-LIKE fallback using the address index.
+      const index = await getAddressIndex();
+      const match =
+        index.find((a) => a.startsWith(needle)) || index.find((a) => a.includes(needle));
+      if (match) return getStatic(`property/${slugify(match)}.json`);
+      throw new Error(`No HCAD record found for address '${address.trim()}'`);
+    }
   }
   return get(`/api/property/lookup?address=${encodeURIComponent(address)}`);
 }
