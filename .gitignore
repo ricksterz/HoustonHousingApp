@@ -1,0 +1,17 @@
+# Secrets — never commit the FRED API key
+.env
+
+# Generated database (rebuild with: python etl/build_db.py)
+etl/housing.duckdb
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# OS / editor
+.DS_Store
