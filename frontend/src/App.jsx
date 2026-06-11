@@ -39,7 +39,7 @@ export default function App() {
             <ThemeToggle theme={theme} onToggle={() => setTheme(theme === "dark" ? "light" : "dark")} />
           </div>
           <h1 className="app-title">
-            Houston Heights Housing Analytics<span className="accent-dot">.</span>
+            Houston Heights Analytics<span className="accent-dot">.</span>
           </h1>
           <p className="app-subtitle">
             Home values, market velocity, and property records for ZIP codes{" "}

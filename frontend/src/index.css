@@ -316,6 +316,41 @@ body {
   font-weight: 650;
 }
 
+.seg {
+  display: inline-flex;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.seg-btn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-family: var(--sans);
+  font-weight: 550;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.seg-btn:hover {
+  color: var(--text-bright);
+}
+
+.seg-btn.is-active {
+  background: color-mix(in srgb, var(--gold) 16%, transparent);
+  color: var(--gold);
+}
+
 .btn-primary {
   appearance: none;
   border: none;
