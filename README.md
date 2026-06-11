@@ -79,6 +79,21 @@ Notes:
 - FRED values are baked in at export time — they go stale until re-exported.
   The API key itself is never shipped to the browser.
 
+## Valuation methodology
+
+`backend/valuation.py` estimates a market-value range per property:
+
+1. Comps = MLS `Sold` listings in the subject's ZIP from the last 30 months,
+   within ±25% of the subject's HCAD building sqft (narrowed to ±25 years of
+   build year when that still leaves ≥8 comps).
+2. Each comp's $/sqft is time-adjusted to the latest month using the ZIP's
+   ZHVI index (sale price × zhvi_now / zhvi_at_sale).
+3. The range is the 25th/50th/75th percentile of adjusted $/sqft × subject sqft.
+
+This is a statistical estimate, not an appraisal — condition, renovations, and
+lot characteristics are not considered. Estimates are embedded in the lookup
+API response and in each static property JSON (`valuation` key).
+
 ## Data sources
 
 | Table | Source | Rows |

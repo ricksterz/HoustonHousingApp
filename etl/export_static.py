@@ -22,6 +22,7 @@ sys.path.insert(0, str(ROOT))
 from backend.db import get_connection  # noqa: E402
 from backend.fred_client import get_macro_snapshot  # noqa: E402
 from backend.routers.market import VALID_ZIPS, _zip_trend  # noqa: E402
+from backend.valuation import estimate_all  # noqa: E402
 
 OUT_DIR = ROOT / "frontend" / "public" / "data"
 
@@ -133,6 +134,10 @@ def export_properties(con) -> int:
             i += 1
         return [{k: v for k, v in l.items() if k != "addr_norm"} for l in matched]
 
+    print("Computing valuation estimates...")
+    valuations = estimate_all(con)
+    print(f"  estimated {len(valuations)} properties")
+
     print(f"Writing {len(accounts)} property files...")
     prop_dir = OUT_DIR / "property"
     prop_dir.mkdir(parents=True, exist_ok=True)
@@ -158,6 +163,7 @@ def export_properties(con) -> int:
             "ownership_history": ownership_by_acct.get(acct, []),
             "permits": permits_by_acct.get(acct, []),
             "mls_listings": listings_for(site_norm),
+            "valuation": valuations.get(acct),
         }
         write_json(prop_dir / f"{slug}.json", payload, compact=True)
         exported_addresses.append(site_norm)
