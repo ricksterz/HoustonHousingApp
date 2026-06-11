@@ -69,86 +69,50 @@ export default function PropertyLookup() {
   return (
     <div>
       {IS_STATIC && propertyCount && (
-        <div style={{ fontSize: 11, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 10 }}>
+        <div
+          style={{
+            fontSize: 11,
+            color: "var(--text-dimmer)",
+            fontFamily: "var(--mono)",
+            marginBottom: 10,
+          }}
+        >
           {propertyCount.toLocaleString()} properties available across 77007 / 77008 / 77009
         </div>
       )}
 
-      <div style={{ display: "flex", gap: 10, marginBottom: 24, position: "relative" }}>
+      <div className="search-row">
         <input
+          className="search-input"
           value={address}
           onChange={(e) => onInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && search()}
           placeholder="Street address, e.g. 726 E 21ST ST"
-          style={{
-            flex: 1,
-            background: colors.panel,
-            border: `1px solid ${colors.border}`,
-            borderRadius: 6,
-            color: colors.text,
-            fontSize: 13,
-            padding: "8px 12px",
-            fontFamily: "monospace",
-            outline: "none",
-          }}
+          aria-label="Street address"
         />
         {suggestions.length > 0 && (
-          <div
-            style={{
-              position: "absolute",
-              top: "calc(100% + 4px)",
-              left: 0,
-              right: 110,
-              background: colors.panelAlt,
-              border: `1px solid ${colors.border}`,
-              borderRadius: 6,
-              zIndex: 10,
-              overflow: "hidden",
-            }}
-          >
+          <div className="suggestions" role="listbox">
             {suggestions.map((addr) => (
               <div
                 key={addr}
+                role="option"
+                className="suggestion"
                 onMouseDown={() => {
                   setAddress(addr);
                   search(addr);
                 }}
-                style={{
-                  padding: "7px 12px",
-                  fontSize: 12,
-                  fontFamily: "monospace",
-                  color: colors.text,
-                  cursor: "pointer",
-                  borderBottom: `1px solid ${colors.borderAlt}`,
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.background = colors.panel)}
-                onMouseLeave={(e) => (e.currentTarget.style.background = "transparent")}
               >
                 {addr}
               </div>
             ))}
           </div>
         )}
-        <button
-          onClick={() => search()}
-          disabled={loading}
-          style={{
-            background: loading ? colors.panel : `linear-gradient(135deg, ${colors.accentGold}, #A06010)`,
-            border: "none",
-            borderRadius: 6,
-            color: loading ? colors.textDim : "#FFF8F0",
-            padding: "8px 20px",
-            fontSize: 13,
-            fontWeight: 600,
-            cursor: loading ? "not-allowed" : "pointer",
-            fontFamily: "inherit",
-          }}
-        >
+        <button className="btn-primary" onClick={() => search()} disabled={loading}>
           {loading ? "Searching…" : "Search"}
         </button>
       </div>
 
-      {error && <div style={{ color: colors.zip77009, fontFamily: "monospace" }}>Error: {error}</div>}
+      {error && <div style={{ color: "var(--red)", fontFamily: "var(--mono)" }}>Error: {error}</div>}
 
       {data && (
         <>
@@ -217,27 +181,8 @@ export default function PropertyLookup() {
 
 function Section({ title, children }) {
   return (
-    <div
-      style={{
-        background: colors.panel,
-        border: `1px solid ${colors.border}`,
-        borderRadius: 8,
-        padding: 16,
-        marginBottom: 16,
-      }}
-    >
-      <div
-        style={{
-          fontSize: 11,
-          color: colors.textDimmer,
-          fontFamily: "monospace",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          marginBottom: 12,
-        }}
-      >
-        {title}
-      </div>
+    <div className="panel">
+      <div className="panel-title">{title}</div>
       {children}
     </div>
   );
@@ -275,34 +220,15 @@ function ValuationRange({ valuation, hcad, trend }) {
   }
 
   return (
-    <div
-      style={{
-        background: colors.panel,
-        border: `1px solid ${colors.accentGold}44`,
-        borderRadius: 8,
-        padding: 16,
-        marginBottom: 16,
-      }}
-    >
-      <div
-        style={{
-          fontSize: 11,
-          color: colors.accentGold,
-          fontFamily: "monospace",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          marginBottom: 14,
-        }}
-      >
-        Estimated Market Value Range
-      </div>
+    <div className="panel panel--gold">
+      <div className="panel-title panel-title--gold">Estimated Market Value Range</div>
 
-      <div style={{ display: "flex", alignItems: "baseline", gap: 24, marginBottom: 20, flexWrap: "wrap" }}>
-        <RangeStat label="Low (25th pct)" value={fmt.currency(est_low)} color={colors.textDim} size={16} />
-        <RangeStat label="Mid (median)" value={fmt.currency(est_mid)} color={colors.accentGold} size={26} />
-        <RangeStat label="High (75th pct)" value={fmt.currency(est_high)} color={colors.textDim} size={16} />
+      <div className="range-stats">
+        <RangeStat label="Low (25th pct)" value={fmt.currency(est_low)} color="var(--text-dim)" />
+        <RangeStat label="Mid (median)" value={fmt.currency(est_mid)} color="var(--gold)" mid />
+        <RangeStat label="High (75th pct)" value={fmt.currency(est_high)} color="var(--text-dim)" />
         {hcadVal && (
-          <RangeStat label="HCAD Market Value" value={fmt.currency(hcadVal)} color={colors.zip77007} size={16} />
+          <RangeStat label="HCAD Market Value" value={fmt.currency(hcadVal)} color="var(--blue)" />
         )}
       </div>
 
@@ -315,7 +241,7 @@ function ValuationRange({ valuation, hcad, trend }) {
             right: 0,
             height: 6,
             borderRadius: 3,
-            background: colors.borderAlt,
+            background: "var(--border-alt)",
           }}
         />
         <div
@@ -330,9 +256,9 @@ function ValuationRange({ valuation, hcad, trend }) {
           }}
         />
         {[
-          [est_low, colors.textDim],
-          [est_mid, colors.accentGold],
-          [est_high, colors.textDim],
+          [est_low, "var(--text-dim)"],
+          [est_mid, "var(--gold)"],
+          [est_high, "var(--text-dim)"],
         ].map(([v, c]) => (
           <div
             key={v}
@@ -348,42 +274,58 @@ function ValuationRange({ valuation, hcad, trend }) {
           />
         ))}
         {hcadVal && hcadVal >= scaleMin && hcadVal <= scaleMax && (
-          <div style={{ position: "absolute", top: 0, left: pos(hcadVal), transform: "translateX(-50%)", textAlign: "center" }}>
-            <div style={{ fontSize: 9, color: colors.zip77007, fontFamily: "monospace", whiteSpace: "nowrap" }}>HCAD ▼</div>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: pos(hcadVal),
+              transform: "translateX(-50%)",
+              textAlign: "center",
+            }}
+          >
+            <div style={{ fontSize: 9, color: "var(--blue)", fontFamily: "var(--mono)", whiteSpace: "nowrap" }}>
+              HCAD ▼
+            </div>
           </div>
         )}
       </div>
 
       {implied && implied.length > 0 && (
         <div style={{ marginBottom: 10 }}>
-          <div style={{ fontSize: 10, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 6 }}>
+          <div style={{ fontSize: 10, color: "var(--text-dimmer)", fontFamily: "var(--mono)", marginBottom: 6 }}>
             IMPLIED VALUE HISTORY (MID ESTIMATE × ZIP ZHVI INDEX)
           </div>
-          <ResponsiveContainer width="100%" height={140}>
-            <LineChart data={implied}>
-              <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-              <XAxis dataKey="monthLabel" tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }} minTickGap={50} />
-              <YAxis
-                tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }}
-                domain={["auto", "auto"]}
-                width={70}
-              />
-              <Tooltip
-                contentStyle={{
-                  background: colors.panelAlt,
-                  border: `1px solid ${colors.border}`,
-                  borderRadius: 6,
-                  fontSize: 12,
-                  fontFamily: "monospace",
-                }}
-              />
-              <Line type="monotone" dataKey="implied" name="Implied Value" stroke={colors.accentGold} dot={false} />
-            </LineChart>
-          </ResponsiveContainer>
+          <div className="chart-box chart-box--sm">
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={implied}>
+                <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
+                <XAxis
+                  dataKey="monthLabel"
+                  tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }}
+                  minTickGap={50}
+                />
+                <YAxis
+                  tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }}
+                  domain={["auto", "auto"]}
+                  width={64}
+                />
+                <Tooltip
+                  contentStyle={{
+                    background: colors.panelAlt,
+                    border: `1px solid ${colors.border}`,
+                    borderRadius: 6,
+                    fontSize: 12,
+                    fontFamily: "var(--mono)",
+                  }}
+                />
+                <Line type="monotone" dataKey="implied" name="Implied Value" stroke={colors.accentGold} dot={false} />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </div>
       )}
 
-      <div style={{ fontSize: 10, color: colors.textDimmer, lineHeight: 1.6 }}>
+      <div className="method-note">
         Based on {comp_count} comparable MLS sales in ZIP {hcad.zip_code?.trim()} over the last{" "}
         {window_months} months, within ±{sqft_band_pct}% of this property's {fmt.num(sqft_used)} sqft
         {year_band_applied ? " and a similar build year" : ""}; each comp's $/sqft is adjusted to{" "}
@@ -395,11 +337,13 @@ function ValuationRange({ valuation, hcad, trend }) {
   );
 }
 
-function RangeStat({ label, value, color, size }) {
+function RangeStat({ label, value, color, mid = false }) {
   return (
     <div>
-      <div style={{ fontSize: 10, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 2 }}>{label}</div>
-      <div style={{ fontSize: size, fontWeight: 700, color, fontFamily: "monospace" }}>{value}</div>
+      <div className="stat-label">{label}</div>
+      <div className={`range-stat-value${mid ? " range-stat-value--mid" : ""}`} style={{ color }}>
+        {value}
+      </div>
     </div>
   );
 }
@@ -424,40 +368,28 @@ function ValuationSummary({ hcad, buildings }) {
   ];
 
   return (
-    <div
-      style={{
-        background: colors.panel,
-        border: `1px solid ${colors.border}`,
-        borderRadius: 8,
-        padding: 16,
-        marginBottom: 16,
-      }}
-    >
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 16 }}>
+    <div className="panel">
+      <div className="stat-grid">
         {stats.map(({ label, value, color }) => (
-          <div key={label} style={{ borderLeft: `2px solid ${color}55`, paddingLeft: 10 }}>
-            <div style={{ fontSize: 10, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 2 }}>
-              {label}
-            </div>
-            <div
-              style={{
-                fontSize: 14,
-                fontWeight: 700,
-                color,
-                fontFamily: "monospace",
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-                whiteSpace: "nowrap",
-              }}
-              title={String(value)}
-            >
+          <div key={label} className="stat" style={{ borderLeftColor: color + "55" }}>
+            <div className="stat-label">{label}</div>
+            <div className="stat-value" style={{ color }} title={String(value)}>
               {value}
             </div>
           </div>
         ))}
       </div>
       {hcad.legal_description && (
-        <div style={{ marginTop: 12, paddingTop: 8, borderTop: `1px solid ${colors.borderAlt}`, color: colors.textDim, fontSize: 11, fontFamily: "monospace" }}>
+        <div
+          style={{
+            marginTop: 12,
+            paddingTop: 8,
+            borderTop: "1px solid var(--border-alt)",
+            color: "var(--text-dim)",
+            fontSize: 11,
+            fontFamily: "var(--mono)",
+          }}
+        >
           Legal: {hcad.legal_description}
         </div>
       )}
