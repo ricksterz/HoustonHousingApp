@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getMacroSnapshot, getStaticMeta, IS_STATIC } from "./api";
+import banner from "./assets/heights-19th-st.jpg";
 import Footer from "./components/Footer";
 import MacroHeader from "./components/MacroHeader";
 import { colors } from "./components/theme";
@@ -29,22 +30,26 @@ export default function App() {
   return (
     <div className="app-shell">
       <div className="container app-main">
-        <header style={{ marginBottom: 28 }}>
-          <div className="header-tools">
-            {IS_STATIC && meta?.generated && (
-              <span className="snapshot-badge">
-                Snapshot · data as of {meta.generated.slice(0, 10)}
-              </span>
-            )}
-            <ThemeToggle theme={theme} onToggle={() => setTheme(theme === "dark" ? "light" : "dark")} />
+        <header className="hero">
+          <div className="hero-bg" style={{ backgroundImage: `url(${banner})` }} />
+          <div className="hero-overlay" />
+          <div className="hero-content">
+            <div className="header-tools">
+              {IS_STATIC && meta?.generated && (
+                <span className="snapshot-badge">
+                  Snapshot · data as of {meta.generated.slice(0, 10)}
+                </span>
+              )}
+              <ThemeToggle theme={theme} onToggle={() => setTheme(theme === "dark" ? "light" : "dark")} />
+            </div>
+            <h1 className="app-title">Houston Heights Analytics</h1>
+            <p className="app-subtitle">
+              Home values, market velocity, and property records for ZIP codes{" "}
+              <Zip color={colors.zip77007}>77007</Zip>, <Zip color={colors.zip77008}>77008</Zip> and{" "}
+              <Zip color={colors.zip77009}>77009</Zip> — built on MLS (HAR), Zillow ZHVI, Redfin, HCAD,
+              and FRED data.
+            </p>
           </div>
-          <h1 className="app-title">Houston Heights Analytics</h1>
-          <p className="app-subtitle">
-            Home values, market velocity, and property records for ZIP codes{" "}
-            <Zip color={colors.zip77007}>77007</Zip>, <Zip color={colors.zip77008}>77008</Zip> and{" "}
-            <Zip color={colors.zip77009}>77009</Zip> — built on MLS (HAR), Zillow ZHVI, Redfin, HCAD,
-            and FRED data.
-          </p>
         </header>
 
         <MacroHeader macro={macro} loading={macroLoading} />
