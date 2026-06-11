@@ -31,7 +31,7 @@ function lastClosedDate(listings) {
 }
 
 export default function PropertyLookup() {
-  const [address, setAddress] = useState("726 E 21ST ST");
+  const [address, setAddress] = useState("");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -58,6 +58,7 @@ export default function PropertyLookup() {
   }, []);
 
   function search(addr = address) {
+    if (!addr.trim()) return;
     setSuggestions([]);
     setLoading(true);
     setError(null);
@@ -97,7 +98,7 @@ export default function PropertyLookup() {
           value={address}
           onChange={(e) => onInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && search()}
-          placeholder="Street address, e.g. 726 E 21ST ST"
+          placeholder="Street address, e.g. 2714 HARVARD ST"
           aria-label="Street address"
         />
         {suggestions.length > 0 && (
