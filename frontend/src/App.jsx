@@ -38,7 +38,9 @@ export default function App() {
             )}
             <ThemeToggle theme={theme} onToggle={() => setTheme(theme === "dark" ? "light" : "dark")} />
           </div>
-          <h1 className="app-title">Houston Heights Housing Analytics</h1>
+          <h1 className="app-title">
+            Houston Heights Housing Analytics<span className="accent-dot">.</span>
+          </h1>
           <p className="app-subtitle">
             Home values, market velocity, and property records for ZIP codes{" "}
             <Zip color={colors.zip77007}>77007</Zip>, <Zip color={colors.zip77008}>77008</Zip> and{" "}
@@ -73,7 +75,7 @@ export default function App() {
 }
 
 function Zip({ color, children }) {
-  return <span style={{ color, fontFamily: "var(--mono)", fontWeight: 700 }}>{children}</span>;
+  return <span className="num" style={{ color, fontWeight: 650 }}>{children}</span>;
 }
 
 function ThemeToggle({ theme, onToggle }) {

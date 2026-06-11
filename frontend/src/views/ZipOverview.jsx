@@ -10,18 +10,24 @@ import {
   YAxis,
 } from "recharts";
 import { getMarketCompare, getMarketTrend } from "../api";
-import { colors } from "../components/theme";
+import { colors, fmtCompactCurrency } from "../components/theme";
 
 const ZIPS = ["77007", "77008", "77009"];
 const ZIP_COLORS = { 77007: colors.zip77007, 77008: colors.zip77008, 77009: colors.zip77009 };
 
-const tickStyle = { fontSize: 11, fill: colors.textDim, fontFamily: "monospace" };
-const legendStyle = { fontSize: 11, fontFamily: "var(--mono)" };
+const tick = { fontSize: 11 };
+const xAxisProps = { tick, tickLine: false, axisLine: false, minTickGap: 48 };
+const yAxisProps = { tick, tickLine: false, axisLine: false };
+const currencyAxis = { ...yAxisProps, tickFormatter: fmtCompactCurrency, width: 52 };
+const gridProps = { stroke: colors.borderAlt, vertical: false };
+const legendProps = { iconType: "circle", iconSize: 7 };
+const lineProps = { type: "monotone", dot: false, strokeWidth: 1.8 };
 
-function ChartPanel({ title, children }) {
+function ChartPanel({ title, subtitle, children }) {
   return (
     <div className="panel">
       <div className="panel-title">{title}</div>
+      {subtitle && <div className="panel-subtitle">{subtitle}</div>}
       <div className="chart-box">
         <ResponsiveContainer width="100%" height="100%">
           {children}
@@ -87,8 +93,8 @@ export default function ZipOverview() {
         </button>
       </div>
 
-      {loading && <div style={{ color: "var(--text-dim)", fontFamily: "var(--mono)" }}>Loading…</div>}
-      {error && <div style={{ color: "var(--red)", fontFamily: "var(--mono)" }}>Error: {error}</div>}
+      {loading && <div style={{ color: "var(--text-dim)" }}>Loading…</div>}
+      {error && <div style={{ color: "var(--red)" }}>Error: {error}</div>}
 
       {!loading && !error && !compareMode && trend && <SingleZipCharts data={trend.series} />}
       {!loading && !error && compareMode && compare && <CompareCharts zips={compare.zips} />}
@@ -101,97 +107,53 @@ function SingleZipCharts({ data }) {
 
   return (
     <>
-      <ChartPanel title="Home Value Trend (ZHVI, MLS Close Price, Redfin Median Sale)">
+      <ChartPanel title="Home value trend" subtitle="Zillow ZHVI vs. MLS median close and Redfin median sale price">
         <LineChart data={chartData}>
-          <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-          <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} domain={["auto", "auto"]} width={64} />
-          <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={legendStyle} />
-          <Line type="monotone" dataKey="zhvi" name="Zillow ZHVI" stroke={colors.zip77008} dot={false} />
-          <Line
-            type="monotone"
-            dataKey="mls_median_close_price"
-            name="MLS Median Close"
-            stroke={colors.zip77007}
-            dot={false}
-          />
-          <Line
-            type="monotone"
-            dataKey="redfin_median_sale_price"
-            name="Redfin Median Sale"
-            stroke={colors.zip77009}
-            dot={false}
-          />
+          <CartesianGrid {...gridProps} />
+          <XAxis dataKey="monthLabel" {...xAxisProps} />
+          <YAxis {...currencyAxis} domain={["auto", "auto"]} />
+          <Tooltip formatter={(v) => fmtCompactCurrency(v)} />
+          <Legend {...legendProps} />
+          <Line {...lineProps} dataKey="zhvi" name="Zillow ZHVI" stroke={colors.zip77008} />
+          <Line {...lineProps} dataKey="mls_median_close_price" name="MLS Median Close" stroke={colors.zip77007} />
+          <Line {...lineProps} dataKey="redfin_median_sale_price" name="Redfin Median Sale" stroke={colors.zip77009} />
         </LineChart>
       </ChartPanel>
 
-      <ChartPanel title="Days on Market">
+      <ChartPanel title="Days on market" subtitle="Median days from listing to contract">
         <LineChart data={chartData}>
-          <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-          <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} width={40} />
-          <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={legendStyle} />
-          <Line type="monotone" dataKey="mls_median_dom" name="MLS Median DOM" stroke={colors.zip77007} dot={false} />
-          <Line
-            type="monotone"
-            dataKey="redfin_median_dom"
-            name="Redfin Median DOM"
-            stroke={colors.zip77009}
-            dot={false}
-          />
+          <CartesianGrid {...gridProps} />
+          <XAxis dataKey="monthLabel" {...xAxisProps} />
+          <YAxis {...yAxisProps} width={36} />
+          <Tooltip />
+          <Legend {...legendProps} />
+          <Line {...lineProps} dataKey="mls_median_dom" name="MLS Median DOM" stroke={colors.zip77007} />
+          <Line {...lineProps} dataKey="redfin_median_dom" name="Redfin Median DOM" stroke={colors.zip77009} />
         </LineChart>
       </ChartPanel>
 
-      <ChartPanel title="Inventory: Active Listings & Months of Supply (Redfin)">
+      <ChartPanel title="Inventory" subtitle="Active listings and months of supply (Redfin)">
         <LineChart data={chartData}>
-          <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-          <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis yAxisId="left" tick={tickStyle} width={44} />
-          <YAxis yAxisId="right" orientation="right" tick={tickStyle} width={32} />
-          <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={legendStyle} />
-          <Line
-            yAxisId="left"
-            type="monotone"
-            dataKey="redfin_active_listings"
-            name="Active Listings"
-            stroke={colors.zip77008}
-            dot={false}
-          />
-          <Line
-            yAxisId="right"
-            type="monotone"
-            dataKey="redfin_months_supply"
-            name="Months of Supply"
-            stroke={colors.accentGold}
-            dot={false}
-          />
+          <CartesianGrid {...gridProps} />
+          <XAxis dataKey="monthLabel" {...xAxisProps} />
+          <YAxis yAxisId="left" {...yAxisProps} width={42} />
+          <YAxis yAxisId="right" orientation="right" {...yAxisProps} width={28} />
+          <Tooltip />
+          <Legend {...legendProps} />
+          <Line {...lineProps} yAxisId="left" dataKey="redfin_active_listings" name="Active Listings" stroke={colors.zip77008} />
+          <Line {...lineProps} yAxisId="right" dataKey="redfin_months_supply" name="Months of Supply" stroke={colors.accentGold} />
         </LineChart>
       </ChartPanel>
 
-      <ChartPanel title="New Listings vs. Closed Sales (Monthly)">
+      <ChartPanel title="New listings vs. closed sales" subtitle="Monthly counts">
         <LineChart data={chartData}>
-          <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-          <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} width={40} />
-          <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={legendStyle} />
-          <Line
-            type="monotone"
-            dataKey="redfin_new_listings"
-            name="New Listings (Redfin)"
-            stroke={colors.zip77007}
-            dot={false}
-          />
-          <Line
-            type="monotone"
-            dataKey="mls_closed_count"
-            name="Closed Sales (MLS)"
-            stroke={colors.zip77009}
-            dot={false}
-          />
+          <CartesianGrid {...gridProps} />
+          <XAxis dataKey="monthLabel" {...xAxisProps} />
+          <YAxis {...yAxisProps} width={36} />
+          <Tooltip />
+          <Legend {...legendProps} />
+          <Line {...lineProps} dataKey="redfin_new_listings" name="New Listings (Redfin)" stroke={colors.zip77007} />
+          <Line {...lineProps} dataKey="mls_closed_count" name="Closed Sales (MLS)" stroke={colors.zip77009} />
         </LineChart>
       </ChartPanel>
     </>
@@ -216,46 +178,31 @@ function CompareCharts({ zips }) {
 
   return (
     <>
-      <ChartPanel title="Zillow ZHVI Comparison">
+      <ChartPanel title="Home value comparison" subtitle="Zillow ZHVI by ZIP code">
         <LineChart data={merged}>
-          <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-          <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} domain={["auto", "auto"]} width={64} />
-          <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={legendStyle} />
+          <CartesianGrid {...gridProps} />
+          <XAxis dataKey="monthLabel" {...xAxisProps} />
+          <YAxis {...currencyAxis} domain={["auto", "auto"]} />
+          <Tooltip formatter={(v) => fmtCompactCurrency(v)} />
+          <Legend {...legendProps} />
           {ZIPS.map((z) => (
-            <Line key={z} type="monotone" dataKey={`zhvi_${z}`} name={z} stroke={ZIP_COLORS[z]} dot={false} />
+            <Line key={z} {...lineProps} dataKey={`zhvi_${z}`} name={z} stroke={ZIP_COLORS[z]} />
           ))}
         </LineChart>
       </ChartPanel>
 
-      <ChartPanel title="Redfin Median Sale Price Comparison">
+      <ChartPanel title="Sale price comparison" subtitle="Redfin median sale price by ZIP code">
         <LineChart data={merged}>
-          <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-          <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} domain={["auto", "auto"]} width={64} />
-          <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={legendStyle} />
+          <CartesianGrid {...gridProps} />
+          <XAxis dataKey="monthLabel" {...xAxisProps} />
+          <YAxis {...currencyAxis} domain={["auto", "auto"]} />
+          <Tooltip formatter={(v) => fmtCompactCurrency(v)} />
+          <Legend {...legendProps} />
           {ZIPS.map((z) => (
-            <Line
-              key={z}
-              type="monotone"
-              dataKey={`redfin_price_${z}`}
-              name={z}
-              stroke={ZIP_COLORS[z]}
-              dot={false}
-            />
+            <Line key={z} {...lineProps} dataKey={`redfin_price_${z}`} name={z} stroke={ZIP_COLORS[z]} />
           ))}
         </LineChart>
       </ChartPanel>
     </>
   );
 }
-
-const tooltipStyle = {
-  background: colors.panelAlt,
-  border: `1px solid ${colors.border}`,
-  borderRadius: 6,
-  fontSize: 12,
-  fontFamily: "var(--mono)",
-};

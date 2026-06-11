@@ -11,7 +11,7 @@ import {
 import { getAddressIndex, getMarketTrend, getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
 import Collapsible from "../components/Collapsible";
 import Table from "../components/Table";
-import { colors, fmt } from "../components/theme";
+import { colors, fmt, fmtCompactCurrency } from "../components/theme";
 
 export default function PropertyLookup() {
   const [address, setAddress] = useState("726 E 21ST ST");
@@ -69,14 +69,7 @@ export default function PropertyLookup() {
   return (
     <div>
       {IS_STATIC && propertyCount && (
-        <div
-          style={{
-            fontSize: 11,
-            color: "var(--text-dimmer)",
-            fontFamily: "var(--mono)",
-            marginBottom: 10,
-          }}
-        >
+        <div className="num" style={{ fontSize: 12, color: "var(--text-dimmer)", marginBottom: 10 }}>
           {propertyCount.toLocaleString()} properties available across 77007 / 77008 / 77009
         </div>
       )}
@@ -112,7 +105,7 @@ export default function PropertyLookup() {
         </button>
       </div>
 
-      {error && <div style={{ color: "var(--red)", fontFamily: "var(--mono)" }}>Error: {error}</div>}
+      {error && <div style={{ color: "var(--red)", fontSize: 13 }}>Error: {error}</div>}
 
       {data && (
         <>
@@ -121,7 +114,7 @@ export default function PropertyLookup() {
           {data.valuation && <ValuationRange valuation={data.valuation} hcad={data.hcad} trend={trend} />}
 
           {data.mls_listings.length > 0 && (
-            <Section title="MLS Listing History">
+            <Section title="MLS listing history">
               <Table
                 columns={[
                   { key: "status", label: "Status" },
@@ -152,7 +145,7 @@ export default function PropertyLookup() {
             />
           </Section>
 
-          <Collapsible title="Ownership History" count={data.ownership_history.length}>
+          <Collapsible title="Ownership history" count={data.ownership_history.length}>
             <Table
               columns={[
                 { key: "purchase_date", label: "Purchase Date", type: "date" },
@@ -162,7 +155,7 @@ export default function PropertyLookup() {
             />
           </Collapsible>
 
-          <Collapsible title="Permit History" count={data.permits.length}>
+          <Collapsible title="Permit history" count={data.permits.length}>
             <Table
               columns={[
                 { key: "issue_date", label: "Issue Date", type: "date" },
@@ -221,15 +214,13 @@ function ValuationRange({ valuation, hcad, trend }) {
 
   return (
     <div className="panel panel--gold">
-      <div className="panel-title panel-title--gold">Estimated Market Value Range</div>
+      <div className="panel-title panel-title--gold">Estimated market value range</div>
 
       <div className="range-stats">
-        <RangeStat label="Low (25th pct)" value={fmt.currency(est_low)} color="var(--text-dim)" />
-        <RangeStat label="Mid (median)" value={fmt.currency(est_mid)} color="var(--gold)" mid />
-        <RangeStat label="High (75th pct)" value={fmt.currency(est_high)} color="var(--text-dim)" />
-        {hcadVal && (
-          <RangeStat label="HCAD Market Value" value={fmt.currency(hcadVal)} color="var(--blue)" />
-        )}
+        <RangeStat label="Low · 25th pct" value={fmt.currency(est_low)} />
+        <RangeStat label="Mid · median" value={fmt.currency(est_mid)} variant="mid" />
+        <RangeStat label="High · 75th pct" value={fmt.currency(est_high)} />
+        {hcadVal && <RangeStat label="HCAD market value" value={fmt.currency(hcadVal)} variant="ref" />}
       </div>
 
       <div style={{ position: "relative", height: 44, margin: "0 8px 14px" }}>
@@ -283,42 +274,33 @@ function ValuationRange({ valuation, hcad, trend }) {
               textAlign: "center",
             }}
           >
-            <div style={{ fontSize: 9, color: "var(--blue)", fontFamily: "var(--mono)", whiteSpace: "nowrap" }}>
-              HCAD ▼
+            <div style={{ fontSize: 10, fontWeight: 600, color: "var(--blue)", whiteSpace: "nowrap" }}>
+              HCAD ▾
             </div>
           </div>
         )}
       </div>
 
       {implied && implied.length > 0 && (
-        <div style={{ marginBottom: 10 }}>
-          <div style={{ fontSize: 10, color: "var(--text-dimmer)", fontFamily: "var(--mono)", marginBottom: 6 }}>
-            IMPLIED VALUE HISTORY (MID ESTIMATE × ZIP ZHVI INDEX)
+        <div style={{ marginBottom: 12 }}>
+          <div className="stat-label" style={{ marginBottom: 8 }}>
+            Implied value history · mid estimate × ZIP ZHVI index
           </div>
           <div className="chart-box chart-box--sm">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={implied}>
-                <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
-                <XAxis
-                  dataKey="monthLabel"
-                  tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }}
-                  minTickGap={50}
-                />
+                <CartesianGrid stroke={colors.borderAlt} vertical={false} />
+                <XAxis dataKey="monthLabel" tick={{ fontSize: 11 }} tickLine={false} axisLine={false} minTickGap={50} />
                 <YAxis
-                  tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }}
+                  tick={{ fontSize: 11 }}
+                  tickLine={false}
+                  axisLine={false}
+                  tickFormatter={fmtCompactCurrency}
                   domain={["auto", "auto"]}
-                  width={64}
+                  width={52}
                 />
-                <Tooltip
-                  contentStyle={{
-                    background: colors.panelAlt,
-                    border: `1px solid ${colors.border}`,
-                    borderRadius: 6,
-                    fontSize: 12,
-                    fontFamily: "var(--mono)",
-                  }}
-                />
-                <Line type="monotone" dataKey="implied" name="Implied Value" stroke={colors.accentGold} dot={false} />
+                <Tooltip formatter={(v) => fmtCompactCurrency(v)} />
+                <Line type="monotone" dataKey="implied" name="Implied Value" stroke={colors.accentGold} dot={false} strokeWidth={1.8} />
               </LineChart>
             </ResponsiveContainer>
           </div>
@@ -337,13 +319,17 @@ function ValuationRange({ valuation, hcad, trend }) {
   );
 }
 
-function RangeStat({ label, value, color, mid = false }) {
+function RangeStat({ label, value, variant }) {
+  const cls =
+    variant === "mid"
+      ? "range-stat-value range-stat-value--mid"
+      : variant === "ref"
+        ? "range-stat-value range-stat-value--ref"
+        : "range-stat-value";
   return (
     <div>
       <div className="stat-label">{label}</div>
-      <div className={`range-stat-value${mid ? " range-stat-value--mid" : ""}`} style={{ color }}>
-        {value}
-      </div>
+      <div className={cls}>{value}</div>
     </div>
   );
 }
@@ -353,27 +339,27 @@ function ValuationSummary({ hcad, buildings }) {
   const yearBuilt = buildings.length ? Math.min(...buildings.map((b) => b.year_built).filter(Boolean)) : null;
 
   const stats = [
-    { label: "Site Address", value: hcad.site_address, color: colors.zip77008 },
-    { label: "Assessed Value", value: fmt.currency(hcad.assessed_val), color: colors.zip77007 },
-    { label: "Market Value", value: fmt.currency(hcad.tot_mkt_val), color: colors.zip77007 },
-    { label: "Land Value", value: fmt.currency(hcad.land_val), color: colors.accentGold },
-    { label: "Improvement Value", value: fmt.currency(hcad.bld_val), color: colors.accentGold },
-    { label: "Year Built", value: fmt.raw(yearBuilt), color: colors.zip77008 },
-    { label: "Total SqFt (HCAD)", value: fmt.num(totalSqft), color: colors.zip77008 },
-    { label: "Lot Size (acres)", value: fmt.num(hcad.acreage), color: colors.zip77008 },
-    { label: "Owner", value: fmt.raw(hcad.owner_name), color: colors.zip77009 },
-    { label: "Neighborhood", value: fmt.raw(hcad.market_area_1_dscr), color: colors.zip77009 },
-    { label: "Protested", value: hcad.protested === "Y" ? "Yes" : "No", color: colors.zip77009 },
-    { label: "Account", value: hcad.acct, color: colors.textDim },
+    { label: "Site Address", value: hcad.site_address },
+    { label: "Market Value", value: fmt.currency(hcad.tot_mkt_val), accent: true },
+    { label: "Assessed Value", value: fmt.currency(hcad.assessed_val) },
+    { label: "Land Value", value: fmt.currency(hcad.land_val) },
+    { label: "Improvement Value", value: fmt.currency(hcad.bld_val) },
+    { label: "Year Built", value: fmt.raw(yearBuilt) },
+    { label: "Total SqFt (HCAD)", value: fmt.num(totalSqft) },
+    { label: "Lot Size (acres)", value: fmt.num(hcad.acreage) },
+    { label: "Owner", value: fmt.raw(hcad.owner_name) },
+    { label: "Neighborhood", value: fmt.raw(hcad.market_area_1_dscr) },
+    { label: "Protested", value: hcad.protested === "Y" ? "Yes" : "No" },
+    { label: "Account", value: hcad.acct },
   ];
 
   return (
     <div className="panel">
       <div className="stat-grid">
-        {stats.map(({ label, value, color }) => (
-          <div key={label} className="stat" style={{ borderLeftColor: color + "55" }}>
+        {stats.map(({ label, value, accent }) => (
+          <div key={label} className="stat">
             <div className="stat-label">{label}</div>
-            <div className="stat-value" style={{ color }} title={String(value)}>
+            <div className={`stat-value${accent ? " stat-value--accent" : ""}`} title={String(value)}>
               {value}
             </div>
           </div>
@@ -382,12 +368,11 @@ function ValuationSummary({ hcad, buildings }) {
       {hcad.legal_description && (
         <div
           style={{
-            marginTop: 12,
-            paddingTop: 8,
+            marginTop: 14,
+            paddingTop: 10,
             borderTop: "1px solid var(--border-alt)",
-            color: "var(--text-dim)",
-            fontSize: 11,
-            fontFamily: "var(--mono)",
+            color: "var(--text-dimmer)",
+            fontSize: 12,
           }}
         >
           Legal: {hcad.legal_description}
