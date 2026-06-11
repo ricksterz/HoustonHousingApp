@@ -10,6 +10,7 @@ import {
   YAxis,
 } from "recharts";
 import { getMarketCompare, getMarketTrend } from "../api";
+import RangeToggle, { filterRange } from "../components/RangeToggle";
 import { colors, fmtCompactCurrency } from "../components/theme";
 
 const ZIPS = ["77007", "77008", "77009"];
@@ -44,6 +45,7 @@ function monthLabel(m) {
 export default function ZipOverview() {
   const [zip, setZip] = useState("77008");
   const [compareMode, setCompareMode] = useState(false);
+  const [range, setRange] = useState("2020");
   const [trend, setTrend] = useState(null);
   const [compare, setCompare] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -91,13 +93,16 @@ export default function ZipOverview() {
         >
           Compare All
         </button>
+        <RangeToggle value={range} onChange={setRange} />
       </div>
 
       {loading && <div style={{ color: "var(--text-dim)" }}>Loading…</div>}
       {error && <div style={{ color: "var(--red)" }}>Error: {error}</div>}
 
-      {!loading && !error && !compareMode && trend && <SingleZipCharts data={trend.series} />}
-      {!loading && !error && compareMode && compare && <CompareCharts zips={compare.zips} />}
+      {!loading && !error && !compareMode && trend && (
+        <SingleZipCharts data={filterRange(trend.series, range)} />
+      )}
+      {!loading && !error && compareMode && compare && <CompareCharts zips={compare.zips} range={range} />}
     </div>
   );
 }
@@ -160,11 +165,14 @@ function SingleZipCharts({ data }) {
   );
 }
 
-function CompareCharts({ zips }) {
+function CompareCharts({ zips, range }) {
   // Merge the 3 zip series into one array keyed by month for overlay charts.
   const monthsSet = new Set();
   Object.values(zips).forEach((series) => series.forEach((d) => monthsSet.add(d.month)));
-  const months = Array.from(monthsSet).sort();
+  const months = filterRange(
+    Array.from(monthsSet).sort().map((m) => ({ month: m })),
+    range
+  ).map((r) => r.month);
 
   const merged = months.map((month) => {
     const row = { month, monthLabel: monthLabel(month) };

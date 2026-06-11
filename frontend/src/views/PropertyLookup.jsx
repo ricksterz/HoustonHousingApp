@@ -10,8 +10,25 @@ import {
 } from "recharts";
 import { getAddressIndex, getMarketTrend, getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
 import Collapsible from "../components/Collapsible";
+import RangeToggle, { filterRange } from "../components/RangeToggle";
 import Table from "../components/Table";
 import { colors, fmt, fmtCompactCurrency } from "../components/theme";
+
+// Most-recent listing decides the sale status. This HAR export contains only
+// Sold + pending-stage statuses; "Active" is handled for future exports.
+function listingStatus(listings) {
+  const latest = listings?.[0];
+  if (!latest || latest.close_date) return { label: "Not listed", tone: "var(--text-dim)" };
+  const s = (latest.status || "").toLowerCase();
+  if (s.includes("active")) return { label: "For sale · Active", tone: "var(--green)" };
+  if (s.includes("pend")) return { label: `Pending sale · ${latest.status}`, tone: "var(--gold)" };
+  return { label: latest.status || "Not listed", tone: "var(--text-dim)" };
+}
+
+function lastClosedDate(listings) {
+  const dates = (listings || []).map((l) => l.close_date).filter(Boolean).sort();
+  return dates.length ? dates[dates.length - 1] : null;
+}
 
 export default function PropertyLookup() {
   const [address, setAddress] = useState("726 E 21ST ST");
@@ -109,7 +126,12 @@ export default function PropertyLookup() {
 
       {data && (
         <>
-          <ValuationSummary hcad={data.hcad} buildings={data.buildings} />
+          <ValuationSummary
+            hcad={data.hcad}
+            buildings={data.buildings}
+            valuation={data.valuation}
+            listings={data.mls_listings}
+          />
 
           {data.valuation && <ValuationRange valuation={data.valuation} hcad={data.hcad} trend={trend} />}
 
@@ -182,6 +204,7 @@ function Section({ title, children }) {
 }
 
 function ValuationRange({ valuation, hcad, trend }) {
+  const [range, setRange] = useState("2020");
   const {
     est_low,
     est_mid,
@@ -283,12 +306,15 @@ function ValuationRange({ valuation, hcad, trend }) {
 
       {implied && implied.length > 0 && (
         <div style={{ marginBottom: 12 }}>
-          <div className="stat-label" style={{ marginBottom: 8 }}>
-            Implied value history · mid estimate × ZIP ZHVI index
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8, flexWrap: "wrap" }}>
+            <div className="stat-label" style={{ marginBottom: 0 }}>
+              Implied value history · mid estimate × ZIP ZHVI index
+            </div>
+            <RangeToggle value={range} onChange={setRange} />
           </div>
           <div className="chart-box chart-box--sm">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={implied}>
+              <LineChart data={filterRange(implied, range, "monthLabel")}>
                 <CartesianGrid stroke={colors.borderAlt} vertical={false} />
                 <XAxis dataKey="monthLabel" tick={{ fontSize: 11 }} tickLine={false} axisLine={false} minTickGap={50} />
                 <YAxis
@@ -334,13 +360,25 @@ function RangeStat({ label, value, variant }) {
   );
 }
 
-function ValuationSummary({ hcad, buildings }) {
+function ValuationSummary({ hcad, buildings, valuation, listings }) {
   const totalSqft = buildings.reduce((sum, b) => sum + (b.im_sq_ft || 0), 0);
   const yearBuilt = buildings.length ? Math.min(...buildings.map((b) => b.year_built).filter(Boolean)) : null;
+  const status = listingStatus(listings);
+  const lastClosed = lastClosedDate(listings);
 
   const stats = [
     { label: "Site Address", value: hcad.site_address },
-    { label: "Market Value", value: fmt.currency(hcad.tot_mkt_val), accent: true },
+    {
+      label: "Sellable Estimate",
+      value: valuation ? `${fmtCompactCurrency(valuation.est_low)} – ${fmtCompactCurrency(valuation.est_high)}` : "—",
+      accent: true,
+      title: valuation
+        ? `${fmt.currency(valuation.est_low)} – ${fmt.currency(valuation.est_high)} (comps-based, see range below)`
+        : "Not enough comparable sales",
+    },
+    { label: "Listing Status", value: status.label, tone: status.tone },
+    { label: "Last Closed (MLS)", value: fmt.date(lastClosed) },
+    { label: "Market Value (HCAD)", value: fmt.currency(hcad.tot_mkt_val) },
     { label: "Assessed Value", value: fmt.currency(hcad.assessed_val) },
     { label: "Land Value", value: fmt.currency(hcad.land_val) },
     { label: "Improvement Value", value: fmt.currency(hcad.bld_val) },
@@ -356,10 +394,14 @@ function ValuationSummary({ hcad, buildings }) {
   return (
     <div className="panel">
       <div className="stat-grid">
-        {stats.map(({ label, value, accent }) => (
+        {stats.map(({ label, value, accent, tone, title }) => (
           <div key={label} className="stat">
             <div className="stat-label">{label}</div>
-            <div className={`stat-value${accent ? " stat-value--accent" : ""}`} title={String(value)}>
+            <div
+              className={`stat-value${accent ? " stat-value--accent" : ""}`}
+              style={tone ? { color: tone } : undefined}
+              title={title || String(value)}
+            >
               {value}
             </div>
           </div>
