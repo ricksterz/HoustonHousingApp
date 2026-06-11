@@ -5,6 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Houston Heights Housing Analytics</title>
+    <script>
+      // Set theme before first paint to avoid a flash of the wrong theme.
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+    </script>
     <meta
       name="description"
       content="Market trends and property analytics for Houston ZIP codes 77007, 77008, and 77009 — The Heights, Rice Military, and Near Northside."

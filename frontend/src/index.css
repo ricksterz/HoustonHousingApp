@@ -29,8 +29,47 @@
   text-size-adjust: 100%;
 }
 
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f4f6fa;
+  --panel: #ffffff;
+  --panel-alt: #eef2f8;
+  --border: #d9e1ee;
+  --border-alt: #e7ecf4;
+  --text: #2c3c55;
+  --text-bright: #101d32;
+  --text-dim: #5b7090;
+  --text-dimmer: #8294ac;
+  --gold: #a86c0c;
+  --gold-bright: #c8851a;
+
+  --shadow: 0 1px 2px rgba(20, 35, 60, 0.06), 0 4px 14px rgba(20, 35, 60, 0.07);
+}
+
+[data-theme="light"] ::selection {
+  background: rgba(200, 133, 26, 0.25);
+}
+
 * {
   box-sizing: border-box;
+}
+
+/* Recharts follows the active theme (overrides inline/attribute colors). */
+.recharts-cartesian-grid line {
+  stroke: var(--border) !important;
+}
+
+.recharts-cartesian-axis-tick-value,
+.recharts-text {
+  fill: var(--text-dim) !important;
+}
+
+.recharts-default-tooltip,
+.recharts-tooltip-wrapper > div {
+  background: var(--panel-alt) !important;
+  border-color: var(--border) !important;
+  color: var(--text) !important;
 }
 
 body {
@@ -100,6 +139,43 @@ body {
   border-radius: 999px;
   padding: 3px 10px;
   white-space: nowrap;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.theme-toggle {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--text-dimmer);
+  color: var(--text);
+}
+
+.theme-toggle:active {
+  transform: scale(0.94);
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* ---------- Panels ---------- */
