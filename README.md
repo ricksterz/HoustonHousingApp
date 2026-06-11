@@ -1,8 +1,30 @@
-# Houston Heights Housing Analytics
+# Houston Heights Analytics
 
 Market dashboard and property lookup for Houston ZIP codes **77007 / 77008 / 77009**
 (Heights / Rice Military / Near Northside), built on local MLS (HAR), Zillow ZHVI,
 Redfin, and HCAD bulk data, with live macro context from the FRED API.
+
+**Live site:** https://ricksterz.github.io/HoustonHousingApp/
+
+## Features
+
+- **Market Overview** — per-ZIP trend charts (home values, days on market,
+  inventory, new listings vs. closed sales) plus a 3-ZIP comparison view.
+  Charts default to **Since 2020**, with 10Y / Max presets to go further back.
+- **Property Lookup** — autocomplete search across ~47k properties. Each
+  property shows:
+  - **Sellable Estimate** — comps-based market value range (see methodology)
+  - **Listing Status** — for sale / pending / not listed, from the latest MLS listing
+  - **Last Closed (MLS)** — most recent sale date when one exists
+  - HCAD valuation breakdown, buildings, MLS history, and collapsible
+    ownership / permit history
+- **Estimated market value range panel** — low/mid/high markers vs. the HCAD
+  value, plus an implied value history line (mid estimate scaled by ZIP ZHVI).
+- **Macro header** — live FRED stats (30yr mortgage rate, Houston HPI, active
+  listings, median DOM, list $/sqft).
+- **Dark / light mode** — toggle top-right; follows OS preference on first
+  visit and remembers the choice.
+- Fully responsive (phone through desktop).
 
 ## Architecture
 
