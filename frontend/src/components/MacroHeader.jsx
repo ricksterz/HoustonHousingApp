@@ -16,9 +16,9 @@ export default function MacroHeader({ macro, loading }) {
           const entry = macro?.[f.key];
           const value = entry?.value;
           return (
-            <div key={f.key} className="stat" style={{ borderLeftColor: "rgba(200,133,26,0.4)" }}>
+            <div key={f.key} className="stat">
               <div className="stat-label">{f.label}</div>
-              <div className="stat-value" style={{ color: "var(--gold)", fontSize: 16 }}>
+              <div className="stat-value stat-value--accent" style={{ fontSize: 17 }}>
                 {loading ? "…" : value != null ? f.fmt(value) : "—"}
               </div>
               {entry?.error && !loading && <div className="stat-note">{entry.error}</div>}

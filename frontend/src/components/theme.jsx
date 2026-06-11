@@ -1,17 +1,26 @@
 export const colors = {
-  bg: "#080C16",
-  panel: "#0C1220",
-  panelAlt: "#0C1826",
-  border: "#1A2540",
-  borderAlt: "#101820",
-  text: "#C8D4E8",
-  textBright: "#E0ECFF",
-  textDim: "#7589A8",
-  textDimmer: "#51678A",
-  accentGold: "#C8851A",
-  zip77007: "#4A9EE8",
-  zip77008: "#34A853",
-  zip77009: "#E85555",
+  bg: "#0A0E17",
+  panel: "#10151F",
+  panelAlt: "#161C29",
+  border: "#222A3A",
+  borderAlt: "#1A2130",
+  text: "#C4CEDD",
+  textBright: "#EEF2F8",
+  textDim: "#8B98AC",
+  textDimmer: "#5F6C80",
+  accentGold: "#D4922A",
+  zip77007: "#5B8FDB",
+  zip77008: "#3FA56E",
+  zip77009: "#D9655E",
+};
+
+// Compact axis labels: 450000 -> $450K, 1200000 -> $1.2M
+export const fmtCompactCurrency = (v) => {
+  if (v == null) return "";
+  const n = Number(v);
+  if (Math.abs(n) >= 1e6) return `$${(n / 1e6).toFixed(1)}M`;
+  if (Math.abs(n) >= 1e3) return `$${Math.round(n / 1e3)}K`;
+  return `$${n}`;
 };
 
 export const fmt = {

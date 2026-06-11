@@ -10,7 +10,7 @@ export default function Footer({ generated }) {
   return (
     <footer className="footer">
       <div className="footer-inner">
-        <div className="panel-title">Disclaimer</div>
+        <div className="footer-heading">Disclaimer</div>
 
         <p style={{ margin: "0 0 10px" }}>
           This site is provided for general informational and educational purposes only. Nothing here
@@ -40,7 +40,7 @@ export default function Footer({ generated }) {
         <div className="footer-sources">
           {SOURCES.map(({ name, desc }) => (
             <span key={name}>
-              <span style={{ color: "var(--text-dim)", fontFamily: "var(--mono)" }}>{name}</span>
+              <b>{name}</b>
               {" — "}
               {desc}
             </span>
