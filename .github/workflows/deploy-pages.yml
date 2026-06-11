@@ -30,7 +30,7 @@ jobs:
         working-directory: frontend
         env:
           VITE_STATIC_DATA: "true"
-          VITE_BASE: /HoustonHousingApp/
+          VITE_BASE: /HoustonHeightsAnalytics/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/dist

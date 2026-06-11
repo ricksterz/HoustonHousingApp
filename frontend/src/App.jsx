@@ -33,27 +33,8 @@ export default function App() {
     >
       <div style={{ padding: "36px 24px 0", maxWidth: 1100, margin: "0 auto", width: "100%", boxSizing: "border-box", flex: 1 }}>
         <header style={{ marginBottom: 28 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10 }}>
-            <div
-              style={{
-                width: 6,
-                height: 30,
-                background: `linear-gradient(180deg, ${colors.accentGold}, #8B5CF6)`,
-                borderRadius: 3,
-              }}
-            />
-            <span
-              style={{
-                fontSize: 11,
-                fontFamily: "monospace",
-                color: colors.accentGold,
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-              }}
-            >
-              The Heights · Rice Military · Near Northside
-            </span>
-            {IS_STATIC && meta?.generated && (
+          {IS_STATIC && meta?.generated && (
+            <div style={{ display: "flex", marginBottom: 10 }}>
               <span
                 style={{
                   marginLeft: "auto",
@@ -67,8 +48,8 @@ export default function App() {
               >
                 Snapshot · data as of {meta.generated.slice(0, 10)}
               </span>
-            )}
-          </div>
+            </div>
+          )}
           <h1
             style={{
               margin: 0,
