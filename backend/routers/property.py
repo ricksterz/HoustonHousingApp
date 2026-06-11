@@ -3,6 +3,7 @@ import re
 from fastapi import APIRouter, HTTPException
 
 from ..db import get_connection
+from ..valuation import estimate_for_account
 
 router = APIRouter(prefix="/api/property", tags=["property"])
 
@@ -83,4 +84,5 @@ def property_lookup(address: str):
         "ownership_history": serialize(ownership),
         "permits": serialize(permits),
         "mls_listings": serialize(listings),
+        "valuation": estimate_for_account(con, acct),
     }

@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-import { getAddressIndex, getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  Tooltip,
+  XAxis,
+  YAxis,
+} from "recharts";
+import { getAddressIndex, getMarketTrend, getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
 import Collapsible from "../components/Collapsible";
 import Table from "../components/Table";
 import { colors, fmt } from "../components/theme";
@@ -11,6 +20,18 @@ export default function PropertyLookup() {
   const [error, setError] = useState(null);
   const [propertyCount, setPropertyCount] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
+  const [trend, setTrend] = useState(null);
+
+  useEffect(() => {
+    const zip = data?.hcad?.zip_code?.trim();
+    if (data?.valuation && zip) {
+      getMarketTrend(zip)
+        .then((t) => setTrend(t.series))
+        .catch(() => setTrend(null));
+    } else {
+      setTrend(null);
+    }
+  }, [data]);
 
   useEffect(() => {
     if (IS_STATIC) {
@@ -133,6 +154,8 @@ export default function PropertyLookup() {
         <>
           <ValuationSummary hcad={data.hcad} buildings={data.buildings} />
 
+          {data.valuation && <ValuationRange valuation={data.valuation} hcad={data.hcad} trend={trend} />}
+
           {data.mls_listings.length > 0 && (
             <Section title="MLS Listing History">
               <Table
@@ -216,6 +239,167 @@ function Section({ title, children }) {
         {title}
       </div>
       {children}
+    </div>
+  );
+}
+
+function ValuationRange({ valuation, hcad, trend }) {
+  const {
+    est_low,
+    est_mid,
+    est_high,
+    comp_count,
+    window_months,
+    sqft_band_pct,
+    year_band_applied,
+    sqft_used,
+    ppsf_mid,
+    zhvi_as_of,
+  } = valuation;
+  const hcadVal = Number(hcad.tot_mkt_val) || null;
+
+  const scaleMin = Math.min(est_low, hcadVal ?? est_low) * 0.92;
+  const scaleMax = Math.max(est_high, hcadVal ?? est_high) * 1.08;
+  const pos = (v) => `${(((v - scaleMin) / (scaleMax - scaleMin)) * 100).toFixed(1)}%`;
+
+  let implied = null;
+  if (trend) {
+    const zhviPts = trend.filter((d) => d.zhvi != null);
+    const last = zhviPts[zhviPts.length - 1];
+    if (last) {
+      implied = zhviPts.map((d) => ({
+        monthLabel: d.month.slice(0, 7),
+        implied: Math.round((d.zhvi / last.zhvi) * est_mid),
+      }));
+    }
+  }
+
+  return (
+    <div
+      style={{
+        background: colors.panel,
+        border: `1px solid ${colors.accentGold}44`,
+        borderRadius: 8,
+        padding: 16,
+        marginBottom: 16,
+      }}
+    >
+      <div
+        style={{
+          fontSize: 11,
+          color: colors.accentGold,
+          fontFamily: "monospace",
+          letterSpacing: "0.08em",
+          textTransform: "uppercase",
+          marginBottom: 14,
+        }}
+      >
+        Estimated Market Value Range
+      </div>
+
+      <div style={{ display: "flex", alignItems: "baseline", gap: 24, marginBottom: 20, flexWrap: "wrap" }}>
+        <RangeStat label="Low (25th pct)" value={fmt.currency(est_low)} color={colors.textDim} size={16} />
+        <RangeStat label="Mid (median)" value={fmt.currency(est_mid)} color={colors.accentGold} size={26} />
+        <RangeStat label="High (75th pct)" value={fmt.currency(est_high)} color={colors.textDim} size={16} />
+        {hcadVal && (
+          <RangeStat label="HCAD Market Value" value={fmt.currency(hcadVal)} color={colors.zip77007} size={16} />
+        )}
+      </div>
+
+      <div style={{ position: "relative", height: 44, margin: "0 8px 14px" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: 18,
+            left: 0,
+            right: 0,
+            height: 6,
+            borderRadius: 3,
+            background: colors.borderAlt,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 18,
+            left: pos(est_low),
+            width: `calc(${pos(est_high)} - ${pos(est_low)})`,
+            height: 6,
+            borderRadius: 3,
+            background: `linear-gradient(90deg, ${colors.accentGold}55, ${colors.accentGold})`,
+          }}
+        />
+        {[
+          [est_low, colors.textDim],
+          [est_mid, colors.accentGold],
+          [est_high, colors.textDim],
+        ].map(([v, c]) => (
+          <div
+            key={v}
+            style={{
+              position: "absolute",
+              top: 13,
+              left: pos(v),
+              width: 2,
+              height: 16,
+              background: c,
+              transform: "translateX(-1px)",
+            }}
+          />
+        ))}
+        {hcadVal && hcadVal >= scaleMin && hcadVal <= scaleMax && (
+          <div style={{ position: "absolute", top: 0, left: pos(hcadVal), transform: "translateX(-50%)", textAlign: "center" }}>
+            <div style={{ fontSize: 9, color: colors.zip77007, fontFamily: "monospace", whiteSpace: "nowrap" }}>HCAD ▼</div>
+          </div>
+        )}
+      </div>
+
+      {implied && implied.length > 0 && (
+        <div style={{ marginBottom: 10 }}>
+          <div style={{ fontSize: 10, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 6 }}>
+            IMPLIED VALUE HISTORY (MID ESTIMATE × ZIP ZHVI INDEX)
+          </div>
+          <ResponsiveContainer width="100%" height={140}>
+            <LineChart data={implied}>
+              <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
+              <XAxis dataKey="monthLabel" tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }} minTickGap={50} />
+              <YAxis
+                tick={{ fontSize: 10, fill: colors.textDim, fontFamily: "monospace" }}
+                domain={["auto", "auto"]}
+                width={70}
+              />
+              <Tooltip
+                contentStyle={{
+                  background: colors.panelAlt,
+                  border: `1px solid ${colors.border}`,
+                  borderRadius: 6,
+                  fontSize: 12,
+                  fontFamily: "monospace",
+                }}
+              />
+              <Line type="monotone" dataKey="implied" name="Implied Value" stroke={colors.accentGold} dot={false} />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      )}
+
+      <div style={{ fontSize: 10, color: colors.textDimmer, lineHeight: 1.6 }}>
+        Based on {comp_count} comparable MLS sales in ZIP {hcad.zip_code?.trim()} over the last{" "}
+        {window_months} months, within ±{sqft_band_pct}% of this property's {fmt.num(sqft_used)} sqft
+        {year_band_applied ? " and a similar build year" : ""}; each comp's $/sqft is adjusted to{" "}
+        {zhvi_as_of} using the ZIP's Zillow Home Value Index (mid estimate ≈ ${ppsf_mid}/sqft).
+        This is a statistical estimate for informational purposes only — not an appraisal. Condition,
+        renovations, and lot characteristics are not considered.
+      </div>
+    </div>
+  );
+}
+
+function RangeStat({ label, value, color, size }) {
+  return (
+    <div>
+      <div style={{ fontSize: 10, color: colors.textDimmer, fontFamily: "monospace", marginBottom: 2 }}>{label}</div>
+      <div style={{ fontSize: size, fontWeight: 700, color, fontFamily: "monospace" }}>{value}</div>
     </div>
   );
 }
