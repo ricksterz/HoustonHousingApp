@@ -16,33 +16,17 @@ const ZIPS = ["77007", "77008", "77009"];
 const ZIP_COLORS = { 77007: colors.zip77007, 77008: colors.zip77008, 77009: colors.zip77009 };
 
 const tickStyle = { fontSize: 11, fill: colors.textDim, fontFamily: "monospace" };
+const legendStyle = { fontSize: 11, fontFamily: "var(--mono)" };
 
 function ChartPanel({ title, children }) {
   return (
-    <div
-      style={{
-        background: colors.panel,
-        border: `1px solid ${colors.border}`,
-        borderRadius: 8,
-        padding: 16,
-        marginBottom: 16,
-      }}
-    >
-      <div
-        style={{
-          fontSize: 11,
-          color: colors.textDimmer,
-          fontFamily: "monospace",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-          marginBottom: 12,
-        }}
-      >
-        {title}
+    <div className="panel">
+      <div className="panel-title">{title}</div>
+      <div className="chart-box">
+        <ResponsiveContainer width="100%" height="100%">
+          {children}
+        </ResponsiveContainer>
       </div>
-      <ResponsiveContainer width="100%" height={260}>
-        {children}
-      </ResponsiveContainer>
     </div>
   );
 }
@@ -77,45 +61,39 @@ export default function ZipOverview() {
 
   return (
     <div>
-      <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+      <div className="btn-row" role="tablist" aria-label="ZIP code">
         {ZIPS.map((z) => (
           <button
             key={z}
+            role="tab"
+            aria-selected={!compareMode && zip === z}
+            className={`btn${!compareMode && zip === z ? " is-active" : ""}`}
+            style={{ "--active-color": ZIP_COLORS[z] }}
             onClick={() => {
               setZip(z);
               setCompareMode(false);
             }}
-            style={tabStyle(!compareMode && zip === z, ZIP_COLORS[z])}
           >
             {z}
           </button>
         ))}
-        <button onClick={() => setCompareMode(true)} style={tabStyle(compareMode, colors.accentGold)}>
+        <button
+          role="tab"
+          aria-selected={compareMode}
+          className={`btn${compareMode ? " is-active" : ""}`}
+          onClick={() => setCompareMode(true)}
+        >
           Compare All
         </button>
       </div>
 
-      {loading && <div style={{ color: colors.textDim, fontFamily: "monospace" }}>Loading…</div>}
-      {error && <div style={{ color: colors.zip77009, fontFamily: "monospace" }}>Error: {error}</div>}
+      {loading && <div style={{ color: "var(--text-dim)", fontFamily: "var(--mono)" }}>Loading…</div>}
+      {error && <div style={{ color: "var(--red)", fontFamily: "var(--mono)" }}>Error: {error}</div>}
 
       {!loading && !error && !compareMode && trend && <SingleZipCharts data={trend.series} />}
       {!loading && !error && compareMode && compare && <CompareCharts zips={compare.zips} />}
     </div>
   );
-}
-
-function tabStyle(active, color) {
-  return {
-    background: active ? color + "22" : "transparent",
-    border: `1px solid ${active ? color + "88" : colors.border}`,
-    color: active ? color : colors.textDim,
-    borderRadius: 6,
-    padding: "6px 16px",
-    fontSize: 13,
-    fontFamily: "monospace",
-    fontWeight: 600,
-    cursor: "pointer",
-  };
 }
 
 function SingleZipCharts({ data }) {
@@ -127,9 +105,9 @@ function SingleZipCharts({ data }) {
         <LineChart data={chartData}>
           <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
           <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} domain={["auto", "auto"]} />
+          <YAxis tick={tickStyle} domain={["auto", "auto"]} width={64} />
           <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={{ fontSize: 11, fontFamily: "monospace" }} />
+          <Legend wrapperStyle={legendStyle} />
           <Line type="monotone" dataKey="zhvi" name="Zillow ZHVI" stroke={colors.zip77008} dot={false} />
           <Line
             type="monotone"
@@ -152,9 +130,9 @@ function SingleZipCharts({ data }) {
         <LineChart data={chartData}>
           <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
           <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} />
+          <YAxis tick={tickStyle} width={40} />
           <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={{ fontSize: 11, fontFamily: "monospace" }} />
+          <Legend wrapperStyle={legendStyle} />
           <Line type="monotone" dataKey="mls_median_dom" name="MLS Median DOM" stroke={colors.zip77007} dot={false} />
           <Line
             type="monotone"
@@ -170,10 +148,10 @@ function SingleZipCharts({ data }) {
         <LineChart data={chartData}>
           <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
           <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis yAxisId="left" tick={tickStyle} />
-          <YAxis yAxisId="right" orientation="right" tick={tickStyle} />
+          <YAxis yAxisId="left" tick={tickStyle} width={44} />
+          <YAxis yAxisId="right" orientation="right" tick={tickStyle} width={32} />
           <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={{ fontSize: 11, fontFamily: "monospace" }} />
+          <Legend wrapperStyle={legendStyle} />
           <Line
             yAxisId="left"
             type="monotone"
@@ -197,9 +175,9 @@ function SingleZipCharts({ data }) {
         <LineChart data={chartData}>
           <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
           <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} />
+          <YAxis tick={tickStyle} width={40} />
           <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={{ fontSize: 11, fontFamily: "monospace" }} />
+          <Legend wrapperStyle={legendStyle} />
           <Line
             type="monotone"
             dataKey="redfin_new_listings"
@@ -242,9 +220,9 @@ function CompareCharts({ zips }) {
         <LineChart data={merged}>
           <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
           <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} domain={["auto", "auto"]} />
+          <YAxis tick={tickStyle} domain={["auto", "auto"]} width={64} />
           <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={{ fontSize: 11, fontFamily: "monospace" }} />
+          <Legend wrapperStyle={legendStyle} />
           {ZIPS.map((z) => (
             <Line key={z} type="monotone" dataKey={`zhvi_${z}`} name={z} stroke={ZIP_COLORS[z]} dot={false} />
           ))}
@@ -255,9 +233,9 @@ function CompareCharts({ zips }) {
         <LineChart data={merged}>
           <CartesianGrid stroke={colors.border} strokeDasharray="3 3" />
           <XAxis dataKey="monthLabel" tick={tickStyle} minTickGap={40} />
-          <YAxis tick={tickStyle} domain={["auto", "auto"]} />
+          <YAxis tick={tickStyle} domain={["auto", "auto"]} width={64} />
           <Tooltip contentStyle={tooltipStyle} />
-          <Legend wrapperStyle={{ fontSize: 11, fontFamily: "monospace" }} />
+          <Legend wrapperStyle={legendStyle} />
           {ZIPS.map((z) => (
             <Line
               key={z}
@@ -279,5 +257,5 @@ const tooltipStyle = {
   border: `1px solid ${colors.border}`,
   borderRadius: 6,
   fontSize: 12,
-  fontFamily: "monospace",
+  fontFamily: "var(--mono)",
 };

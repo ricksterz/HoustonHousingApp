@@ -1,5 +1,3 @@
-import { colors } from "./theme";
-
 const SOURCES = [
   { name: "HAR / MLS", desc: "Listing history © Houston Association of REALTORS®" },
   { name: "Zillow ZHVI", desc: "Zillow Home Value Index, Zillow Research (zillow.com/research/data)" },
@@ -10,36 +8,9 @@ const SOURCES = [
 
 export default function Footer({ generated }) {
   return (
-    <footer
-      style={{
-        marginTop: 48,
-        borderTop: `1px solid ${colors.border}`,
-        background: colors.panel,
-      }}
-    >
-      <div
-        style={{
-          maxWidth: 1100,
-          margin: "0 auto",
-          padding: "28px 24px 36px",
-          boxSizing: "border-box",
-          color: colors.textDimmer,
-          fontSize: 11,
-          lineHeight: 1.7,
-        }}
-      >
-        <div
-          style={{
-            fontSize: 10,
-            fontFamily: "monospace",
-            letterSpacing: "0.14em",
-            textTransform: "uppercase",
-            color: colors.textDim,
-            marginBottom: 10,
-          }}
-        >
-          Disclaimer
-        </div>
+    <footer className="footer">
+      <div className="footer-inner">
+        <div className="panel-title">Disclaimer</div>
 
         <p style={{ margin: "0 0 10px" }}>
           This site is provided for general informational and educational purposes only. Nothing here
@@ -66,18 +37,10 @@ export default function Footer({ generated }) {
           their respective owners.
         </p>
 
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "6px 18px",
-            paddingTop: 12,
-            borderTop: `1px solid ${colors.borderAlt}`,
-          }}
-        >
+        <div className="footer-sources">
           {SOURCES.map(({ name, desc }) => (
             <span key={name}>
-              <span style={{ color: colors.textDim, fontFamily: "monospace" }}>{name}</span>
+              <span style={{ color: "var(--text-dim)", fontFamily: "var(--mono)" }}>{name}</span>
               {" — "}
               {desc}
             </span>
