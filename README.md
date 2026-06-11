@@ -1,4 +1,4 @@
-# Houston Housing Analytics
+# Houston Heights Housing Analytics
 
 Market dashboard and property lookup for Houston ZIP codes **77007 / 77008 / 77009**
 (Heights / Rice Military / Near Northside), built on local MLS (HAR), Zillow ZHVI,
@@ -72,8 +72,8 @@ the static site and deploys it to GitHub Pages (enable in repo Settings → Page
 → Source: GitHub Actions).
 
 Notes:
-- Property lookup on the static site only works for the addresses listed in
-  `ADDRESSES` in `etl/export_static.py`.
+- All ~47k properties are exported with an address index for client-side
+  autocomplete search.
 - Owner names are redacted in the static export by default
   (`REDACT_OWNER_NAMES`), since the Pages site is publicly accessible.
 - FRED values are baked in at export time — they go stale until re-exported.
