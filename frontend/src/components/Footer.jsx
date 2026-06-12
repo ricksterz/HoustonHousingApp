@@ -1,10 +1,29 @@
 const SOURCES = [
-  { name: "HAR / MLS", desc: "Listing history © Houston Association of REALTORS®" },
-  { name: "Zillow ZHVI", desc: "Zillow Home Value Index, Zillow Research (zillow.com/research/data)" },
-  { name: "Redfin", desc: "Market data © Redfin (redfin.com/news/data-center)" },
-  { name: "HCAD", desc: "Public appraisal records, Harris Central Appraisal District" },
-  { name: "FRED®", desc: "Macro series, Federal Reserve Bank of St. Louis" },
+  {
+    name: "HAR / MLS",
+    desc: "Listing and sale history from the Multiple Listing Service (MLS), © Houston Association of REALTORS® (HAR)",
+  },
+  {
+    name: "Zillow",
+    desc: "Zillow Home Value Index (ZHVI) — a smoothed, seasonally adjusted index of typical home values, from Zillow Research (zillow.com/research/data). An index estimate, not an appraisal",
+  },
+  {
+    name: "Redfin",
+    desc: "ZIP-level market statistics © Redfin, a national real estate brokerage (redfin.com/news/data-center)",
+  },
+  {
+    name: "HCAD",
+    desc: "Public property records — appraised values, buildings, permits — from the Harris Central Appraisal District",
+  },
+  {
+    name: "FRED®",
+    desc: "Federal Reserve Economic Data, Federal Reserve Bank of St. Louis — macro series including the Freddie Mac 30-year mortgage average",
+  },
 ];
+
+const TERMS =
+  "Terms: DOM — days on market · HPI — house price index · MSA — metropolitan statistical area · " +
+  "ZHVI — Zillow Home Value Index · sqft — square feet · comps — comparable recent sales";
 
 export default function Footer({ generated }) {
   return (
@@ -46,6 +65,8 @@ export default function Footer({ generated }) {
             </span>
           ))}
         </div>
+
+        <p style={{ margin: "12px 0 0", color: "var(--text-dimmer)" }}>{TERMS}</p>
       </div>
     </footer>
   );
