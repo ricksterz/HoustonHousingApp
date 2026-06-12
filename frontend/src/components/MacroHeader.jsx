@@ -11,7 +11,7 @@ const METRO_FIELDS = [
 
 const HEIGHTS_FIELDS = [
   { key: "median_sale_price", label: "Median Sale Price", fmt: fmtCompactCurrency },
-  { key: "zhvi", label: "Avg Home Value (ZHVI)", fmt: fmtCompactCurrency },
+  { key: "zhvi", label: "Avg Home Value (Zillow)", fmt: fmtCompactCurrency },
   { key: "active_listings", label: "Active Listings", fmt: (v) => fmt.num(Math.round(v)) },
   { key: "median_dom", label: "Median DOM", fmt: (v) => `${Math.round(v)} days` },
   { key: "months_supply", label: "Months of Supply", fmt: (v) => Number(v).toFixed(1) },
