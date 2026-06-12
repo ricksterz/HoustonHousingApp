@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMacroSnapshot, getStaticMeta, IS_STATIC } from "./api";
+import { getHeightsSnapshot, getMacroSnapshot, getStaticMeta, IS_STATIC } from "./api";
 import banner from "./assets/heights-19th-st.jpg";
 import Footer from "./components/Footer";
 import MacroHeader from "./components/MacroHeader";
@@ -12,6 +12,7 @@ export default function App() {
   const [macro, setMacro] = useState(null);
   const [macroLoading, setMacroLoading] = useState(true);
   const [meta, setMeta] = useState(null);
+  const [heights, setHeights] = useState(null);
   const [theme, setTheme] = useState(() => document.documentElement.dataset.theme || "dark");
 
   useEffect(() => {
@@ -24,6 +25,9 @@ export default function App() {
       .then(setMacro)
       .catch(() => setMacro(null))
       .finally(() => setMacroLoading(false));
+    getHeightsSnapshot()
+      .then(setHeights)
+      .catch(() => setHeights(null));
     if (IS_STATIC) getStaticMeta().then(setMeta);
   }, []);
 
@@ -52,7 +56,7 @@ export default function App() {
           </div>
         </header>
 
-        <MacroHeader macro={macro} loading={macroLoading} />
+        <MacroHeader macro={macro} heights={heights} loading={macroLoading} />
 
         <nav className="btn-row" aria-label="Main navigation">
           <button
