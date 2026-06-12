@@ -76,3 +76,37 @@ export function getMacroSnapshot() {
 export function getStaticMeta() {
   return getStatic("meta.json").catch(() => null);
 }
+
+// Latest Heights-wide stats, aggregated across the 3 ZIPs from the trend data
+// (sum for counts, average for prices/ratios). Each entry: {value, date}.
+export async function getHeightsSnapshot() {
+  const { zips } = await getMarketCompare();
+  const series = Object.values(zips);
+
+  // Some sources serialize numbers as strings — coerce and skip non-numerics.
+  const latest = (s, key) => {
+    for (let i = s.length - 1; i >= 0; i--) {
+      const v = Number(s[i][key]);
+      if (s[i][key] != null && Number.isFinite(v)) return { value: v, month: s[i].month };
+    }
+    return null;
+  };
+
+  const agg = (key, mode) => {
+    const pts = series.map((s) => latest(s, key)).filter(Boolean);
+    if (!pts.length) return null;
+    const total = pts.reduce((a, p) => a + p.value, 0);
+    return {
+      value: mode === "sum" ? total : total / pts.length,
+      date: pts.map((p) => p.month).sort()[0].slice(0, 7),
+    };
+  };
+
+  return {
+    median_sale_price: agg("redfin_median_sale_price", "avg"),
+    zhvi: agg("zhvi", "avg"),
+    active_listings: agg("redfin_active_listings", "sum"),
+    median_dom: agg("redfin_median_dom", "avg"),
+    months_supply: agg("redfin_months_supply", "avg"),
+  };
+}
