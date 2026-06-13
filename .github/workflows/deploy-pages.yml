@@ -30,7 +30,6 @@ jobs:
         working-directory: frontend
         env:
           VITE_STATIC_DATA: "true"
-          VITE_BASE: /${{ github.event.repository.name }}/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/dist
