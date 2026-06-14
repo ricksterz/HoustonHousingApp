@@ -11,7 +11,7 @@ sqft.
 DuckDB-specific syntax (ASOF JOIN, quantile_cont) is isolated in this module.
 """
 
-COMP_WINDOW_MONTHS = 30
+COMP_WINDOW_MONTHS = 12
 SQFT_BAND = 0.25  # comps within ±25% of subject sqft
 LOT_BAND = 0.4  # preferred: comps with lot size within ±40% of subject's lot
 MIN_LOT_BAND_COMPS = 8  # apply the lot band only when it leaves this many comps
