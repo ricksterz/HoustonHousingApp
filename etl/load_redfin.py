@@ -1,35 +1,50 @@
-"""Load Redfin monthly market data for target ZIPs into redfin_market table."""
+"""Load Redfin monthly market data for target ZIPs into redfin_market table.
+
+Source is Redfin's public Data Center zip-code market tracker (a national feed,
+rolling 3-month windows stepped monthly). Override with the REDFIN_SOURCE env var
+to point at a local file instead (e.g. for offline development).
+"""
+
+import os
 
 import duckdb
 
-DATA_DIR = "/Users/ricky.dsa/Downloads/HousingData"
 ZIPS = ("77007", "77008", "77009")
+
+DEFAULT_SOURCE = (
+    "https://redfin-public-data.s3-us-west-2.amazonaws.com/"
+    "redfin_market_tracker/zip_code_market_tracker.tsv000.gz"
+)
+
+REGIONS = tuple(f"Zip Code: {z}" for z in ZIPS)
 
 
 def load(con: duckdb.DuckDBPyConnection):
-    path = f"{DATA_DIR}/redfin_housing_market_monthly_all_zips_2019_Jan_to_2026_May.csv"
+    path = os.environ.get("REDFIN_SOURCE", DEFAULT_SOURCE)
 
     sql = f"""
     CREATE OR REPLACE TABLE redfin_market AS
     SELECT
-        CAST("PERIOD BEGIN" AS DATE) AS period_begin,
-        CAST("PERIOD END" AS DATE) AS period_end,
-        "REGION NAME" AS zip_code,
-        "FREQUENCY" AS frequency,
-        "HOMES SOLD" AS homes_sold,
-        "MEDIAN SALE PRICE NSA ($)" AS median_sale_price,
-        "MEDIAN DAYS ON MARKET (DAYS)" AS median_dom,
-        "AVERAGE SALE TO LIST RATIO (%)" AS sale_to_list_ratio,
-        "SHARE SOLD ABOVE ORIGINAL LIST (%)" AS pct_sold_above_list,
-        "NEW LISTINGS" AS new_listings,
-        "ACTIVE LISTINGS" AS active_listings,
-        "PENDING SALES" AS pending_sales,
-        "MEDIAN NEW LISTING PRICE ($)" AS median_new_listing_price,
-        "MEDIAN SALE PRICE PER SQ.FT. ($)" AS median_sale_price_psf,
-        "MONTHS OF SUPPLY" AS months_of_supply,
-        "PERCENT OFF MARKET IN TWO WEEKS (%)" AS pct_off_market_2wk
-    FROM read_csv_auto('{path}')
-    WHERE "REGION TYPE" = 'Zip' AND "REGION NAME" IN {ZIPS}
+        PERIOD_BEGIN AS period_begin,
+        PERIOD_END AS period_end,
+        regexp_extract(REGION, '\\d{{5}}', 0) AS zip_code,
+        'monthly' AS frequency,
+        TRY_CAST(HOMES_SOLD AS DOUBLE) AS homes_sold,
+        TRY_CAST(MEDIAN_SALE_PRICE AS DOUBLE) AS median_sale_price,
+        TRY_CAST(MEDIAN_DOM AS DOUBLE) AS median_dom,
+        TRY_CAST(AVG_SALE_TO_LIST AS DOUBLE) * 100 AS sale_to_list_ratio,
+        TRY_CAST(SOLD_ABOVE_LIST AS DOUBLE) * 100 AS pct_sold_above_list,
+        TRY_CAST(NEW_LISTINGS AS DOUBLE) AS new_listings,
+        TRY_CAST(INVENTORY AS DOUBLE) AS active_listings,
+        TRY_CAST(PENDING_SALES AS DOUBLE) AS pending_sales,
+        TRY_CAST(MEDIAN_LIST_PRICE AS DOUBLE) AS median_new_listing_price,
+        TRY_CAST(MEDIAN_PPSF AS DOUBLE) AS median_sale_price_psf,
+        TRY_CAST(MONTHS_OF_SUPPLY AS DOUBLE) AS months_of_supply,
+        TRY_CAST(OFF_MARKET_IN_TWO_WEEKS AS DOUBLE) * 100 AS pct_off_market_2wk
+    FROM read_csv_auto('{path}', delim='\t')
+    WHERE REGION_TYPE = 'zip code'
+      AND PROPERTY_TYPE = 'All Residential'
+      AND REGION IN {REGIONS}
     ORDER BY zip_code, period_begin
     """
     con.execute(sql)
