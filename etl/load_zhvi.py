@@ -1,13 +1,23 @@
-"""Load Zillow ZHVI (home value index) for target ZIPs into zhvi_trend table (long format)."""
+"""Load Zillow ZHVI (home value index) for target ZIPs into zhvi_trend table (long format).
+
+Source is Zillow's public research data CSV. Override with the ZHVI_SOURCE env var to
+point at a local file instead (e.g. for offline development).
+"""
+
+import os
 
 import duckdb
 
-DATA_DIR = "/Users/ricky.dsa/Downloads/HousingData"
 ZIPS = ("77007", "77008", "77009")
+
+DEFAULT_SOURCE = (
+    "https://files.zillowstatic.com/research/public_csvs/zhvi/"
+    "Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv"
+)
 
 
 def load(con: duckdb.DuckDBPyConnection):
-    path = f"{DATA_DIR}/Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv"
+    path = os.environ.get("ZHVI_SOURCE", DEFAULT_SOURCE)
 
     sql = f"""
     CREATE OR REPLACE TABLE zhvi_trend AS
