@@ -1,0 +1,42 @@
+name: Monthly Data Refresh
+
+on:
+  schedule:
+    # 06:00 UTC on the 5th of each month — gives Zillow/Redfin/FRED time to
+    # publish the prior month's data.
+    - cron: "0 6 5 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install duckdb requests fastapi
+
+      - name: Refresh ZHVI, Redfin, and FRED data; re-export static site data
+        working-directory: etl
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: python refresh_market_data.py
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add etl/housing.duckdb frontend/public/data
+          if git diff --cached --quiet; then
+            echo "No data changes."
+          else
+            git commit -m "Monthly data refresh: ZHVI, Redfin, FRED"
+            git push
+          fi
