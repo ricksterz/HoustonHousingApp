@@ -599,6 +599,50 @@ body {
   padding: 4px 20px 16px;
 }
 
+/* ---------- About / FAQ text ---------- */
+
+.text-block {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.text-block:last-child {
+  margin-bottom: 0;
+}
+
+.text-list {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 12px;
+  padding-left: 20px;
+}
+
+.text-list li {
+  margin-bottom: 8px;
+}
+
+.text-list li:last-child {
+  margin-bottom: 0;
+}
+
+.faq-item {
+  margin-bottom: 16px;
+}
+
+.faq-item:last-child {
+  margin-bottom: 0;
+}
+
+.faq-q {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-bright);
+  margin-bottom: 6px;
+}
+
 /* ---------- Valuation range ---------- */
 
 .range-stats {

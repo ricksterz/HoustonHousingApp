@@ -4,6 +4,7 @@ import banner from "./assets/heights-19th-st.jpg";
 import Footer from "./components/Footer";
 import MacroHeader from "./components/MacroHeader";
 import { colors } from "./components/theme";
+import About from "./views/About";
 import PropertyLookup from "./views/PropertyLookup";
 import ZipOverview from "./views/ZipOverview";
 
@@ -71,9 +72,17 @@ export default function App() {
           >
             Property Lookup
           </button>
+          <button
+            className={`btn${view === "about" ? " is-active" : ""}`}
+            onClick={() => setView("about")}
+          >
+            About &amp; FAQ
+          </button>
         </nav>
 
-        {view === "overview" ? <ZipOverview /> : <PropertyLookup />}
+        {view === "overview" && <ZipOverview />}
+        {view === "property" && <PropertyLookup />}
+        {view === "about" && <About />}
       </div>
 
       <Footer generated={meta?.generated} />
