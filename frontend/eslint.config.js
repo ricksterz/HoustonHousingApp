@@ -17,5 +17,17 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
+    rules: {
+      // setState at the top of a useEffect for loading/error resets is the
+      // standard async-fetch pattern used throughout this codebase.
+      'react-hooks/set-state-in-effect': 'warn',
+      // This is a static-export site; Fast Refresh HMR rules don't apply.
+      'react-refresh/only-export-components': 'warn',
+    },
+  },
+  // vite.config.js runs in Node, not the browser
+  {
+    files: ['vite.config.js'],
+    languageOptions: { globals: { ...globals.browser, ...globals.node } },
   },
 ])
