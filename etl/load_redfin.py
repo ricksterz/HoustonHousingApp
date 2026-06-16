@@ -39,7 +39,14 @@ def load(con: duckdb.DuckDBPyConnection):
         TRY_CAST(PENDING_SALES AS DOUBLE) AS pending_sales,
         TRY_CAST(MEDIAN_LIST_PRICE AS DOUBLE) AS median_new_listing_price,
         TRY_CAST(MEDIAN_PPSF AS DOUBLE) AS median_sale_price_psf,
-        TRY_CAST(MONTHS_OF_SUPPLY AS DOUBLE) AS months_of_supply,
+        -- Redfin omits MONTHS_OF_SUPPLY for small ZIPs; derive from active/sold
+        -- (window is 90 days so homes_sold is a 3-month total, not monthly)
+        COALESCE(
+            TRY_CAST(MONTHS_OF_SUPPLY AS DOUBLE),
+            CASE WHEN TRY_CAST(HOMES_SOLD AS DOUBLE) > 0
+                 THEN ROUND(TRY_CAST(INVENTORY AS DOUBLE) * 3.0 / TRY_CAST(HOMES_SOLD AS DOUBLE), 2)
+            END
+        ) AS months_of_supply,
         TRY_CAST(OFF_MARKET_IN_TWO_WEEKS AS DOUBLE) * 100 AS pct_off_market_2wk
     FROM read_csv_auto('{path}', delim='\t')
     WHERE REGION_TYPE = 'zip code'
