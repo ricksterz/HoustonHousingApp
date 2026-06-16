@@ -146,10 +146,10 @@ def export_properties(con) -> int:
         ORDER BY COALESCE(close_date, list_date) DESC
         """,
     )
-    for l in listings:
-        if l.get("addr_norm"):
-            l["addr_norm"] = expand_suffix(l["addr_norm"])
-    listings_by_addr = group_by([l for l in listings if l.get("addr_norm")], "addr_norm")
+    for listing in listings:
+        if listing.get("addr_norm"):
+            listing["addr_norm"] = expand_suffix(listing["addr_norm"])
+    listings_by_addr = group_by([listing for listing in listings if listing.get("addr_norm")], "addr_norm")
     sorted_addrs = sorted(listings_by_addr)
 
     def listings_for(site_norm: str) -> list[dict]:
@@ -158,7 +158,7 @@ def export_properties(con) -> int:
         while i < len(sorted_addrs) and sorted_addrs[i].startswith(site_norm):
             matched.extend(listings_by_addr[sorted_addrs[i]])
             i += 1
-        return [{k: v for k, v in l.items() if k != "addr_norm"} for l in matched]
+        return [{k: v for k, v in lst.items() if k != "addr_norm"} for lst in matched]
 
     print("Computing valuation estimates...")
     valuations = estimate_all(con)

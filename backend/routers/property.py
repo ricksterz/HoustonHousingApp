@@ -64,7 +64,7 @@ def property_lookup(address: str):
         [needle, f"{needle}%"],
     ).fetchall()
     lcols = [c[0] for c in con.description]
-    listings = [dict(zip(lcols, l)) for l in listings]
+    listings = [dict(zip(lcols, row)) for row in listings]
 
     def serialize(records):
         out = []
