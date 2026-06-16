@@ -33,6 +33,29 @@ REDACT_OWNER_NAMES = True
 MAX_PERMITS_PER_PROPERTY = 10
 
 
+_SUFFIX_MAP = {
+    r"\bST\b": "STREET",
+    r"\bDR\b": "DRIVE",
+    r"\bLN\b": "LANE",
+    r"\bAVE\b": "AVENUE",
+    r"\bBLVD\b": "BOULEVARD",
+    r"\bRD\b": "ROAD",
+    r"\bPL\b": "PLACE",
+    r"\bCT\b": "COURT",
+    r"\bFWY\b": "FREEWAY",
+}
+
+
+def expand_suffix(addr: str) -> str:
+    """Expand HCAD street suffix abbreviations to full words (e.g. ST→STREET).
+
+    Applied to both HCAD site addresses and MLS addresses so they match.
+    """
+    for pattern, replacement in _SUFFIX_MAP.items():
+        addr = re.sub(pattern, replacement, addr)
+    return addr
+
+
 def slugify(address: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", address.strip().lower()).strip("-")
 
@@ -123,6 +146,9 @@ def export_properties(con) -> int:
         ORDER BY COALESCE(close_date, list_date) DESC
         """,
     )
+    for l in listings:
+        if l.get("addr_norm"):
+            l["addr_norm"] = expand_suffix(l["addr_norm"])
     listings_by_addr = group_by([l for l in listings if l.get("addr_norm")], "addr_norm")
     sorted_addrs = sorted(listings_by_addr)
 
@@ -146,7 +172,8 @@ def export_properties(con) -> int:
     skipped = 0
 
     for account in accounts:
-        site_norm = account.get("site_address_norm", "").strip()
+        site_norm = expand_suffix(account.get("site_address_norm", "").strip())
+        account["site_address_norm"] = site_norm  # display full suffix in JSON
         slug = slugify(site_norm) if site_norm else ""
         if not slug or slug in seen_slugs:
             skipped += 1
