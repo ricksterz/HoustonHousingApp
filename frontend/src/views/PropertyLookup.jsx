@@ -10,7 +10,8 @@ import {
 } from "recharts";
 import { getAddressIndex, getMarketTrend, getPropertyLookup, getStaticMeta, IS_STATIC } from "../api";
 import Collapsible from "../components/Collapsible";
-import RangeToggle, { filterRange } from "../components/RangeToggle";
+import RangeToggle from "../components/RangeToggle";
+import { filterRange } from "../components/rangeUtils";
 import Table from "../components/Table";
 import { colors, fmt, fmtCompactCurrency } from "../components/theme";
 
@@ -41,13 +42,10 @@ export default function PropertyLookup() {
 
   useEffect(() => {
     const zip = data?.hcad?.zip_code?.trim();
-    if (data?.valuation && zip) {
-      getMarketTrend(zip)
-        .then((t) => setTrend(t.series))
-        .catch(() => setTrend(null));
-    } else {
-      setTrend(null);
-    }
+    if (!(data?.valuation && zip)) return;
+    getMarketTrend(zip)
+      .then((t) => setTrend(t.series))
+      .catch(() => setTrend(null));
   }, [data]);
 
   useEffect(() => {
@@ -63,6 +61,7 @@ export default function PropertyLookup() {
     setLoading(true);
     setError(null);
     setData(null);
+    setTrend(null);
     getPropertyLookup(addr)
       .then(setData)
       .catch((e) => setError(e.message))
