@@ -31,22 +31,3 @@ export const fmt = {
   raw: (v) => (v != null && v !== "" ? String(v) : "—"),
   date: (v) => (v ? String(v) : "—"),
 };
-
-export function Badge({ text, color }) {
-  return (
-    <span
-      style={{
-        background: color + "22",
-        color,
-        border: `1px solid ${color}44`,
-        borderRadius: 4,
-        fontSize: 11,
-        padding: "2px 8px",
-        fontFamily: "monospace",
-        letterSpacing: "0.03em",
-      }}
-    >
-      {text}
-    </span>
-  );
-}
