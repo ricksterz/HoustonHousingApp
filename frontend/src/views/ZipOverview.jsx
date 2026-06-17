@@ -10,7 +10,8 @@ import {
   YAxis,
 } from "recharts";
 import { getMarketCompare, getMarketTrend } from "../api";
-import RangeToggle, { filterRange } from "../components/RangeToggle";
+import RangeToggle from "../components/RangeToggle";
+import { filterRange } from "../components/rangeUtils";
 import { colors, fmtCompactCurrency } from "../components/theme";
 
 const ZIPS = ["77007", "77008", "77009"];
@@ -52,8 +53,6 @@ export default function ZipOverview() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    setLoading(true);
-    setError(null);
     if (compareMode) {
       getMarketCompare()
         .then(setCompare)
@@ -78,6 +77,9 @@ export default function ZipOverview() {
             className={`btn${!compareMode && zip === z ? " is-active" : ""}`}
             style={{ "--active-color": ZIP_COLORS[z] }}
             onClick={() => {
+              if (zip === z && !compareMode) return;
+              setLoading(true);
+              setError(null);
               setZip(z);
               setCompareMode(false);
             }}
@@ -89,7 +91,12 @@ export default function ZipOverview() {
           role="tab"
           aria-selected={compareMode}
           className={`btn${compareMode ? " is-active" : ""}`}
-          onClick={() => setCompareMode(true)}
+          onClick={() => {
+            if (compareMode) return;
+            setLoading(true);
+            setError(null);
+            setCompareMode(true);
+          }}
         >
           Compare All
         </button>
