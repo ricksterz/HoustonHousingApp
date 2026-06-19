@@ -27,7 +27,10 @@ FRED_API_KEY = os.environ.get("FRED_API_KEY", "")
 FRED_SERIES = {
     "mortgage_rate_30yr": "MORTGAGE30US",
     "houston_hpi": "ATNHPIUS26420Q",
+    "houston_median_list_price": "MEDLISPRI26420",
     "houston_active_listings": "ACTLISCOU26420",
+    "houston_new_listings": "NEWLISCOU26420",
+    "houston_price_reduced": "PRIREDCOU26420",
     "houston_median_dom": "MEDDAYONMAR26420",
     "houston_list_price_sqft": "MEDLISPRIPERSQUFEE26420",
 }
