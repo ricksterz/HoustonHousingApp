@@ -3,10 +3,13 @@ import { fmt, fmtCompactCurrency } from "./theme";
 
 const METRO_FIELDS = [
   { key: "mortgage_rate_30yr", label: "30yr Mortgage Rate", fmt: (v) => `${v}%` },
+  { key: "houston_median_list_price", label: "Median List Price", fmt: fmtCompactCurrency },
   { key: "houston_hpi", label: "Houston MSA HPI", fmt: fmt.num },
-  { key: "houston_active_listings", label: "Active Listings", fmt: fmt.num },
-  { key: "houston_median_dom", label: "Median DOM", fmt: (v) => `${Math.round(v)} days` },
   { key: "houston_list_price_sqft", label: "List Price/SqFt", fmt: (v) => `$${v}` },
+  { key: "houston_active_listings", label: "Active Listings", fmt: fmt.num },
+  { key: "houston_new_listings", label: "New Listings", fmt: fmt.num },
+  { key: "houston_price_reduced", label: "Price-Reduced Listings", fmt: fmt.num },
+  { key: "houston_median_dom", label: "Median DOM", fmt: (v) => `${Math.round(v)} days` },
 ];
 
 const HEIGHTS_FIELDS = [
