@@ -105,6 +105,8 @@ export async function getHeightsSnapshot() {
   return {
     median_sale_price: agg("redfin_median_sale_price", "avg"),
     zhvi: agg("zhvi", "avg"),
+    sale_to_list_ratio: agg("redfin_sale_to_list_ratio", "avg"),
+    median_sale_price_psf: agg("redfin_median_sale_price_psf", "avg"),
     active_listings: agg("redfin_active_listings", "sum"),
     median_dom: agg("redfin_median_dom", "avg"),
     months_supply: agg("redfin_months_supply", "avg"),
