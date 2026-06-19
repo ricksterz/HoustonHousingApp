@@ -29,7 +29,9 @@ def _zip_trend(con, zip_code: str) -> list[dict]:
                 months_of_supply AS redfin_months_supply,
                 median_dom AS redfin_median_dom,
                 new_listings AS redfin_new_listings,
-                homes_sold AS redfin_homes_sold
+                homes_sold AS redfin_homes_sold,
+                sale_to_list_ratio AS redfin_sale_to_list_ratio,
+                median_sale_price_psf AS redfin_median_sale_price_psf
             FROM redfin_market
             WHERE zip_code = ?
         ),
@@ -59,6 +61,8 @@ def _zip_trend(con, zip_code: str) -> list[dict]:
             redfin_monthly.redfin_median_dom,
             redfin_monthly.redfin_new_listings,
             redfin_monthly.redfin_homes_sold,
+            redfin_monthly.redfin_sale_to_list_ratio,
+            redfin_monthly.redfin_median_sale_price_psf,
             zhvi_monthly.zhvi
         FROM all_months
         LEFT JOIN mls_monthly USING (month)
@@ -81,6 +85,8 @@ def _zip_trend(con, zip_code: str) -> list[dict]:
         "redfin_median_dom",
         "redfin_new_listings",
         "redfin_homes_sold",
+        "redfin_sale_to_list_ratio",
+        "redfin_median_sale_price_psf",
         "zhvi",
     ]
     series = []
