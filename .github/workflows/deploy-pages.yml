@@ -4,6 +4,12 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Auto-deploy after a data refresh commits new JSON. Pushes made by a
+  # workflow's GITHUB_TOKEN don't trigger `push` events, so the refresh
+  # workflows can't fire this directly — workflow_run bridges that gap.
+  workflow_run:
+    workflows: ["Refresh FRED Macro", "Monthly Data Refresh"]
+    types: [completed]
 
 permissions:
   contents: read
@@ -16,6 +22,9 @@ concurrency:
 
 jobs:
   build:
+    # For workflow_run, only deploy on a successful refresh; push/dispatch
+    # are unaffected (github.event.workflow_run is null for those).
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
