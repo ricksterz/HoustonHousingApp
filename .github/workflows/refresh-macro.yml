@@ -1,0 +1,56 @@
+name: Refresh FRED Macro
+
+# Regenerates only frontend/public/data/macro.json from the FRED API.
+# Unlike the full data refresh, this needs no database (no ZHVI/Redfin/MLS),
+# so it can run standalone on demand — handy after adding or changing a
+# FRED series in backend/fred_client.py.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-macro:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Regenerate macro.json from FRED
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          python - <<'PY'
+          import json
+          from backend.fred_client import get_macro_snapshot
+
+          snapshot = get_macro_snapshot()
+          errored = [k for k, v in snapshot.items() if v.get("value") is None]
+          for key, entry in snapshot.items():
+              status = entry.get("error") or entry.get("value")
+              print(f"  {key} ({entry['series']}): {status}")
+          with open("frontend/public/data/macro.json", "w") as f:
+              json.dump(snapshot, f, indent=1)
+          if errored:
+              print(f"::warning::FRED series returned no value: {', '.join(errored)}")
+          PY
+
+      - name: Commit and push if macro.json changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/data/macro.json
+          if git diff --cached --quiet; then
+            echo "No macro.json changes."
+          else
+            git commit -m "Refresh FRED macro snapshot"
+            git push
+          fi
