@@ -1,9 +1,6 @@
 # Secrets — never commit the FRED API key
 .env
 
-# Generated database (rebuild with: python etl/build_db.py)
-etl/housing.duckdb
-
 # Python
 venv/
 __pycache__/
