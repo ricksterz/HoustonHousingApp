@@ -1,0 +1,4 @@
+Contact: mailto:neilrickydsa@gmail.com
+Expires: 2027-06-28T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://heightscomps.com/.well-known/security.txt
