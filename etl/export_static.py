@@ -26,9 +26,9 @@ from backend.valuation import estimate_all  # noqa: E402
 
 OUT_DIR = ROOT / "frontend" / "public" / "data"
 
-# Owner names come from public HCAD records, but redact them by default since
-# the GitHub Pages site is publicly accessible. Set to False to include them.
-REDACT_OWNER_NAMES = True
+# Owner names come from public HCAD records, which are themselves publicly
+# searchable, so there's no added exposure in surfacing them here too.
+REDACT_OWNER_NAMES = False
 
 MAX_PERMITS_PER_PROPERTY = 10
 
