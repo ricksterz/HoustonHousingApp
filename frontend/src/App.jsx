@@ -21,6 +21,16 @@ export default function App() {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
+  // Track SPA view changes as virtual pageviews in GA4
+  useEffect(() => {
+    if (typeof window.gtag !== "function") return;
+    const titles = { overview: "Market Overview", property: "Property Lookup", about: "About & FAQ" };
+    window.gtag("event", "page_view", {
+      page_title: titles[view] ?? view,
+      page_location: window.location.origin + "/?view=" + view,
+    });
+  }, [view]);
+
   useEffect(() => {
     getMacroSnapshot()
       .then(setMacro)
