@@ -27,7 +27,21 @@ export const fmt = {
   currency: (v) =>
     v != null ? `$${Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 })}` : "—",
   num: (v) => (v != null ? Number(v).toLocaleString(undefined, { maximumFractionDigits: 1 }) : "—"),
+  int: (v) => (v != null ? Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 }) : "—"),
   pct: (v) => (v != null ? `${Number(v).toFixed(1)}%` : "—"),
   raw: (v) => (v != null && v !== "" ? String(v) : "—"),
-  date: (v) => (v ? String(v) : "—"),
+  date: (v) => {
+    if (!v) return "—";
+    const [y, m, d] = String(v).split("-").map(Number);
+    if (!y || !m) return String(v);
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return d ? `${months[m - 1]} ${d}, ${y}` : `${months[m - 1]} ${y}`;
+  },
+  monthYear: (v) => {
+    if (!v) return "—";
+    const [y, m] = String(v).split("-").map(Number);
+    if (!y || !m) return String(v);
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    return `${months[m - 1]} ${y}`;
+  },
 };

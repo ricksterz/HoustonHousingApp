@@ -15,6 +15,15 @@ import { filterRange } from "../components/rangeUtils";
 import Table from "../components/Table";
 import { colors, fmt, fmtCompactCurrency } from "../components/theme";
 
+function fmtLotSize(acreage) {
+  if (acreage == null || acreage === "") return "—";
+  const ac = Number(acreage);
+  if (isNaN(ac) || ac === 0) return "—";
+  const sqft = Math.round(ac * 43560);
+  if (ac < 0.5) return `${sqft.toLocaleString()} sq ft`;
+  return `${sqft.toLocaleString()} sq ft (${ac.toFixed(2)} ac)`;
+}
+
 // Most-recent listing decides the sale status. This HAR export contains only
 // Sold + pending-stage statuses; "Active" is handled for future exports.
 function listingStatus(listings) {
@@ -140,14 +149,14 @@ export default function PropertyLookup() {
               <Table
                 columns={[
                   { key: "status", label: "Status" },
-                  { key: "list_date", label: "List Date", type: "date" },
-                  { key: "close_date", label: "Close Date", type: "date" },
+                  { key: "list_date", label: "Listed", type: "date" },
+                  { key: "close_date", label: "Closed", type: "date" },
                   { key: "list_price", label: "List Price", type: "currency" },
-                  { key: "close_price", label: "Close Price", type: "currency" },
-                  { key: "dom", label: "DOM" },
+                  { key: "close_price", label: "Sale Price", type: "currency" },
+                  { key: "dom", label: "Days on Mkt" },
                   { key: "bedrooms", label: "Beds" },
                   { key: "baths_full", label: "Baths" },
-                  { key: "building_sqft", label: "SqFt", type: "num" },
+                  { key: "building_sqft", label: "Sq Ft", type: "num" },
                 ]}
                 rows={data.mls_listings}
               />
@@ -157,11 +166,11 @@ export default function PropertyLookup() {
           <Section title="Buildings">
             <Table
               columns={[
-                { key: "bld_num", label: "Bldg #" },
+                { key: "bld_num", label: "#" },
                 { key: "structure_desc", label: "Type" },
                 { key: "year_built", label: "Year Built" },
                 { key: "year_remodeled", label: "Remodeled" },
-                { key: "im_sq_ft", label: "SqFt", type: "num" },
+                { key: "im_sq_ft", label: "Sq Ft", type: "num" },
               ]}
               rows={data.buildings}
             />
@@ -240,10 +249,10 @@ function ValuationRange({ valuation, hcad, trend }) {
       <div className="panel-title panel-title--gold">Estimated market value range</div>
 
       <div className="range-stats">
-        <RangeStat label="Low · 25th pct" value={fmt.currency(est_low)} />
-        <RangeStat label="Mid · median" value={fmt.currency(est_mid)} variant="mid" />
-        <RangeStat label="High · 75th pct" value={fmt.currency(est_high)} />
-        {hcadVal && <RangeStat label="HCAD market value" value={fmt.currency(hcadVal)} variant="ref" />}
+        <RangeStat label="Low (25th percentile)" value={fmt.currency(est_low)} />
+        <RangeStat label="Mid (median)" value={fmt.currency(est_mid)} variant="mid" />
+        <RangeStat label="High (75th percentile)" value={fmt.currency(est_high)} />
+        {hcadVal && <RangeStat label="HCAD Market Value" value={fmt.currency(hcadVal)} variant="ref" />}
       </div>
 
       <div style={{ position: "relative", height: 44, margin: "0 8px 14px" }}>
@@ -334,12 +343,11 @@ function ValuationRange({ valuation, hcad, trend }) {
       )}
 
       <div className="method-note">
-        Based on {comp_count} comparable MLS sales in ZIP {hcad.zip_code?.trim()} over the last{" "}
-        {window_months} months, within ±{sqft_band_pct}% of this property's {fmt.num(sqft_used)} sqft
-        {year_band_applied ? " and a similar build year" : ""}; each comp's $/sqft is adjusted to{" "}
-        {zhvi_as_of} using the ZIP's Zillow Home Value Index (mid estimate ≈ ${ppsf_mid}/sqft).
-        This is a statistical estimate for informational purposes only — not an appraisal. Condition,
-        renovations, and lot characteristics are not considered.
+        Based on {comp_count} comparable sales in ZIP {hcad.zip_code?.trim()} over the past{" "}
+        {window_months} months, filtered to homes within ±{sqft_band_pct}% of {fmt.int(sqft_used)} sq ft
+        {year_band_applied ? " and a similar build year" : ""}. Each sale's price per sq ft is
+        time-adjusted to {fmt.monthYear(zhvi_as_of)} using Zillow's Home Value Index (≈ ${ppsf_mid}/sq ft at the median).
+        This is a statistical estimate — not an appraisal. Condition, renovations, and finishes are not considered.
       </div>
     </div>
   );
@@ -367,9 +375,9 @@ function ValuationSummary({ hcad, buildings, valuation, listings }) {
   const lastClosed = lastClosedDate(listings);
 
   const stats = [
-    { label: "Site Address", value: hcad.site_address },
+    { label: "Address", value: hcad.site_address },
     {
-      label: "Sellable Estimate",
+      label: "Value Estimate",
       value: valuation ? `${fmtCompactCurrency(valuation.est_low)} – ${fmtCompactCurrency(valuation.est_high)}` : "—",
       accent: true,
       title: valuation
@@ -377,18 +385,18 @@ function ValuationSummary({ hcad, buildings, valuation, listings }) {
         : "Not enough comparable sales",
     },
     { label: "Listing Status", value: status.label, tone: status.tone },
-    { label: "Last Closed (MLS)", value: fmt.date(lastClosed) },
-    { label: "Market Value (HCAD)", value: fmt.currency(hcad.tot_mkt_val) },
+    { label: "Last Sale Date", value: fmt.date(lastClosed) },
+    { label: "HCAD Market Value", value: fmt.currency(hcad.tot_mkt_val) },
     { label: "Assessed Value", value: fmt.currency(hcad.assessed_val) },
     { label: "Land Value", value: fmt.currency(hcad.land_val) },
-    { label: "Improvement Value", value: fmt.currency(hcad.bld_val) },
+    { label: "Building Value", value: fmt.currency(hcad.bld_val) },
     { label: "Year Built", value: fmt.raw(yearBuilt) },
-    { label: "Total SqFt (HCAD)", value: fmt.num(totalSqft) },
-    { label: "Lot Size (acres)", value: fmt.num(hcad.acreage) },
+    { label: "Living Area", value: totalSqft ? `${fmt.int(totalSqft)} sq ft` : "—" },
+    { label: "Lot Size", value: fmtLotSize(hcad.acreage) },
     { label: "Owner", value: fmt.raw(hcad.owner_name) },
     { label: "Neighborhood", value: fmt.raw(hcad.market_area_1_dscr) },
-    { label: "Protested", value: hcad.protested === "Y" ? "Yes" : "No" },
-    { label: "Account", value: hcad.acct },
+    ...(hcad.protested === "Y" ? [{ label: "Tax Protest", value: "Filed", tone: "var(--gold)" }] : []),
+    { label: "HCAD Account", value: hcad.acct },
   ];
 
   return (
