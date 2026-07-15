@@ -12,11 +12,12 @@ DuckDB-specific syntax (ASOF JOIN, quantile_cont) is isolated in this module.
 """
 
 COMP_WINDOW_MONTHS = 12
-SQFT_BAND = 0.15  # comps within ±15% of subject sqft
+SQFT_BAND = 0.25  # comps within ±25% of subject sqft; wider band ensures
+                  # enough lot-band comps for rare/large home sizes
 LOT_BAND = 0.4  # preferred: comps with lot size within ±40% of subject's lot
-MIN_LOT_BAND_COMPS = 8  # apply the lot band only when it leaves this many comps
+MIN_LOT_BAND_COMPS = 5  # apply the lot band when at least this many comps qualify
 YEAR_BAND = 25  # preferred: comps built within ±25 years of subject
-MIN_YEAR_BAND_COMPS = 8  # apply the year band only when it leaves this many comps
+MIN_YEAR_BAND_COMPS = 5  # apply the year band when at least this many comps qualify
 
 _SQL = """
 WITH latest AS (
@@ -166,6 +167,9 @@ def _build_valuation(row):
         lot_band, year_band = False, False
     if not count or q50 is None or not sqft:
         return None
+    spread_pct = round((q75 - q25) / q50 * 100) if q50 else None
+    # confidence: high <20%, medium 20-35%, low >35%
+    confidence = "high" if spread_pct < 20 else ("medium" if spread_pct < 35 else "low")
     return {
         "method": "ZHVI-adjusted MLS comps",
         "window_months": COMP_WINDOW_MONTHS,
@@ -180,6 +184,8 @@ def _build_valuation(row):
         "est_low": round(q25 * sqft),
         "est_mid": round(q50 * sqft),
         "est_high": round(q75 * sqft),
+        "spread_pct": spread_pct,
+        "confidence": confidence,
         "zhvi_as_of": zhvi_as_of.isoformat() if zhvi_as_of else None,
     }
 
