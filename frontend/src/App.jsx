@@ -8,8 +8,13 @@ import About from "./views/About";
 import PropertyLookup from "./views/PropertyLookup";
 import ZipOverview from "./views/ZipOverview";
 
+function parseUrlState() {
+  const p = new URLSearchParams(window.location.search);
+  return { view: p.get("view") || "overview", q: p.get("q") || "" };
+}
+
 export default function App() {
-  const [view, setView] = useState("overview");
+  const [view, setView] = useState(() => parseUrlState().view);
   const [macro, setMacro] = useState(null);
   const [macroLoading, setMacroLoading] = useState(true);
   const [meta, setMeta] = useState(null);
@@ -20,6 +25,14 @@ export default function App() {
     document.documentElement.dataset.theme = theme;
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  function navigate(nextView) {
+    setView(nextView);
+    const p = new URLSearchParams(window.location.search);
+    p.set("view", nextView);
+    if (nextView !== "property") p.delete("q");
+    history.replaceState(null, "", "?" + p.toString());
+  }
 
   // Track SPA view changes as virtual pageviews in GA4
   useEffect(() => {
@@ -72,26 +85,31 @@ export default function App() {
         <nav className="btn-row" aria-label="Main navigation">
           <button
             className={`btn${view === "overview" ? " is-active" : ""}`}
-            onClick={() => setView("overview")}
+            onClick={() => navigate("overview")}
           >
             Market Overview
           </button>
           <button
             className={`btn${view === "property" ? " is-active" : ""}`}
-            onClick={() => setView("property")}
+            onClick={() => navigate("property")}
           >
             Property Lookup
           </button>
           <button
             className={`btn${view === "about" ? " is-active" : ""}`}
-            onClick={() => setView("about")}
+            onClick={() => navigate("about")}
           >
             About &amp; FAQ
           </button>
         </nav>
 
         {view === "overview" && <ZipOverview />}
-        {view === "property" && <PropertyLookup />}
+        {view === "property" && <PropertyLookup initialQuery={parseUrlState().q} onSearch={(addr) => {
+          const p = new URLSearchParams(window.location.search);
+          p.set("view", "property");
+          p.set("q", addr);
+          history.replaceState(null, "", "?" + p.toString());
+        }} />}
         {view === "about" && <About />}
       </div>
 

@@ -429,6 +429,31 @@ body {
   cursor: not-allowed;
 }
 
+/* ---------- Share button ---------- */
+
+.share-btn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text-dim);
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-family: var(--sans);
+  font-weight: 550;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.share-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
 /* ---------- Search ---------- */
 
 .search-row {
