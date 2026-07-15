@@ -248,6 +248,8 @@ function ValuationRange({ valuation, hcad, trend }) {
     sqft_used,
     ppsf_mid,
     zhvi_as_of,
+    confidence,
+    spread_pct,
   } = valuation;
   const hcadVal = Number(hcad.tot_mkt_val) || null;
 
@@ -269,7 +271,14 @@ function ValuationRange({ valuation, hcad, trend }) {
 
   return (
     <div className="panel panel--gold">
-      <div className="panel-title panel-title--gold">Estimated market value range</div>
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 14 }}>
+        <div className="panel-title panel-title--gold" style={{ margin: 0 }}>Estimated market value range</div>
+        {confidence && (
+          <span className={`confidence-badge confidence-badge--${confidence}`}>
+            {confidence === "high" ? "High confidence" : confidence === "medium" ? "Medium confidence" : `Low confidence · ${spread_pct}% range`}
+          </span>
+        )}
+      </div>
 
       <div className="range-stats">
         <RangeStat label="Low (25th percentile)" value={fmt.currency(est_low)} />
