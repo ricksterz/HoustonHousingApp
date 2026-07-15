@@ -21,6 +21,7 @@
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.18);
   --mono: "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
   --sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
 
   font-family: var(--sans);
   font-size: 14px;
@@ -179,10 +180,11 @@ body {
 
 .app-title {
   margin: 0;
-  font-size: clamp(22px, 4.5vw, 30px);
+  font-size: clamp(24px, 5vw, 34px);
   font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.2;
+  font-family: var(--serif);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
   color: var(--text-bright);
 }
 
@@ -311,9 +313,8 @@ body {
   color: var(--text-bright);
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.01em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .stat-value--accent {
@@ -662,9 +663,11 @@ body {
 }
 
 .range-stat-value--mid {
-  font-size: clamp(22px, 4vw, 30px);
-  font-weight: 750;
+  font-size: clamp(24px, 5vw, 34px);
+  font-weight: 700;
+  font-family: var(--serif);
   color: var(--gold);
+  letter-spacing: -0.01em;
 }
 
 .range-stat-value--ref {
