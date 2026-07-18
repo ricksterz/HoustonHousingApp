@@ -45,6 +45,7 @@ comps AS (
       AND l.close_date >= current_date - INTERVAL {window} MONTH
       AND l.close_price >= 50000
       AND l.building_sqft >= 300
+      AND (l.year_built IS NULL OR year(l.close_date) - l.year_built >= 3)
 ),
 subjects AS (
     SELECT acct, zip_code,
