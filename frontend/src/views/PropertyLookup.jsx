@@ -247,7 +247,7 @@ function ValuationRange({ valuation, hcad, trend }) {
     year_band_applied,
     sqft_used,
     ppsf_mid,
-    zhvi_as_of,
+    index_as_of,
     confidence,
     spread_pct,
   } = valuation;
@@ -378,7 +378,8 @@ function ValuationRange({ valuation, hcad, trend }) {
         Based on {comp_count} comparable sales in ZIP {hcad.zip_code?.trim()} over the past{" "}
         {window_months} months, filtered to homes within ±{sqft_band_pct}% of {fmt.int(sqft_used)} sq ft
         {year_band_applied ? " and a similar build year" : ""}. Each sale's price per sq ft is
-        time-adjusted to {fmt.monthYear(zhvi_as_of)} using Zillow's Home Value Index (≈ ${ppsf_mid}/sq ft at the median).
+        time-adjusted to {fmt.monthYear(index_as_of)} using a townhome vs. single-family price index
+        for this ZIP (≈ ${ppsf_mid}/sq ft at the median). Brand-new construction is excluded.
         This is a statistical estimate — not an appraisal. Condition, renovations, and finishes are not considered.
       </div>
     </div>
