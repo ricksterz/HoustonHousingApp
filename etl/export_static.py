@@ -197,6 +197,14 @@ def export_properties(con) -> int:
 
     print(f"  wrote {len(exported_addresses)} properties ({skipped} skipped: blank/duplicate address)")
 
+    # Remove files from prior exports whose slug is no longer exported, so
+    # renamed/removed addresses don't leave stale estimates in the deploy.
+    stale = [p for p in prop_dir.glob("*.json") if p.stem not in seen_slugs]
+    for p in stale:
+        p.unlink()
+    if stale:
+        print(f"  removed {len(stale)} stale property files from prior exports")
+
     exported_addresses.sort()
     write_json(OUT_DIR / "addresses.json", exported_addresses, compact=True)
     print(f"  wrote addresses.json ({len(exported_addresses)} entries)")

@@ -33,14 +33,17 @@ export default function About() {
           <li>
             <strong>Match lot size and age when possible.</strong> Small-lot townhomes/patio homes and
             large-lot single-family homes sell at very different prices per square foot, even on the
-            same street. When there are enough comps (8+), we narrow to homes with a similar lot size
+            same street. When there are enough comps (5+), we narrow to homes with a similar lot size
             (±40%) and, where possible, a similar year built (±25 years), so the comparison is closer
             to apples-to-apples.
           </li>
           <li>
             <strong>Adjust for the current market.</strong> Each comp's sale price per square foot is
-            time-adjusted to today using the Zillow Home Value Index (ZHVI) trend for that ZIP, so an
-            older sale is scaled to reflect where the market is now.
+            time-adjusted to today using a quarterly price index built separately for townhomes
+            (lots under 3,000 sq ft) and single-family homes in that ZIP. The two segments can move
+            in opposite directions — a ZIP-wide index would miss that — so each comp is scaled by
+            its own segment's trend. Brand-new construction is excluded from both the comps and the
+            index, since it sells at a premium over existing homes.
           </li>
           <li>
             <strong>Compute a range.</strong> The "low / mid / high" estimate is the 25th / 50th / 75th
@@ -61,7 +64,7 @@ export default function About() {
         <ul className="text-list">
           <li><strong>HCAD</strong> — Harris County Appraisal District property records (size, lot, year built, assessed value).</li>
           <li><strong>MLS (HAR)</strong> — recent listing and sale history for comps.</li>
-          <li><strong>Zillow ZHVI</strong> — home value index trends used to time-adjust comps.</li>
+          <li><strong>Zillow ZHVI</strong> — home value index trends shown on the Market Overview tab.</li>
           <li><strong>Redfin &amp; FRED</strong> — broader market and macro context shown on the Market Overview tab.</li>
         </ul>
       </div>
