@@ -2,7 +2,7 @@
  "zip": "77009",
  "series": [
   {
-   "month": "2000-01-01",
+   "month": "2000-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -15,10 +15,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 155068.8645341134
+   "zhvi": 156911.67141135933
   },
   {
-   "month": "2000-02-01",
+   "month": "2000-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -31,10 +31,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 152843.55346621937
+   "zhvi": 154659.9151989016
   },
   {
-   "month": "2000-03-01",
+   "month": "2000-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -47,10 +47,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 152198.0153389
+   "zhvi": 154006.70562764586
   },
   {
-   "month": "2000-04-01",
+   "month": "2000-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -63,10 +63,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 152107.23628784742
+   "zhvi": 153914.84777679623
   },
   {
-   "month": "2000-05-01",
+   "month": "2000-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -79,10 +79,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 155272.46859302628
+   "zhvi": 157117.6950595374
   },
   {
-   "month": "2000-06-01",
+   "month": "2000-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -95,10 +95,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 160789.59030671619
+   "zhvi": 162700.38112663332
   },
   {
-   "month": "2000-07-01",
+   "month": "2000-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -111,10 +111,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166539.19365959536
+   "zhvi": 168518.31159748006
   },
   {
-   "month": "2000-08-01",
+   "month": "2000-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -127,10 +127,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 171354.45310921164
+   "zhvi": 173390.7946119695
   },
   {
-   "month": "2000-09-01",
+   "month": "2000-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -143,10 +143,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 174232.21682965287
+   "zhvi": 176302.75709172353
   },
   {
-   "month": "2000-10-01",
+   "month": "2000-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -159,10 +159,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 175365.11481684435
+   "zhvi": 177449.1182083981
   },
   {
-   "month": "2000-11-01",
+   "month": "2000-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -175,10 +175,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 175913.90681045572
+   "zhvi": 178004.43193455096
   },
   {
-   "month": "2000-12-01",
+   "month": "2000-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -191,10 +191,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 175802.60982168544
+   "zhvi": 177891.81231498087
   },
   {
-   "month": "2001-01-01",
+   "month": "2001-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -207,10 +207,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 176252.09004467106
+   "zhvi": 178346.6340696053
   },
   {
-   "month": "2001-02-01",
+   "month": "2001-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -223,10 +223,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 176838.20141379096
+   "zhvi": 178939.71066714227
   },
   {
-   "month": "2001-03-01",
+   "month": "2001-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -239,10 +239,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 176341.86368672
+   "zhvi": 178437.474563375
   },
   {
-   "month": "2001-04-01",
+   "month": "2001-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -255,10 +255,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 174921.74900913378
+   "zhvi": 177000.48353151744
   },
   {
-   "month": "2001-05-01",
+   "month": "2001-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -271,10 +271,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 174333.64981173465
+   "zhvi": 176405.39548275396
   },
   {
-   "month": "2001-06-01",
+   "month": "2001-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -287,10 +287,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 176220.75157740855
+   "zhvi": 178314.92318236557
   },
   {
-   "month": "2001-07-01",
+   "month": "2001-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -303,10 +303,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 179179.75248571322
+   "zhvi": 181309.08825621684
   },
   {
-   "month": "2001-08-01",
+   "month": "2001-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -319,10 +319,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 182659.4421001507
+   "zhvi": 184830.12979498436
   },
   {
-   "month": "2001-09-01",
+   "month": "2001-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -335,10 +335,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 185436.0078887491
+   "zhvi": 187639.69172723623
   },
   {
-   "month": "2001-10-01",
+   "month": "2001-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -351,10 +351,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 186796.9099318304
+   "zhvi": 189016.76645367197
   },
   {
-   "month": "2001-11-01",
+   "month": "2001-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -367,10 +367,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 188447.21041050964
+   "zhvi": 190686.67876791066
   },
   {
-   "month": "2001-12-01",
+   "month": "2001-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -383,10 +383,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 189734.80499330873
+   "zhvi": 191989.5748631018
   },
   {
-   "month": "2002-01-01",
+   "month": "2002-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -399,10 +399,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 190131.16643388753
+   "zhvi": 192390.64658250252
   },
   {
-   "month": "2002-02-01",
+   "month": "2002-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -415,10 +415,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 186096.07462728609
+   "zhvi": 188307.60256477306
   },
   {
-   "month": "2002-03-01",
+   "month": "2002-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -431,10 +431,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 179541.83975111894
+   "zhvi": 181675.4784931109
   },
   {
-   "month": "2002-04-01",
+   "month": "2002-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -447,10 +447,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 173097.97985922726
+   "zhvi": 175155.04107960992
   },
   {
-   "month": "2002-05-01",
+   "month": "2002-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -463,10 +463,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166912.48971598476
+   "zhvi": 168896.04382835227
   },
   {
-   "month": "2002-06-01",
+   "month": "2002-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -479,10 +479,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163507.7237137442
+   "zhvi": 165450.816278765
   },
   {
-   "month": "2002-07-01",
+   "month": "2002-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -495,10 +495,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162115.76949414468
+   "zhvi": 164042.32035805486
   },
   {
-   "month": "2002-08-01",
+   "month": "2002-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -511,10 +511,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163729.5311869581
+   "zhvi": 165675.25966692093
   },
   {
-   "month": "2002-09-01",
+   "month": "2002-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -527,10 +527,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166147.95144427748
+   "zhvi": 168122.41993917263
   },
   {
-   "month": "2002-10-01",
+   "month": "2002-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -543,10 +543,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168081.37761711815
+   "zhvi": 170078.82255579307
   },
   {
-   "month": "2002-11-01",
+   "month": "2002-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -559,10 +559,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168619.6052254534
+   "zhvi": 170623.44635166178
   },
   {
-   "month": "2002-12-01",
+   "month": "2002-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -575,10 +575,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167684.94884690063
+   "zhvi": 169677.68270662174
   },
   {
-   "month": "2003-01-01",
+   "month": "2003-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -591,10 +591,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166935.09020880936
+   "zhvi": 168918.91290084124
   },
   {
-   "month": "2003-02-01",
+   "month": "2003-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -607,10 +607,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 165582.25831586085
+   "zhvi": 167550.00422856267
   },
   {
-   "month": "2003-03-01",
+   "month": "2003-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -623,10 +623,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163715.52342262756
+   "zhvi": 165661.08543716525
   },
   {
-   "month": "2003-04-01",
+   "month": "2003-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -639,10 +639,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161577.7207820243
+   "zhvi": 163497.87758436718
   },
   {
-   "month": "2003-05-01",
+   "month": "2003-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -655,10 +655,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 159451.44903253054
+   "zhvi": 161346.33765344552
   },
   {
-   "month": "2003-06-01",
+   "month": "2003-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -671,10 +671,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 157259.91639694906
+   "zhvi": 159128.76128932644
   },
   {
-   "month": "2003-07-01",
+   "month": "2003-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -687,10 +687,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 155714.36304402995
+   "zhvi": 157564.84089440657
   },
   {
-   "month": "2003-08-01",
+   "month": "2003-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -703,10 +703,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 155894.1880798404
+   "zhvi": 157746.80293440344
   },
   {
-   "month": "2003-09-01",
+   "month": "2003-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -719,10 +719,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 156206.88057372256
+   "zhvi": 158063.21140234603
   },
   {
-   "month": "2003-10-01",
+   "month": "2003-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -735,10 +735,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 156423.77801163305
+   "zhvi": 158282.6864053366
   },
   {
-   "month": "2003-11-01",
+   "month": "2003-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -751,10 +751,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 156971.04766588495
+   "zhvi": 158836.45970095837
   },
   {
-   "month": "2003-12-01",
+   "month": "2003-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -767,10 +767,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 158179.90487456403
+   "zhvi": 160059.6827230743
   },
   {
-   "month": "2004-01-01",
+   "month": "2004-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -783,10 +783,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 159884.36768313116
+   "zhvi": 161784.4010213239
   },
   {
-   "month": "2004-02-01",
+   "month": "2004-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -799,10 +799,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 159844.75671484764
+   "zhvi": 161744.31932434195
   },
   {
-   "month": "2004-03-01",
+   "month": "2004-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -815,10 +815,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 159491.6193103454
+   "zhvi": 161386.9853066796
   },
   {
-   "month": "2004-04-01",
+   "month": "2004-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -831,10 +831,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 157165.13505686293
+   "zhvi": 159032.85358705357
   },
   {
-   "month": "2004-05-01",
+   "month": "2004-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -847,10 +847,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 155763.48319682782
+   "zhvi": 157614.54478111942
   },
   {
-   "month": "2004-06-01",
+   "month": "2004-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -863,10 +863,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 154450.73978578494
+   "zhvi": 156286.20099411966
   },
   {
-   "month": "2004-07-01",
+   "month": "2004-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -879,10 +879,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 155012.85682179322
+   "zhvi": 156854.9981147657
   },
   {
-   "month": "2004-08-01",
+   "month": "2004-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -895,10 +895,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 156427.6350078203
+   "zhvi": 158286.58923728275
   },
   {
-   "month": "2004-09-01",
+   "month": "2004-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -911,10 +911,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 158186.39029692672
+   "zhvi": 160066.2452168785
   },
   {
-   "month": "2004-10-01",
+   "month": "2004-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -927,10 +927,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 159318.7309976075
+   "zhvi": 161212.04242436262
   },
   {
-   "month": "2004-11-01",
+   "month": "2004-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -943,10 +943,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 160098.9252254291
+   "zhvi": 162001.5083218578
   },
   {
-   "month": "2004-12-01",
+   "month": "2004-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -959,10 +959,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161595.9836689251
+   "zhvi": 163516.35750370478
   },
   {
-   "month": "2005-01-01",
+   "month": "2005-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -975,10 +975,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163516.45279761942
+   "zhvi": 165459.64909729906
   },
   {
-   "month": "2005-02-01",
+   "month": "2005-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -991,10 +991,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 165040.66330847525
+   "zhvi": 167001.97301615722
   },
   {
-   "month": "2005-03-01",
+   "month": "2005-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1007,10 +1007,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 165046.3726491714
+   "zhvi": 167007.75020549816
   },
   {
-   "month": "2005-04-01",
+   "month": "2005-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1023,10 +1023,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 164263.68972225682
+   "zhvi": 166215.76603371568
   },
   {
-   "month": "2005-05-01",
+   "month": "2005-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1039,10 +1039,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162888.31945479335
+   "zhvi": 164824.051145459
   },
   {
-   "month": "2005-06-01",
+   "month": "2005-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1055,10 +1055,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162041.33606001383
+   "zhvi": 163967.0023721168
   },
   {
-   "month": "2005-07-01",
+   "month": "2005-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1071,10 +1071,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161891.46796857458
+   "zhvi": 163815.35327873103
   },
   {
-   "month": "2005-08-01",
+   "month": "2005-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1087,10 +1087,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162143.19004088442
+   "zhvi": 164070.06676500008
   },
   {
-   "month": "2005-09-01",
+   "month": "2005-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1103,10 +1103,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162107.15378997655
+   "zhvi": 164033.6022666087
   },
   {
-   "month": "2005-10-01",
+   "month": "2005-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1119,10 +1119,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161452.66059765182
+   "zhvi": 163371.33121017469
   },
   {
-   "month": "2005-11-01",
+   "month": "2005-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1135,10 +1135,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161205.8622822453
+   "zhvi": 163121.59999373552
   },
   {
-   "month": "2005-12-01",
+   "month": "2005-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1151,10 +1151,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161376.28271464052
+   "zhvi": 163294.0456679211
   },
   {
-   "month": "2006-01-01",
+   "month": "2006-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1167,10 +1167,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162104.38820966717
+   "zhvi": 164030.80382070484
   },
   {
-   "month": "2006-02-01",
+   "month": "2006-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1183,10 +1183,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162109.59373783867
+   "zhvi": 164036.07121031542
   },
   {
-   "month": "2006-03-01",
+   "month": "2006-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1199,10 +1199,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161948.2618421229
+   "zhvi": 163872.82207913243
   },
   {
-   "month": "2006-04-01",
+   "month": "2006-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1215,10 +1215,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161938.4551857238
+   "zhvi": 163862.89888242134
   },
   {
-   "month": "2006-05-01",
+   "month": "2006-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1231,10 +1231,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162415.19570796433
+   "zhvi": 164345.3048921579
   },
   {
-   "month": "2006-06-01",
+   "month": "2006-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1247,10 +1247,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163092.31978349594
+   "zhvi": 165030.4757726164
   },
   {
-   "month": "2006-07-01",
+   "month": "2006-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1263,10 +1263,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163593.3814063823
+   "zhvi": 165537.49191001698
   },
   {
-   "month": "2006-08-01",
+   "month": "2006-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1279,10 +1279,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 164638.00214629964
+   "zhvi": 166594.52671054806
   },
   {
-   "month": "2006-09-01",
+   "month": "2006-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1295,10 +1295,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 165980.03938160275
+   "zhvi": 167952.51244366317
   },
   {
-   "month": "2006-10-01",
+   "month": "2006-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1311,10 +1311,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167543.5804656384
+   "zhvi": 169534.63433224117
   },
   {
-   "month": "2006-11-01",
+   "month": "2006-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1327,10 +1327,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168626.74511588676
+   "zhvi": 170630.67109110174
   },
   {
-   "month": "2006-12-01",
+   "month": "2006-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1343,10 +1343,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169678.5070944026
+   "zhvi": 171694.93199525983
   },
   {
-   "month": "2007-01-01",
+   "month": "2007-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1359,10 +1359,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170313.0591584875
+   "zhvi": 172337.02494713795
   },
   {
-   "month": "2007-02-01",
+   "month": "2007-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1375,10 +1375,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170472.64671542382
+   "zhvi": 172498.50901017385
   },
   {
-   "month": "2007-03-01",
+   "month": "2007-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1391,10 +1391,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170033.16505265384
+   "zhvi": 172053.80463662304
   },
   {
-   "month": "2007-04-01",
+   "month": "2007-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1407,10 +1407,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169707.09442956513
+   "zhvi": 171723.8590565047
   },
   {
-   "month": "2007-05-01",
+   "month": "2007-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1423,10 +1423,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169501.43251070668
+   "zhvi": 171515.75309319157
   },
   {
-   "month": "2007-06-01",
+   "month": "2007-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1439,10 +1439,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169092.3460638448
+   "zhvi": 171101.8051461186
   },
   {
-   "month": "2007-07-01",
+   "month": "2007-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1455,10 +1455,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168493.23851218892
+   "zhvi": 170495.57792205314
   },
   {
-   "month": "2007-08-01",
+   "month": "2007-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1471,10 +1471,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167826.60054797493
+   "zhvi": 169821.0177677285
   },
   {
-   "month": "2007-09-01",
+   "month": "2007-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1487,10 +1487,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167961.62682956088
+   "zhvi": 169957.64867420844
   },
   {
-   "month": "2007-10-01",
+   "month": "2007-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1503,10 +1503,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168065.42678008229
+   "zhvi": 170062.68216225042
   },
   {
-   "month": "2007-11-01",
+   "month": "2007-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1519,10 +1519,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168296.76507395494
+   "zhvi": 170296.76963340119
   },
   {
-   "month": "2007-12-01",
+   "month": "2007-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1535,10 +1535,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168975.40894079662
+   "zhvi": 170983.47836606088
   },
   {
-   "month": "2008-01-01",
+   "month": "2008-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1551,10 +1551,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169505.33636715772
+   "zhvi": 171519.7033422794
   },
   {
-   "month": "2008-02-01",
+   "month": "2008-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1567,10 +1567,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170359.0486692355
+   "zhvi": 172383.56098788683
   },
   {
-   "month": "2008-03-01",
+   "month": "2008-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1583,10 +1583,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170539.17552176435
+   "zhvi": 172565.8284313307
   },
   {
-   "month": "2008-04-01",
+   "month": "2008-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1599,10 +1599,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170784.41501794034
+   "zhvi": 172813.9823038483
   },
   {
-   "month": "2008-05-01",
+   "month": "2008-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1615,10 +1615,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170587.51979912602
+   "zhvi": 172614.74722226127
   },
   {
-   "month": "2008-06-01",
+   "month": "2008-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1631,10 +1631,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169935.95308035405
+   "zhvi": 171955.43741699707
   },
   {
-   "month": "2008-07-01",
+   "month": "2008-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1647,10 +1647,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168823.63982338514
+   "zhvi": 170829.90565529643
   },
   {
-   "month": "2008-08-01",
+   "month": "2008-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1663,10 +1663,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167571.58316327987
+   "zhvi": 169562.96980825136
   },
   {
-   "month": "2008-09-01",
+   "month": "2008-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1679,10 +1679,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166206.93454469272
+   "zhvi": 168182.1039827677
   },
   {
-   "month": "2008-10-01",
+   "month": "2008-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1695,10 +1695,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166067.9458196221
+   "zhvi": 168041.4635439299
   },
   {
-   "month": "2008-11-01",
+   "month": "2008-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1711,10 +1711,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 165933.25689033183
+   "zhvi": 167905.17399877173
   },
   {
-   "month": "2008-12-01",
+   "month": "2008-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1727,10 +1727,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166299.26689786228
+   "zhvi": 168275.53359486104
   },
   {
-   "month": "2009-01-01",
+   "month": "2009-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1743,10 +1743,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166253.40936423242
+   "zhvi": 168229.13109961947
   },
   {
-   "month": "2009-02-01",
+   "month": "2009-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1759,10 +1759,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166808.1791710067
+   "zhvi": 168790.49367805218
   },
   {
-   "month": "2009-03-01",
+   "month": "2009-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1775,10 +1775,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167695.3296306755
+   "zhvi": 169688.18685352107
   },
   {
-   "month": "2009-04-01",
+   "month": "2009-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1791,10 +1791,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168799.5037592056
+   "zhvi": 170805.48276303432
   },
   {
-   "month": "2009-05-01",
+   "month": "2009-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1807,10 +1807,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170009.7775183946
+   "zhvi": 172030.13916965856
   },
   {
-   "month": "2009-06-01",
+   "month": "2009-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1823,10 +1823,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 171142.7871805758
+   "zhvi": 173176.61328844572
   },
   {
-   "month": "2009-07-01",
+   "month": "2009-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1839,10 +1839,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 172097.66739140212
+   "zhvi": 174142.8411016727
   },
   {
-   "month": "2009-08-01",
+   "month": "2009-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1855,10 +1855,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 171557.92465661422
+   "zhvi": 173596.6841738964
   },
   {
-   "month": "2009-09-01",
+   "month": "2009-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1871,10 +1871,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170045.05143359888
+   "zhvi": 172065.83227290364
   },
   {
-   "month": "2009-10-01",
+   "month": "2009-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1887,10 +1887,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168269.73031986927
+   "zhvi": 170269.413603791
   },
   {
-   "month": "2009-11-01",
+   "month": "2009-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1903,10 +1903,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167457.72836711342
+   "zhvi": 169447.76198482153
   },
   {
-   "month": "2009-12-01",
+   "month": "2009-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1919,10 +1919,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167433.93152521577
+   "zhvi": 169423.68234609012
   },
   {
-   "month": "2010-01-01",
+   "month": "2010-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1935,10 +1935,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167077.26920116963
+   "zhvi": 169062.78151945627
   },
   {
-   "month": "2010-02-01",
+   "month": "2010-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1951,10 +1951,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 166984.79279997366
+   "zhvi": 168969.206147499
   },
   {
-   "month": "2010-03-01",
+   "month": "2010-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1967,10 +1967,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167499.2460057283
+   "zhvi": 169489.7730106176
   },
   {
-   "month": "2010-04-01",
+   "month": "2010-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1983,10 +1983,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 168989.84106513215
+   "zhvi": 170998.08199882924
   },
   {
-   "month": "2010-05-01",
+   "month": "2010-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -1999,10 +1999,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 170891.29564658695
+   "zhvi": 172922.13308016816
   },
   {
-   "month": "2010-06-01",
+   "month": "2010-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2015,10 +2015,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 171855.95705973188
+   "zhvi": 173898.2583335346
   },
   {
-   "month": "2010-07-01",
+   "month": "2010-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2031,10 +2031,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 171222.38550589324
+   "zhvi": 173257.15754408736
   },
   {
-   "month": "2010-08-01",
+   "month": "2010-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2047,10 +2047,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 169403.32770176278
+   "zhvi": 171416.48242663205
   },
   {
-   "month": "2010-09-01",
+   "month": "2010-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2063,10 +2063,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 167438.86581143577
+   "zhvi": 169428.6752703649
   },
   {
-   "month": "2010-10-01",
+   "month": "2010-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2079,10 +2079,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 165731.515514095
+   "zhvi": 167701.03516901183
   },
   {
-   "month": "2010-11-01",
+   "month": "2010-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2095,10 +2095,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 164558.02394515625
+   "zhvi": 166513.59806471286
   },
   {
-   "month": "2010-12-01",
+   "month": "2010-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2111,10 +2111,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 163509.34058555574
+   "zhvi": 165452.45236515175
   },
   {
-   "month": "2011-01-01",
+   "month": "2011-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2127,10 +2127,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 162226.1149010296
+   "zhvi": 164153.97708733298
   },
   {
-   "month": "2011-02-01",
+   "month": "2011-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2143,10 +2143,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 160654.2596227487
+   "zhvi": 162563.44220031475
   },
   {
-   "month": "2011-03-01",
+   "month": "2011-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2159,10 +2159,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 158813.33387888133
+   "zhvi": 160700.63926897012
   },
   {
-   "month": "2011-04-01",
+   "month": "2011-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2175,10 +2175,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 157946.4172597984
+   "zhvi": 159823.4203889372
   },
   {
-   "month": "2011-05-01",
+   "month": "2011-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2191,10 +2191,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 157640.90458138235
+   "zhvi": 159514.2770599288
   },
   {
-   "month": "2011-06-01",
+   "month": "2011-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2207,10 +2207,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 157909.49761976275
+   "zhvi": 159786.06200340114
   },
   {
-   "month": "2011-07-01",
+   "month": "2011-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2223,10 +2223,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 158827.92181414613
+   "zhvi": 160715.40056429335
   },
   {
-   "month": "2011-08-01",
+   "month": "2011-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2239,10 +2239,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 159665.89806627887
+   "zhvi": 161563.33515593564
   },
   {
-   "month": "2011-09-01",
+   "month": "2011-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2255,10 +2255,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 160384.69957812692
+   "zhvi": 162290.67875889517
   },
   {
-   "month": "2011-10-01",
+   "month": "2011-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2271,10 +2271,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 160309.35044674028
+   "zhvi": 162214.43419374156
   },
   {
-   "month": "2011-11-01",
+   "month": "2011-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2287,10 +2287,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 160401.42274242677
+   "zhvi": 162307.60065788156
   },
   {
-   "month": "2011-12-01",
+   "month": "2011-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2303,10 +2303,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 161293.8594522095
+   "zhvi": 163210.6429041866
   },
   {
-   "month": "2012-01-01",
+   "month": "2012-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2319,10 +2319,10 @@
    "redfin_homes_sold": 72.0,
    "redfin_sale_to_list_ratio": 96.18307349,
    "redfin_median_sale_price_psf": 158.124962864,
-   "zhvi": 162236.33197881898
+   "zhvi": 164164.31558279865
   },
   {
-   "month": "2012-02-01",
+   "month": "2012-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2335,10 +2335,10 @@
    "redfin_homes_sold": 80.0,
    "redfin_sale_to_list_ratio": 96.82374979000001,
    "redfin_median_sale_price_psf": 162.193807483,
-   "zhvi": 163143.7919303961
+   "zhvi": 165082.55960405094
   },
   {
-   "month": "2012-03-01",
+   "month": "2012-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2351,10 +2351,10 @@
    "redfin_homes_sold": 101.0,
    "redfin_sale_to_list_ratio": 96.65333252,
    "redfin_median_sale_price_psf": 192.165558019,
-   "zhvi": 163510.21231803912
+   "zhvi": 165453.33445712668
   },
   {
-   "month": "2012-04-01",
+   "month": "2012-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2367,10 +2367,10 @@
    "redfin_homes_sold": 106.0,
    "redfin_sale_to_list_ratio": 96.2037588,
    "redfin_median_sale_price_psf": 195.182724252,
-   "zhvi": 163997.25510914714
+   "zhvi": 165946.16516580063
   },
   {
-   "month": "2012-05-01",
+   "month": "2012-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2383,10 +2383,10 @@
    "redfin_homes_sold": 118.0,
    "redfin_sale_to_list_ratio": 95.71563923000001,
    "redfin_median_sale_price_psf": 195.048762191,
-   "zhvi": 164241.95407673632
+   "zhvi": 166193.77208619955
   },
   {
-   "month": "2012-06-01",
+   "month": "2012-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2399,10 +2399,10 @@
    "redfin_homes_sold": 112.0,
    "redfin_sale_to_list_ratio": 95.47330206,
    "redfin_median_sale_price_psf": 162.593984962,
-   "zhvi": 165067.3260122761
+   "zhvi": 167028.95257411167
   },
   {
-   "month": "2012-07-01",
+   "month": "2012-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2415,10 +2415,10 @@
    "redfin_homes_sold": 118.0,
    "redfin_sale_to_list_ratio": 95.92765685,
    "redfin_median_sale_price_psf": 162.018459069,
-   "zhvi": 166388.5407677144
+   "zhvi": 168365.8683772422
   },
   {
-   "month": "2012-08-01",
+   "month": "2012-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2431,10 +2431,10 @@
    "redfin_homes_sold": 116.0,
    "redfin_sale_to_list_ratio": 95.16327844999999,
    "redfin_median_sale_price_psf": 155.62369729,
-   "zhvi": 167784.77110041806
+   "zhvi": 169778.69122751572
   },
   {
-   "month": "2012-09-01",
+   "month": "2012-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2447,10 +2447,10 @@
    "redfin_homes_sold": 122.0,
    "redfin_sale_to_list_ratio": 95.56175673,
    "redfin_median_sale_price_psf": 156.163281163,
-   "zhvi": 168806.90521931564
+   "zhvi": 170812.97218059198
   },
   {
-   "month": "2012-10-01",
+   "month": "2012-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2463,10 +2463,10 @@
    "redfin_homes_sold": 106.0,
    "redfin_sale_to_list_ratio": 95.57975761,
    "redfin_median_sale_price_psf": 148.370452647,
-   "zhvi": 169161.9332118468
+   "zhvi": 171172.21925364723
   },
   {
-   "month": "2012-11-01",
+   "month": "2012-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2479,10 +2479,10 @@
    "redfin_homes_sold": 85.0,
    "redfin_sale_to_list_ratio": 96.41202493,
    "redfin_median_sale_price_psf": 157.176470588,
-   "zhvi": 169424.439175106
+   "zhvi": 171437.84478443442
   },
   {
-   "month": "2012-12-01",
+   "month": "2012-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2495,10 +2495,10 @@
    "redfin_homes_sold": 77.0,
    "redfin_sale_to_list_ratio": 96.48847093,
    "redfin_median_sale_price_psf": 188.679245283,
-   "zhvi": 170036.99592666607
+   "zhvi": 172057.6810359629
   },
   {
-   "month": "2013-01-01",
+   "month": "2013-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2511,10 +2511,10 @@
    "redfin_homes_sold": 102.0,
    "redfin_sale_to_list_ratio": 95.93103923000001,
    "redfin_median_sale_price_psf": 180.975050097,
-   "zhvi": 171084.17334917912
+   "zhvi": 173117.30290218614
   },
   {
-   "month": "2013-02-01",
+   "month": "2013-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2527,10 +2527,10 @@
    "redfin_homes_sold": 134.0,
    "redfin_sale_to_list_ratio": 96.70537088,
    "redfin_median_sale_price_psf": 183.567872743,
-   "zhvi": 173093.91318984397
+   "zhvi": 175150.92608275273
   },
   {
-   "month": "2013-03-01",
+   "month": "2013-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2543,10 +2543,10 @@
    "redfin_homes_sold": 138.0,
    "redfin_sale_to_list_ratio": 97.37568031,
    "redfin_median_sale_price_psf": 186.291108944,
-   "zhvi": 175389.5013686788
+   "zhvi": 177473.79456505782
   },
   {
-   "month": "2013-04-01",
+   "month": "2013-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2559,10 +2559,10 @@
    "redfin_homes_sold": 141.0,
    "redfin_sale_to_list_ratio": 97.96615858,
    "redfin_median_sale_price_psf": 192.932575142,
-   "zhvi": 178320.83805541592
+   "zhvi": 180439.96666135357
   },
   {
-   "month": "2013-05-01",
+   "month": "2013-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2575,10 +2575,10 @@
    "redfin_homes_sold": 136.0,
    "redfin_sale_to_list_ratio": 97.83432452000001,
    "redfin_median_sale_price_psf": 188.734328808,
-   "zhvi": 181926.95681427352
+   "zhvi": 184088.93980280403
   },
   {
-   "month": "2013-06-01",
+   "month": "2013-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2591,10 +2591,10 @@
    "redfin_homes_sold": 130.0,
    "redfin_sale_to_list_ratio": 98.17703113,
    "redfin_median_sale_price_psf": 193.941070099,
-   "zhvi": 185496.60957259304
+   "zhvi": 187701.01358917565
   },
   {
-   "month": "2013-07-01",
+   "month": "2013-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2607,10 +2607,10 @@
    "redfin_homes_sold": 118.0,
    "redfin_sale_to_list_ratio": 98.06264984,
    "redfin_median_sale_price_psf": 227.837337993,
-   "zhvi": 188909.59496902334
+   "zhvi": 191154.558210563
   },
   {
-   "month": "2013-08-01",
+   "month": "2013-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2623,10 +2623,10 @@
    "redfin_homes_sold": 106.0,
    "redfin_sale_to_list_ratio": 97.3240759,
    "redfin_median_sale_price_psf": 205.078125,
-   "zhvi": 191306.66761010583
+   "zhvi": 193580.11717584427
   },
   {
-   "month": "2013-09-01",
+   "month": "2013-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2639,10 +2639,10 @@
    "redfin_homes_sold": 104.0,
    "redfin_sale_to_list_ratio": 96.6270355,
    "redfin_median_sale_price_psf": 201.367140152,
-   "zhvi": 193709.01706388884
+   "zhvi": 196011.01566239586
   },
   {
-   "month": "2013-10-01",
+   "month": "2013-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2655,10 +2655,10 @@
    "redfin_homes_sold": 113.0,
    "redfin_sale_to_list_ratio": 97.57216255,
    "redfin_median_sale_price_psf": 199.806013579,
-   "zhvi": 196159.1650760121
+   "zhvi": 198490.28073564274
   },
   {
-   "month": "2013-11-01",
+   "month": "2013-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2671,10 +2671,10 @@
    "redfin_homes_sold": 113.0,
    "redfin_sale_to_list_ratio": 98.24963844999999,
    "redfin_median_sale_price_psf": 216.666666667,
-   "zhvi": 198274.4173427437
+   "zhvi": 200630.6702305081
   },
   {
-   "month": "2013-12-01",
+   "month": "2013-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2687,10 +2687,10 @@
    "redfin_homes_sold": 127.0,
    "redfin_sale_to_list_ratio": 98.05860009,
    "redfin_median_sale_price_psf": 209.171359614,
-   "zhvi": 200587.36260437997
+   "zhvi": 202971.10206365984
   },
   {
-   "month": "2014-01-01",
+   "month": "2014-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2703,10 +2703,10 @@
    "redfin_homes_sold": 135.0,
    "redfin_sale_to_list_ratio": 97.48416613,
    "redfin_median_sale_price_psf": 200.475435816,
-   "zhvi": 203165.45106651998
+   "zhvi": 205579.82800523486
   },
   {
-   "month": "2014-02-01",
+   "month": "2014-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2719,10 +2719,10 @@
    "redfin_homes_sold": 166.0,
    "redfin_sale_to_list_ratio": 98.0864201,
    "redfin_median_sale_price_psf": 202.276763167,
-   "zhvi": 206570.70017412535
+   "zhvi": 209025.54440131283
   },
   {
-   "month": "2014-03-01",
+   "month": "2014-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2735,10 +2735,10 @@
    "redfin_homes_sold": 173.0,
    "redfin_sale_to_list_ratio": 98.24705784999999,
    "redfin_median_sale_price_psf": 204.505300353,
-   "zhvi": 209834.27309651554
+   "zhvi": 212327.90096117812
   },
   {
-   "month": "2014-04-01",
+   "month": "2014-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2751,10 +2751,10 @@
    "redfin_homes_sold": 158.0,
    "redfin_sale_to_list_ratio": 98.83579753000001,
    "redfin_median_sale_price_psf": 229.366563114,
-   "zhvi": 213496.0082625614
+   "zhvi": 216033.151443899
   },
   {
-   "month": "2014-05-01",
+   "month": "2014-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2767,10 +2767,10 @@
    "redfin_homes_sold": 139.0,
    "redfin_sale_to_list_ratio": 98.55905617,
    "redfin_median_sale_price_psf": 232.716049383,
-   "zhvi": 218142.898910124
+   "zhvi": 220735.26479570233
   },
   {
-   "month": "2014-06-01",
+   "month": "2014-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2783,10 +2783,10 @@
    "redfin_homes_sold": 137.0,
    "redfin_sale_to_list_ratio": 99.26179761,
    "redfin_median_sale_price_psf": 234.567901235,
-   "zhvi": 223645.05710746313
+   "zhvi": 226302.80952305967
   },
   {
-   "month": "2014-07-01",
+   "month": "2014-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2799,10 +2799,10 @@
    "redfin_homes_sold": 137.0,
    "redfin_sale_to_list_ratio": 98.86876562,
    "redfin_median_sale_price_psf": 215.951843491,
-   "zhvi": 229224.53846436238
+   "zhvi": 231948.59630269383
   },
   {
-   "month": "2014-08-01",
+   "month": "2014-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2815,10 +2815,10 @@
    "redfin_homes_sold": 141.0,
    "redfin_sale_to_list_ratio": 98.43762371,
    "redfin_median_sale_price_psf": 223.981900452,
-   "zhvi": 234401.72219375428
+   "zhvi": 237187.30463155927
   },
   {
-   "month": "2014-09-01",
+   "month": "2014-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2831,10 +2831,10 @@
    "redfin_homes_sold": 136.0,
    "redfin_sale_to_list_ratio": 97.74443163,
    "redfin_median_sale_price_psf": 216.139954853,
-   "zhvi": 238817.5202443446
+   "zhvi": 241655.57912892432
   },
   {
-   "month": "2014-10-01",
+   "month": "2014-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2847,10 +2847,10 @@
    "redfin_homes_sold": 140.0,
    "redfin_sale_to_list_ratio": 97.96846236,
    "redfin_median_sale_price_psf": 223.098929494,
-   "zhvi": 242931.71098312378
+   "zhvi": 245818.66207446915
   },
   {
-   "month": "2014-11-01",
+   "month": "2014-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2863,10 +2863,10 @@
    "redfin_homes_sold": 108.0,
    "redfin_sale_to_list_ratio": 99.57399628,
    "redfin_median_sale_price_psf": 215.653253993,
-   "zhvi": 247390.37023100877
+   "zhvi": 250330.3071228885
   },
   {
-   "month": "2014-12-01",
+   "month": "2014-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2879,10 +2879,10 @@
    "redfin_homes_sold": 100.0,
    "redfin_sale_to_list_ratio": 99.26263716,
    "redfin_median_sale_price_psf": 215.653253993,
-   "zhvi": 252524.12008406792
+   "zhvi": 255525.0654160603
   },
   {
-   "month": "2015-01-01",
+   "month": "2015-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2895,10 +2895,10 @@
    "redfin_homes_sold": 90.0,
    "redfin_sale_to_list_ratio": 98.43553456000001,
    "redfin_median_sale_price_psf": 212.023825549,
-   "zhvi": 258196.99186735527
+   "zhvi": 261265.35245493343
   },
   {
-   "month": "2015-02-01",
+   "month": "2015-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2911,10 +2911,10 @@
    "redfin_homes_sold": 108.0,
    "redfin_sale_to_list_ratio": 96.95996653,
    "redfin_median_sale_price_psf": 216.433395143,
-   "zhvi": 263708.55675992
+   "zhvi": 266842.41566477105
   },
   {
-   "month": "2015-03-01",
+   "month": "2015-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2927,10 +2927,10 @@
    "redfin_homes_sold": 119.0,
    "redfin_sale_to_list_ratio": 96.93338878,
    "redfin_median_sale_price_psf": 219.573400251,
-   "zhvi": 268505.61028726894
+   "zhvi": 271696.4764015122
   },
   {
-   "month": "2015-04-01",
+   "month": "2015-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2943,10 +2943,10 @@
    "redfin_homes_sold": 135.0,
    "redfin_sale_to_list_ratio": 97.11949815999999,
    "redfin_median_sale_price_psf": 234.772727273,
-   "zhvi": 272809.73514059355
+   "zhvi": 276051.75060002645
   },
   {
-   "month": "2015-05-01",
+   "month": "2015-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2959,10 +2959,10 @@
    "redfin_homes_sold": 151.0,
    "redfin_sale_to_list_ratio": 96.69660285,
    "redfin_median_sale_price_psf": 236.032388664,
-   "zhvi": 275600.0840230819
+   "zhvi": 278875.25942165544
   },
   {
-   "month": "2015-06-01",
+   "month": "2015-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2975,10 +2975,10 @@
    "redfin_homes_sold": 149.0,
    "redfin_sale_to_list_ratio": 96.88462385999999,
    "redfin_median_sale_price_psf": 219.230769231,
-   "zhvi": 277562.861255795
+   "zhvi": 280861.36190017994
   },
   {
-   "month": "2015-07-01",
+   "month": "2015-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -2991,10 +2991,10 @@
    "redfin_homes_sold": 144.0,
    "redfin_sale_to_list_ratio": 97.09553967,
    "redfin_median_sale_price_psf": 211.519954328,
-   "zhvi": 278210.0645709068
+   "zhvi": 281516.2564479815
   },
   {
-   "month": "2015-08-01",
+   "month": "2015-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3007,10 +3007,10 @@
    "redfin_homes_sold": 123.0,
    "redfin_sale_to_list_ratio": 97.24154811,
    "redfin_median_sale_price_psf": 210.697808535,
-   "zhvi": 279163.69310151273
+   "zhvi": 282481.2177062747
   },
   {
-   "month": "2015-09-01",
+   "month": "2015-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3023,10 +3023,10 @@
    "redfin_homes_sold": 109.0,
    "redfin_sale_to_list_ratio": 96.84685069,
    "redfin_median_sale_price_psf": 219.019093972,
-   "zhvi": 279800.84425519436
+   "zhvi": 283125.94063480216
   },
   {
-   "month": "2015-10-01",
+   "month": "2015-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3039,10 +3039,10 @@
    "redfin_homes_sold": 100.0,
    "redfin_sale_to_list_ratio": 96.61956237,
    "redfin_median_sale_price_psf": 228.62020777,
-   "zhvi": 280631.4961154137
+   "zhvi": 283966.4637929459
   },
   {
-   "month": "2015-11-01",
+   "month": "2015-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3055,10 +3055,10 @@
    "redfin_homes_sold": 92.0,
    "redfin_sale_to_list_ratio": 96.65730302,
    "redfin_median_sale_price_psf": 224.124740358,
-   "zhvi": 280541.90220873716
+   "zhvi": 283875.8051704873
   },
   {
-   "month": "2015-12-01",
+   "month": "2015-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3071,10 +3071,10 @@
    "redfin_homes_sold": 90.0,
    "redfin_sale_to_list_ratio": 96.72931485000001,
    "redfin_median_sale_price_psf": 221.153026428,
-   "zhvi": 280313.331020168
+   "zhvi": 283644.5176883572
   },
   {
-   "month": "2016-01-01",
+   "month": "2016-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3087,10 +3087,10 @@
    "redfin_homes_sold": 86.0,
    "redfin_sale_to_list_ratio": 96.69006184,
    "redfin_median_sale_price_psf": 219.770529632,
-   "zhvi": 280305.4339724208
+   "zhvi": 283636.52679369925
   },
   {
-   "month": "2016-02-01",
+   "month": "2016-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3103,10 +3103,10 @@
    "redfin_homes_sold": 109.0,
    "redfin_sale_to_list_ratio": 96.68562616,
    "redfin_median_sale_price_psf": 222.816399287,
-   "zhvi": 281170.21436828544
+   "zhvi": 284511.58406407124
   },
   {
-   "month": "2016-03-01",
+   "month": "2016-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3119,10 +3119,10 @@
    "redfin_homes_sold": 132.0,
    "redfin_sale_to_list_ratio": 96.82364344,
    "redfin_median_sale_price_psf": 224.944769317,
-   "zhvi": 281573.5591284503
+   "zhvi": 284919.7220914091
   },
   {
-   "month": "2016-04-01",
+   "month": "2016-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3135,10 +3135,10 @@
    "redfin_homes_sold": 149.0,
    "redfin_sale_to_list_ratio": 96.46696926,
    "redfin_median_sale_price_psf": 224.520686176,
-   "zhvi": 281238.6775687228
+   "zhvi": 284580.8608672714
   },
   {
-   "month": "2016-05-01",
+   "month": "2016-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3151,10 +3151,10 @@
    "redfin_homes_sold": 155.0,
    "redfin_sale_to_list_ratio": 96.21563437,
    "redfin_median_sale_price_psf": 236.295681063,
-   "zhvi": 280643.6148104372
+   "zhvi": 283978.7265040788
   },
   {
-   "month": "2016-06-01",
+   "month": "2016-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3167,10 +3167,10 @@
    "redfin_homes_sold": 159.0,
    "redfin_sale_to_list_ratio": 95.35229153,
    "redfin_median_sale_price_psf": 215.450310559,
-   "zhvi": 280853.6014120407
+   "zhvi": 284191.20854378794
   },
   {
-   "month": "2016-07-01",
+   "month": "2016-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3183,10 +3183,10 @@
    "redfin_homes_sold": 138.0,
    "redfin_sale_to_list_ratio": 95.27538548999999,
    "redfin_median_sale_price_psf": 214.538132379,
-   "zhvi": 281404.68124991475
+   "zhvi": 284748.83730247983
   },
   {
-   "month": "2016-08-01",
+   "month": "2016-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3199,10 +3199,10 @@
    "redfin_homes_sold": 132.0,
    "redfin_sale_to_list_ratio": 95.78124890000001,
    "redfin_median_sale_price_psf": 197.890338575,
-   "zhvi": 281928.737657497
+   "zhvi": 285279.12148992525
   },
   {
-   "month": "2016-09-01",
+   "month": "2016-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3215,10 +3215,10 @@
    "redfin_homes_sold": 133.0,
    "redfin_sale_to_list_ratio": 96.31141813,
    "redfin_median_sale_price_psf": 207.627118644,
-   "zhvi": 282415.06246942555
+   "zhvi": 285771.22568710113
   },
   {
-   "month": "2016-10-01",
+   "month": "2016-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3231,10 +3231,10 @@
    "redfin_homes_sold": 164.0,
    "redfin_sale_to_list_ratio": 95.77943454,
    "redfin_median_sale_price_psf": 210.331133285,
-   "zhvi": 282793.4849105052
+   "zhvi": 286154.14522357786
   },
   {
-   "month": "2016-11-01",
+   "month": "2016-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3247,10 +3247,10 @@
    "redfin_homes_sold": 154.0,
    "redfin_sale_to_list_ratio": 94.96727136000001,
    "redfin_median_sale_price_psf": 208.813559322,
-   "zhvi": 283338.8812898301
+   "zhvi": 286706.022982654
   },
   {
-   "month": "2016-12-01",
+   "month": "2016-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3263,10 +3263,10 @@
    "redfin_homes_sold": 134.0,
    "redfin_sale_to_list_ratio": 95.12616127,
    "redfin_median_sale_price_psf": 214.319034356,
-   "zhvi": 283762.3120441337
+   "zhvi": 287134.4857020037
   },
   {
-   "month": "2017-01-01",
+   "month": "2017-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3279,10 +3279,10 @@
    "redfin_homes_sold": 126.0,
    "redfin_sale_to_list_ratio": 96.18876316000001,
    "redfin_median_sale_price_psf": 214.280810014,
-   "zhvi": 283996.2442280277
+   "zhvi": 287371.19788843783
   },
   {
-   "month": "2017-02-01",
+   "month": "2017-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3295,10 +3295,10 @@
    "redfin_homes_sold": 130.0,
    "redfin_sale_to_list_ratio": 96.78139089,
    "redfin_median_sale_price_psf": 220.348775371,
-   "zhvi": 283773.71394039394
+   "zhvi": 287146.02309608244
   },
   {
-   "month": "2017-03-01",
+   "month": "2017-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3311,10 +3311,10 @@
    "redfin_homes_sold": 150.0,
    "redfin_sale_to_list_ratio": 96.45779538,
    "redfin_median_sale_price_psf": 225.215740835,
-   "zhvi": 283787.8312318837
+   "zhvi": 287160.3081545957
   },
   {
-   "month": "2017-04-01",
+   "month": "2017-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3327,10 +3327,10 @@
    "redfin_homes_sold": 147.0,
    "redfin_sale_to_list_ratio": 96.76193733000001,
    "redfin_median_sale_price_psf": 215.430861723,
-   "zhvi": 284588.4166960848
+   "zhvi": 287970.4076137801
   },
   {
-   "month": "2017-05-01",
+   "month": "2017-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3343,10 +3343,10 @@
    "redfin_homes_sold": 160.0,
    "redfin_sale_to_list_ratio": 96.94907608999999,
    "redfin_median_sale_price_psf": 217.900616047,
-   "zhvi": 285170.15662174235
+   "zhvi": 288559.0608185089
   },
   {
-   "month": "2017-06-01",
+   "month": "2017-06-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3359,10 +3359,10 @@
    "redfin_homes_sold": 141.0,
    "redfin_sale_to_list_ratio": 96.9212607,
    "redfin_median_sale_price_psf": 212.025316456,
-   "zhvi": 285831.7816248509
+   "zhvi": 289228.5484387171
   },
   {
-   "month": "2017-07-01",
+   "month": "2017-07-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3375,10 +3375,10 @@
    "redfin_homes_sold": 152.0,
    "redfin_sale_to_list_ratio": 96.46405507,
    "redfin_median_sale_price_psf": 218.995161929,
-   "zhvi": 286137.79218956106
+   "zhvi": 289538.19557079923
   },
   {
-   "month": "2017-08-01",
+   "month": "2017-08-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3391,10 +3391,10 @@
    "redfin_homes_sold": 136.0,
    "redfin_sale_to_list_ratio": 96.86656436999999,
    "redfin_median_sale_price_psf": 231.443612067,
-   "zhvi": 287039.7917541754
+   "zhvi": 290450.9143149596
   },
   {
-   "month": "2017-09-01",
+   "month": "2017-09-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3407,10 +3407,10 @@
    "redfin_homes_sold": 132.0,
    "redfin_sale_to_list_ratio": 97.39311593,
    "redfin_median_sale_price_psf": 238.907511403,
-   "zhvi": 288154.85395994846
+   "zhvi": 291579.2276934134
   },
   {
-   "month": "2017-10-01",
+   "month": "2017-10-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3423,10 +3423,10 @@
    "redfin_homes_sold": 127.0,
    "redfin_sale_to_list_ratio": 97.80955958999999,
    "redfin_median_sale_price_psf": 264.350453172,
-   "zhvi": 289312.7100070675
+   "zhvi": 292750.8434665284
   },
   {
-   "month": "2017-11-01",
+   "month": "2017-11-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3439,10 +3439,10 @@
    "redfin_homes_sold": 120.0,
    "redfin_sale_to_list_ratio": 96.85143083999999,
    "redfin_median_sale_price_psf": 241.244681537,
-   "zhvi": 290461.7360833483
+   "zhvi": 293913.52433522587
   },
   {
-   "month": "2017-12-01",
+   "month": "2017-12-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3455,10 +3455,10 @@
    "redfin_homes_sold": 134.0,
    "redfin_sale_to_list_ratio": 96.43771409,
    "redfin_median_sale_price_psf": 225.499361442,
-   "zhvi": 291395.16310806625
+   "zhvi": 294858.04401704
   },
   {
-   "month": "2018-01-01",
+   "month": "2018-01-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3471,10 +3471,10 @@
    "redfin_homes_sold": 128.0,
    "redfin_sale_to_list_ratio": 96.23277642,
    "redfin_median_sale_price_psf": 211.519480519,
-   "zhvi": 292287.62878912844
+   "zhvi": 295761.1155789133
   },
   {
-   "month": "2018-02-01",
+   "month": "2018-02-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3487,10 +3487,10 @@
    "redfin_homes_sold": 143.0,
    "redfin_sale_to_list_ratio": 96.87950067999999,
    "redfin_median_sale_price_psf": 231.125521075,
-   "zhvi": 293146.72777239577
+   "zhvi": 296630.42391993495
   },
   {
-   "month": "2018-03-01",
+   "month": "2018-03-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3503,10 +3503,10 @@
    "redfin_homes_sold": 164.0,
    "redfin_sale_to_list_ratio": 97.66057491,
    "redfin_median_sale_price_psf": 238.220651004,
-   "zhvi": 295015.23826671613
+   "zhvi": 298521.1394133019
   },
   {
-   "month": "2018-04-01",
+   "month": "2018-04-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3519,10 +3519,10 @@
    "redfin_homes_sold": 170.0,
    "redfin_sale_to_list_ratio": 97.85355150000001,
    "redfin_median_sale_price_psf": 251.453375015,
-   "zhvi": 297184.5775275652
+   "zhvi": 300716.2586611328
   },
   {
-   "month": "2018-05-01",
+   "month": "2018-05-01T00:00:00",
    "mls_median_close_price": null,
    "mls_median_list_price": null,
    "mls_median_dom": null,
@@ -3535,10 +3535,10 @@
    "redfin_homes_sold": 188.0,
    "redfin_sale_to_list_ratio": 98.06256585999999,
    "redfin_median_sale_price_psf": 257.708896816,
-   "zhvi": 299743.36389659514
+   "zhvi": 303305.45312744513
   },
   {
-   "month": "2018-06-01",
+   "month": "2018-06-01T00:00:00",
    "mls_median_close_price": 450000.0,
    "mls_median_list_price": 450000.0,
    "mls_median_dom": 39.0,
@@ -3551,10 +3551,10 @@
    "redfin_homes_sold": 172.0,
    "redfin_sale_to_list_ratio": 97.68660617,
    "redfin_median_sale_price_psf": 249.544387855,
-   "zhvi": 301425.7598219119
+   "zhvi": 305007.84230408765
   },
   {
-   "month": "2018-07-01",
+   "month": "2018-07-01T00:00:00",
    "mls_median_close_price": 415000.0,
    "mls_median_list_price": 415000.0,
    "mls_median_dom": 20.0,
@@ -3567,10 +3567,10 @@
    "redfin_homes_sold": 162.0,
    "redfin_sale_to_list_ratio": 96.88786731,
    "redfin_median_sale_price_psf": 241.749748907,
-   "zhvi": 303020.4160932242
+   "zhvi": 306621.4491465055
   },
   {
-   "month": "2018-08-01",
+   "month": "2018-08-01T00:00:00",
    "mls_median_close_price": 367000.0,
    "mls_median_list_price": 385000.0,
    "mls_median_dom": 33.0,
@@ -3583,10 +3583,10 @@
    "redfin_homes_sold": 151.0,
    "redfin_sale_to_list_ratio": 96.23044568,
    "redfin_median_sale_price_psf": 218.538055765,
-   "zhvi": 304135.24063182814
+   "zhvi": 307749.5220334018
   },
   {
-   "month": "2018-09-01",
+   "month": "2018-09-01T00:00:00",
    "mls_median_close_price": 352750.0,
    "mls_median_list_price": 374999.5,
    "mls_median_dom": 33.0,
@@ -3599,10 +3599,10 @@
    "redfin_homes_sold": 157.0,
    "redfin_sale_to_list_ratio": 96.04154251,
    "redfin_median_sale_price_psf": 223.333333333,
-   "zhvi": 305033.66720981215
+   "zhvi": 308658.6253302848
   },
   {
-   "month": "2018-10-01",
+   "month": "2018-10-01T00:00:00",
    "mls_median_close_price": 375000.0,
    "mls_median_list_price": 399900.0,
    "mls_median_dom": 33.0,
@@ -3615,10 +3615,10 @@
    "redfin_homes_sold": 163.0,
    "redfin_sale_to_list_ratio": 96.3745052,
    "redfin_median_sale_price_psf": 237.410071942,
-   "zhvi": 306268.2464096746
+   "zhvi": 309907.87601850077
   },
   {
-   "month": "2018-11-01",
+   "month": "2018-11-01T00:00:00",
    "mls_median_close_price": 400500.0,
    "mls_median_list_price": 409495.0,
    "mls_median_dom": 20.5,
@@ -3631,10 +3631,10 @@
    "redfin_homes_sold": 141.0,
    "redfin_sale_to_list_ratio": 96.13711792000001,
    "redfin_median_sale_price_psf": 234.877734878,
-   "zhvi": 307009.09063413454
+   "zhvi": 310657.52428519004
   },
   {
-   "month": "2018-12-01",
+   "month": "2018-12-01T00:00:00",
    "mls_median_close_price": 393000.0,
    "mls_median_list_price": 404950.0,
    "mls_median_dom": 36.0,
@@ -3647,10 +3647,10 @@
    "redfin_homes_sold": 119.0,
    "redfin_sale_to_list_ratio": 96.06797288,
    "redfin_median_sale_price_psf": 233.208955224,
-   "zhvi": 307965.26419416704
+   "zhvi": 311625.0608175223
   },
   {
-   "month": "2019-01-01",
+   "month": "2019-01-01T00:00:00",
    "mls_median_close_price": 369750.0,
    "mls_median_list_price": 376950.0,
    "mls_median_dom": 30.5,
@@ -3663,10 +3663,10 @@
    "redfin_homes_sold": 116.0,
    "redfin_sale_to_list_ratio": 95.73009104,
    "redfin_median_sale_price_psf": 219.321427123,
-   "zhvi": 308961.123545466
+   "zhvi": 312632.7547590007
   },
   {
-   "month": "2019-02-01",
+   "month": "2019-02-01T00:00:00",
    "mls_median_close_price": 355000.0,
    "mls_median_list_price": 359900.0,
    "mls_median_dom": 35.0,
@@ -3679,10 +3679,10 @@
    "redfin_homes_sold": 151.0,
    "redfin_sale_to_list_ratio": 96.23812166,
    "redfin_median_sale_price_psf": 226.338483651,
-   "zhvi": 310189.15109272464
+   "zhvi": 313875.37593610457
   },
   {
-   "month": "2019-03-01",
+   "month": "2019-03-01T00:00:00",
    "mls_median_close_price": 401500.0,
    "mls_median_list_price": 409995.0,
    "mls_median_dom": 34.5,
@@ -3695,10 +3695,10 @@
    "redfin_homes_sold": 184.0,
    "redfin_sale_to_list_ratio": 96.71114847999999,
    "redfin_median_sale_price_psf": 225.124584718,
-   "zhvi": 311635.2165172217
+   "zhvi": 315338.62610827625
   },
   {
-   "month": "2019-04-01",
+   "month": "2019-04-01T00:00:00",
    "mls_median_close_price": 403000.0,
    "mls_median_list_price": 407450.0,
    "mls_median_dom": 20.5,
@@ -3711,10 +3711,10 @@
    "redfin_homes_sold": 212.0,
    "redfin_sale_to_list_ratio": 97.34588554,
    "redfin_median_sale_price_psf": 220.528806776,
-   "zhvi": 312021.8084490342
+   "zhvi": 315729.8122200538
   },
   {
-   "month": "2019-05-01",
+   "month": "2019-05-01T00:00:00",
    "mls_median_close_price": 402450.0,
    "mls_median_list_price": 413950.0,
    "mls_median_dom": 35.5,
@@ -3727,10 +3727,10 @@
    "redfin_homes_sold": 218.0,
    "redfin_sale_to_list_ratio": 97.70613406000001,
    "redfin_median_sale_price_psf": 226.364758811,
-   "zhvi": 312795.1006827559
+   "zhvi": 316512.2941015536
   },
   {
-   "month": "2019-06-01",
+   "month": "2019-06-01T00:00:00",
    "mls_median_close_price": 372783.0,
    "mls_median_list_price": 394900.0,
    "mls_median_dom": 23.0,
@@ -3743,10 +3743,10 @@
    "redfin_homes_sold": 216.0,
    "redfin_sale_to_list_ratio": 97.73213853,
    "redfin_median_sale_price_psf": 229.324714179,
-   "zhvi": 313695.0412111411
+   "zhvi": 317422.92934031674
   },
   {
-   "month": "2019-07-01",
+   "month": "2019-07-01T00:00:00",
    "mls_median_close_price": 409000.0,
    "mls_median_list_price": 415000.0,
    "mls_median_dom": 29.0,
@@ -3759,10 +3759,10 @@
    "redfin_homes_sold": 189.0,
    "redfin_sale_to_list_ratio": 97.42952677,
    "redfin_median_sale_price_psf": 243.005595524,
-   "zhvi": 314861.9844864602
+   "zhvi": 318603.74033240526
   },
   {
-   "month": "2019-08-01",
+   "month": "2019-08-01T00:00:00",
    "mls_median_close_price": 410000.0,
    "mls_median_list_price": 425000.0,
    "mls_median_dom": 26.0,
@@ -3775,10 +3775,10 @@
    "redfin_homes_sold": 167.0,
    "redfin_sale_to_list_ratio": 96.84113896,
    "redfin_median_sale_price_psf": 237.304224015,
-   "zhvi": 315914.3861175607
+   "zhvi": 319668.6484906492
   },
   {
-   "month": "2019-09-01",
+   "month": "2019-09-01T00:00:00",
    "mls_median_close_price": 390000.0,
    "mls_median_list_price": 399000.0,
    "mls_median_dom": 29.0,
@@ -3791,10 +3791,10 @@
    "redfin_homes_sold": 143.0,
    "redfin_sale_to_list_ratio": 96.31567251,
    "redfin_median_sale_price_psf": 236.842105263,
-   "zhvi": 316822.27260020794
+   "zhvi": 320587.3241117802
   },
   {
-   "month": "2019-10-01",
+   "month": "2019-10-01T00:00:00",
    "mls_median_close_price": 395000.0,
    "mls_median_list_price": 419000.0,
    "mls_median_dom": 32.0,
@@ -3807,10 +3807,10 @@
    "redfin_homes_sold": 157.0,
    "redfin_sale_to_list_ratio": 96.7313357,
    "redfin_median_sale_price_psf": 231.809701493,
-   "zhvi": 318582.4566961765
+   "zhvi": 322368.4258778885
   },
   {
-   "month": "2019-11-01",
+   "month": "2019-11-01T00:00:00",
    "mls_median_close_price": 403000.0,
    "mls_median_list_price": 415000.0,
    "mls_median_dom": 28.0,
@@ -3823,10 +3823,10 @@
    "redfin_homes_sold": 133.0,
    "redfin_sale_to_list_ratio": 97.24046275,
    "redfin_median_sale_price_psf": 211.266666667,
-   "zhvi": 319918.5819599475
+   "zhvi": 323720.4293828031
   },
   {
-   "month": "2019-12-01",
+   "month": "2019-12-01T00:00:00",
    "mls_median_close_price": 362250.0,
    "mls_median_list_price": 369900.0,
    "mls_median_dom": 37.5,
@@ -3839,10 +3839,10 @@
    "redfin_homes_sold": 139.0,
    "redfin_sale_to_list_ratio": 97.16604418,
    "redfin_median_sale_price_psf": 225.009087605,
-   "zhvi": 320608.0170511473
+   "zhvi": 324418.0575805384
   },
   {
-   "month": "2020-01-01",
+   "month": "2020-01-01T00:00:00",
    "mls_median_close_price": 380000.0,
    "mls_median_list_price": 385000.0,
    "mls_median_dom": 60.5,
@@ -3855,10 +3855,10 @@
    "redfin_homes_sold": 125.0,
    "redfin_sale_to_list_ratio": 97.0124729,
    "redfin_median_sale_price_psf": 243.827160494,
-   "zhvi": 321297.31694487727
+   "zhvi": 325115.5489741447
   },
   {
-   "month": "2020-02-01",
+   "month": "2020-02-01T00:00:00",
    "mls_median_close_price": 392000.0,
    "mls_median_list_price": 399450.0,
    "mls_median_dom": 15.0,
@@ -3871,10 +3871,10 @@
    "redfin_homes_sold": 136.0,
    "redfin_sale_to_list_ratio": 97.02383558999999,
    "redfin_median_sale_price_psf": 259.989053093,
-   "zhvi": 322930.0710607991
+   "zhvi": 326767.70640821615
   },
   {
-   "month": "2020-03-01",
+   "month": "2020-03-01T00:00:00",
    "mls_median_close_price": 399000.0,
    "mls_median_list_price": 414900.0,
    "mls_median_dom": 26.0,
@@ -3887,10 +3887,10 @@
    "redfin_homes_sold": 120.0,
    "redfin_sale_to_list_ratio": 97.20220956,
    "redfin_median_sale_price_psf": 275.510204082,
-   "zhvi": 325459.3716068769
+   "zhvi": 329327.0646480478
   },
   {
-   "month": "2020-04-01",
+   "month": "2020-04-01T00:00:00",
    "mls_median_close_price": 462695.0,
    "mls_median_list_price": 467500.0,
    "mls_median_dom": 12.5,
@@ -3903,10 +3903,10 @@
    "redfin_homes_sold": 110.0,
    "redfin_sale_to_list_ratio": 96.88245886,
    "redfin_median_sale_price_psf": 259.537882859,
-   "zhvi": 327059.0812032979
+   "zhvi": 330945.7848682632
   },
   {
-   "month": "2020-05-01",
+   "month": "2020-05-01T00:00:00",
    "mls_median_close_price": 480000.0,
    "mls_median_list_price": 499000.0,
    "mls_median_dom": 23.0,
@@ -3919,10 +3919,10 @@
    "redfin_homes_sold": 144.0,
    "redfin_sale_to_list_ratio": 96.76118993,
    "redfin_median_sale_price_psf": 248.1267507,
-   "zhvi": 327117.285637513
+   "zhvi": 331004.6809921478
   },
   {
-   "month": "2020-06-01",
+   "month": "2020-06-01T00:00:00",
    "mls_median_close_price": 404500.0,
    "mls_median_list_price": 404000.0,
    "mls_median_dom": 16.0,
@@ -3935,10 +3935,10 @@
    "redfin_homes_sold": 177.0,
    "redfin_sale_to_list_ratio": 97.38005916,
    "redfin_median_sale_price_psf": 238.650306748,
-   "zhvi": 326061.4631559903
+   "zhvi": 329936.31133079034
   },
   {
-   "month": "2020-07-01",
+   "month": "2020-07-01T00:00:00",
    "mls_median_close_price": 478500.0,
    "mls_median_list_price": 497000.0,
    "mls_median_dom": 27.5,
@@ -3951,10 +3951,10 @@
    "redfin_homes_sold": 193.0,
    "redfin_sale_to_list_ratio": 97.69346095,
    "redfin_median_sale_price_psf": 238.650306748,
-   "zhvi": 325791.3262005364
+   "zhvi": 329662.96412264765
   },
   {
-   "month": "2020-08-01",
+   "month": "2020-08-01T00:00:00",
    "mls_median_close_price": 368012.5,
    "mls_median_list_price": 394450.0,
    "mls_median_dom": 19.5,
@@ -3967,10 +3967,10 @@
    "redfin_homes_sold": 203.0,
    "redfin_sale_to_list_ratio": 97.96285737,
    "redfin_median_sale_price_psf": 247.21448468,
-   "zhvi": 327566.342575007
+   "zhvi": 331459.0744310419
   },
   {
-   "month": "2020-09-01",
+   "month": "2020-09-01T00:00:00",
    "mls_median_close_price": 420000.0,
    "mls_median_list_price": 422000.0,
    "mls_median_dom": 26.0,
@@ -3983,10 +3983,10 @@
    "redfin_homes_sold": 199.0,
    "redfin_sale_to_list_ratio": 97.7947264,
    "redfin_median_sale_price_psf": 246.566791511,
-   "zhvi": 331050.7147278956
+   "zhvi": 334984.85415459605
   },
   {
-   "month": "2020-10-01",
+   "month": "2020-10-01T00:00:00",
    "mls_median_close_price": 499500.0,
    "mls_median_list_price": 499000.0,
    "mls_median_dom": 24.0,
@@ -3999,10 +3999,10 @@
    "redfin_homes_sold": 218.0,
    "redfin_sale_to_list_ratio": 97.71433502,
    "redfin_median_sale_price_psf": 247.563122529,
-   "zhvi": 334547.41945646185
+   "zhvi": 338523.1130116513
   },
   {
-   "month": "2020-11-01",
+   "month": "2020-11-01T00:00:00",
    "mls_median_close_price": 389900.0,
    "mls_median_list_price": 389900.0,
    "mls_median_dom": 13.0,
@@ -4015,10 +4015,10 @@
    "redfin_homes_sold": 169.0,
    "redfin_sale_to_list_ratio": 97.55995088,
    "redfin_median_sale_price_psf": 238.970588235,
-   "zhvi": 337832.84010560304
+   "zhvi": 341847.57693221315
   },
   {
-   "month": "2020-12-01",
+   "month": "2020-12-01T00:00:00",
    "mls_median_close_price": 515000.0,
    "mls_median_list_price": 525000.0,
    "mls_median_dom": 30.0,
@@ -4031,10 +4031,10 @@
    "redfin_homes_sold": 157.0,
    "redfin_sale_to_list_ratio": 97.56851667999999,
    "redfin_median_sale_price_psf": 241.935483871,
-   "zhvi": 340488.7678877967
+   "zhvi": 344535.0672205049
   },
   {
-   "month": "2021-01-01",
+   "month": "2021-01-01T00:00:00",
    "mls_median_close_price": 360000.0,
    "mls_median_list_price": 370000.0,
    "mls_median_dom": 52.0,
@@ -4047,10 +4047,10 @@
    "redfin_homes_sold": 155.0,
    "redfin_sale_to_list_ratio": 97.47844474,
    "redfin_median_sale_price_psf": 216.998191682,
-   "zhvi": 343342.5417525273
+   "zhvi": 347422.7547539777
   },
   {
-   "month": "2021-02-01",
+   "month": "2021-02-01T00:00:00",
    "mls_median_close_price": 386083.0,
    "mls_median_list_price": 399000.0,
    "mls_median_dom": 17.0,
@@ -4063,10 +4063,10 @@
    "redfin_homes_sold": 200.0,
    "redfin_sale_to_list_ratio": 97.88762514,
    "redfin_median_sale_price_psf": 229.027423689,
-   "zhvi": 345815.57855189824
+   "zhvi": 349925.1806201691
   },
   {
-   "month": "2021-03-01",
+   "month": "2021-03-01T00:00:00",
    "mls_median_close_price": 435000.0,
    "mls_median_list_price": 439000.0,
    "mls_median_dom": 21.0,
@@ -4079,10 +4079,10 @@
    "redfin_homes_sold": 225.0,
    "redfin_sale_to_list_ratio": 98.25531213000001,
    "redfin_median_sale_price_psf": 251.412429379,
-   "zhvi": 348674.0757136752
+   "zhvi": 352817.64758139057
   },
   {
-   "month": "2021-04-01",
+   "month": "2021-04-01T00:00:00",
    "mls_median_close_price": 400000.0,
    "mls_median_list_price": 417250.0,
    "mls_median_dom": 25.0,
@@ -4095,10 +4095,10 @@
    "redfin_homes_sold": 230.0,
    "redfin_sale_to_list_ratio": 98.74749381,
    "redfin_median_sale_price_psf": 255.48604493,
-   "zhvi": 351239.89267690526
+   "zhvi": 355413.9561920562
   },
   {
-   "month": "2021-05-01",
+   "month": "2021-05-01T00:00:00",
    "mls_median_close_price": 475000.0,
    "mls_median_list_price": 490000.0,
    "mls_median_dom": 13.0,
@@ -4111,10 +4111,10 @@
    "redfin_homes_sold": 226.0,
    "redfin_sale_to_list_ratio": 98.99057963999999,
    "redfin_median_sale_price_psf": 258.117582312,
-   "zhvi": 354291.3990666592
+   "zhvi": 358501.7260637018
   },
   {
-   "month": "2021-06-01",
+   "month": "2021-06-01T00:00:00",
    "mls_median_close_price": 403500.0,
    "mls_median_list_price": 414500.0,
    "mls_median_dom": 9.5,
@@ -4127,10 +4127,10 @@
    "redfin_homes_sold": 216.0,
    "redfin_sale_to_list_ratio": 98.85742449,
    "redfin_median_sale_price_psf": 251.155225907,
-   "zhvi": 357242.165611244
+   "zhvi": 361487.55891832797
   },
   {
-   "month": "2021-07-01",
+   "month": "2021-07-01T00:00:00",
    "mls_median_close_price": 399990.0,
    "mls_median_list_price": 399900.0,
    "mls_median_dom": 14.0,
@@ -4143,10 +4143,10 @@
    "redfin_homes_sold": 200.0,
    "redfin_sale_to_list_ratio": 98.77365873000001,
    "redfin_median_sale_price_psf": 260.692358618,
-   "zhvi": 359666.04011704103
+   "zhvi": 363940.2382562381
   },
   {
-   "month": "2021-08-01",
+   "month": "2021-08-01T00:00:00",
    "mls_median_close_price": 401490.0,
    "mls_median_list_price": 407450.0,
    "mls_median_dom": 14.0,
@@ -4159,10 +4159,10 @@
    "redfin_homes_sold": 190.0,
    "redfin_sale_to_list_ratio": 98.51853661999999,
    "redfin_median_sale_price_psf": 257.654826433,
-   "zhvi": 360498.897446658
+   "zhvi": 364782.99309312954
   },
   {
-   "month": "2021-09-01",
+   "month": "2021-09-01T00:00:00",
    "mls_median_close_price": 479000.0,
    "mls_median_list_price": 480000.0,
    "mls_median_dom": 21.0,
@@ -4175,10 +4175,10 @@
    "redfin_homes_sold": 186.0,
    "redfin_sale_to_list_ratio": 98.15233291999999,
    "redfin_median_sale_price_psf": 255.37665205,
-   "zhvi": 360532.8819893484
+   "zhvi": 364817.3815012199
   },
   {
-   "month": "2021-10-01",
+   "month": "2021-10-01T00:00:00",
    "mls_median_close_price": 430000.0,
    "mls_median_list_price": 430000.0,
    "mls_median_dom": 17.0,
@@ -4191,10 +4191,10 @@
    "redfin_homes_sold": 196.0,
    "redfin_sale_to_list_ratio": 97.81463262,
    "redfin_median_sale_price_psf": 255.412093224,
-   "zhvi": 361437.5742388297
+   "zhvi": 365732.82492956705
   },
   {
-   "month": "2021-11-01",
+   "month": "2021-11-01T00:00:00",
    "mls_median_close_price": 430000.0,
    "mls_median_list_price": 451850.0,
    "mls_median_dom": 18.0,
@@ -4207,10 +4207,10 @@
    "redfin_homes_sold": 175.0,
    "redfin_sale_to_list_ratio": 97.53175352,
    "redfin_median_sale_price_psf": 251.928783383,
-   "zhvi": 363291.77928854275
+   "zhvi": 367609.06497532973
   },
   {
-   "month": "2021-12-01",
+   "month": "2021-12-01T00:00:00",
    "mls_median_close_price": 432000.0,
    "mls_median_list_price": 435000.0,
    "mls_median_dom": 19.0,
@@ -4223,10 +4223,10 @@
    "redfin_homes_sold": 163.0,
    "redfin_sale_to_list_ratio": 97.80716140999999,
    "redfin_median_sale_price_psf": 265.23297491,
-   "zhvi": 365137.74124413496
+   "zhvi": 369476.96396771603
   },
   {
-   "month": "2022-01-01",
+   "month": "2022-01-01T00:00:00",
    "mls_median_close_price": 400000.0,
    "mls_median_list_price": 399900.0,
    "mls_median_dom": 35.0,
@@ -4239,10 +4239,10 @@
    "redfin_homes_sold": 154.0,
    "redfin_sale_to_list_ratio": 98.3016261,
    "redfin_median_sale_price_psf": 250.325154127,
-   "zhvi": 368385.1231195617
+   "zhvi": 372762.9370695056
   },
   {
-   "month": "2022-02-01",
+   "month": "2022-02-01T00:00:00",
    "mls_median_close_price": 462000.0,
    "mls_median_list_price": 469700.0,
    "mls_median_dom": 21.0,
@@ -4255,10 +4255,10 @@
    "redfin_homes_sold": 184.0,
    "redfin_sale_to_list_ratio": 98.8245288,
    "redfin_median_sale_price_psf": 266.050784939,
-   "zhvi": 372988.6666215733
+   "zhvi": 377421.1881470883
   },
   {
-   "month": "2022-03-01",
+   "month": "2022-03-01T00:00:00",
    "mls_median_close_price": 453860.0,
    "mls_median_list_price": 463850.0,
    "mls_median_dom": 11.0,
@@ -4271,10 +4271,10 @@
    "redfin_homes_sold": 209.0,
    "redfin_sale_to_list_ratio": 99.20204925,
    "redfin_median_sale_price_psf": 271.339320578,
-   "zhvi": 379914.521022508
+   "zhvi": 384429.34799443977
   },
   {
-   "month": "2022-04-01",
+   "month": "2022-04-01T00:00:00",
    "mls_median_close_price": 467500.0,
    "mls_median_list_price": 469849.5,
    "mls_median_dom": 15.5,
@@ -4287,10 +4287,10 @@
    "redfin_homes_sold": 210.0,
    "redfin_sale_to_list_ratio": 99.66812422,
    "redfin_median_sale_price_psf": 287.157622579,
-   "zhvi": 386425.51312940544
+   "zhvi": 391017.7154085489
   },
   {
-   "month": "2022-05-01",
+   "month": "2022-05-01T00:00:00",
    "mls_median_close_price": 566500.0,
    "mls_median_list_price": 575000.0,
    "mls_median_dom": 7.0,
@@ -4303,10 +4303,10 @@
    "redfin_homes_sold": 189.0,
    "redfin_sale_to_list_ratio": 99.74769648,
    "redfin_median_sale_price_psf": 294.117647059,
-   "zhvi": 392060.0481106078
+   "zhvi": 396719.21005857084
   },
   {
-   "month": "2022-06-01",
+   "month": "2022-06-01T00:00:00",
    "mls_median_close_price": 550000.0,
    "mls_median_list_price": 547500.0,
    "mls_median_dom": 14.5,
@@ -4319,10 +4319,10 @@
    "redfin_homes_sold": 161.0,
    "redfin_sale_to_list_ratio": 99.63439536,
    "redfin_median_sale_price_psf": 298.456790123,
-   "zhvi": 395922.7618941379
+   "zhvi": 400627.82754782867
   },
   {
-   "month": "2022-07-01",
+   "month": "2022-07-01T00:00:00",
    "mls_median_close_price": 445000.0,
    "mls_median_list_price": 441250.0,
    "mls_median_dom": 10.0,
@@ -4335,10 +4335,10 @@
    "redfin_homes_sold": 138.0,
    "redfin_sale_to_list_ratio": 98.62588013,
    "redfin_median_sale_price_psf": 273.271758863,
-   "zhvi": 397258.04499140166
+   "zhvi": 401978.9788781004
   },
   {
-   "month": "2022-08-01",
+   "month": "2022-08-01T00:00:00",
    "mls_median_close_price": 479000.0,
    "mls_median_list_price": 479900.0,
    "mls_median_dom": 16.0,
@@ -4351,10 +4351,10 @@
    "redfin_homes_sold": 135.0,
    "redfin_sale_to_list_ratio": 97.94786896,
    "redfin_median_sale_price_psf": 274.341351661,
-   "zhvi": 397048.19312106824
+   "zhvi": 401766.63317078026
   },
   {
-   "month": "2022-09-01",
+   "month": "2022-09-01T00:00:00",
    "mls_median_close_price": 444000.0,
    "mls_median_list_price": 439000.0,
    "mls_median_dom": 28.0,
@@ -4367,10 +4367,10 @@
    "redfin_homes_sold": 128.0,
    "redfin_sale_to_list_ratio": 97.01341187,
    "redfin_median_sale_price_psf": 257.169871795,
-   "zhvi": 396126.86071854894
+   "zhvi": 400834.3518411975
   },
   {
-   "month": "2022-10-01",
+   "month": "2022-10-01T00:00:00",
    "mls_median_close_price": 440000.0,
    "mls_median_list_price": 449900.0,
    "mls_median_dom": 20.0,
@@ -4383,10 +4383,10 @@
    "redfin_homes_sold": 123.0,
    "redfin_sale_to_list_ratio": 97.30751386,
    "redfin_median_sale_price_psf": 260.173076923,
-   "zhvi": 395902.7812839952
+   "zhvi": 400607.609492175
   },
   {
-   "month": "2022-11-01",
+   "month": "2022-11-01T00:00:00",
    "mls_median_close_price": 410000.0,
    "mls_median_list_price": 409990.0,
    "mls_median_dom": 22.0,
@@ -4399,10 +4399,10 @@
    "redfin_homes_sold": 99.0,
    "redfin_sale_to_list_ratio": 97.21291495,
    "redfin_median_sale_price_psf": 254.166666667,
-   "zhvi": 396417.23220234946
+   "zhvi": 401128.17404071026
   },
   {
-   "month": "2022-12-01",
+   "month": "2022-12-01T00:00:00",
    "mls_median_close_price": 470000.0,
    "mls_median_list_price": 485000.0,
    "mls_median_dom": 27.0,
@@ -4415,10 +4415,10 @@
    "redfin_homes_sold": 93.0,
    "redfin_sale_to_list_ratio": 97.16511637,
    "redfin_median_sale_price_psf": 267.857142857,
-   "zhvi": 396294.7315877736
+   "zhvi": 401004.217653722
   },
   {
-   "month": "2023-01-01",
+   "month": "2023-01-01T00:00:00",
    "mls_median_close_price": 410000.0,
    "mls_median_list_price": 450000.0,
    "mls_median_dom": 46.0,
@@ -4431,10 +4431,10 @@
    "redfin_homes_sold": 97.0,
    "redfin_sale_to_list_ratio": 97.44242924,
    "redfin_median_sale_price_psf": 297.175866496,
-   "zhvi": 396109.00655926525
+   "zhvi": 400816.2855067128
   },
   {
-   "month": "2023-02-01",
+   "month": "2023-02-01T00:00:00",
    "mls_median_close_price": 450000.0,
    "mls_median_list_price": 489000.0,
    "mls_median_dom": 25.0,
@@ -4447,10 +4447,10 @@
    "redfin_homes_sold": 108.0,
    "redfin_sale_to_list_ratio": 97.60243985,
    "redfin_median_sale_price_psf": 306.776244819,
-   "zhvi": 395718.9383420563
+   "zhvi": 400421.58179806964
   },
   {
-   "month": "2023-03-01",
+   "month": "2023-03-01T00:00:00",
    "mls_median_close_price": 535000.0,
    "mls_median_list_price": 524000.0,
    "mls_median_dom": 20.0,
@@ -4463,10 +4463,10 @@
    "redfin_homes_sold": 122.0,
    "redfin_sale_to_list_ratio": 98.77098569,
    "redfin_median_sale_price_psf": 300.684022235,
-   "zhvi": 395761.46040091873
+   "zhvi": 400464.60918043944
   },
   {
-   "month": "2023-04-01",
+   "month": "2023-04-01T00:00:00",
    "mls_median_close_price": 572100.0,
    "mls_median_list_price": 575000.0,
    "mls_median_dom": 12.0,
@@ -4479,10 +4479,10 @@
    "redfin_homes_sold": 143.0,
    "redfin_sale_to_list_ratio": 98.36412064,
    "redfin_median_sale_price_psf": 270.27027027,
-   "zhvi": 396699.06061778637
+   "zhvi": 401413.3516477707
   },
   {
-   "month": "2023-05-01",
+   "month": "2023-05-01T00:00:00",
    "mls_median_close_price": 579900.0,
    "mls_median_list_price": 579900.0,
    "mls_median_dom": 7.0,
@@ -4495,10 +4495,10 @@
    "redfin_homes_sold": 168.0,
    "redfin_sale_to_list_ratio": 98.35938567,
    "redfin_median_sale_price_psf": 264.495481928,
-   "zhvi": 398827.8198373892
+   "zhvi": 403567.4086093907
   },
   {
-   "month": "2023-06-01",
+   "month": "2023-06-01T00:00:00",
    "mls_median_close_price": 427500.0,
    "mls_median_list_price": 434915.5,
    "mls_median_dom": 13.5,
@@ -4511,10 +4511,10 @@
    "redfin_homes_sold": 181.0,
    "redfin_sale_to_list_ratio": 97.97291340999999,
    "redfin_median_sale_price_psf": 259.869848156,
-   "zhvi": 401939.0997710663
+   "zhvi": 406715.6623616099
   },
   {
-   "month": "2023-07-01",
+   "month": "2023-07-01T00:00:00",
    "mls_median_close_price": 440240.0,
    "mls_median_list_price": 449900.0,
    "mls_median_dom": 18.0,
@@ -4527,10 +4527,10 @@
    "redfin_homes_sold": 176.0,
    "redfin_sale_to_list_ratio": 98.11364725,
    "redfin_median_sale_price_psf": 261.712032512,
-   "zhvi": 403959.4097217191
+   "zhvi": 408759.9812652038
   },
   {
-   "month": "2023-08-01",
+   "month": "2023-08-01T00:00:00",
    "mls_median_close_price": 520000.0,
    "mls_median_list_price": 529000.0,
    "mls_median_dom": 19.0,
@@ -4543,10 +4543,10 @@
    "redfin_homes_sold": 160.0,
    "redfin_sale_to_list_ratio": 98.05410436999999,
    "redfin_median_sale_price_psf": 258.255859181,
-   "zhvi": 405188.92701739445
+   "zhvi": 410004.10989459185
   },
   {
-   "month": "2023-09-01",
+   "month": "2023-09-01T00:00:00",
    "mls_median_close_price": 425500.0,
    "mls_median_list_price": 434950.0,
    "mls_median_dom": 17.0,
@@ -4559,10 +4559,10 @@
    "redfin_homes_sold": 140.0,
    "redfin_sale_to_list_ratio": 98.31543772,
    "redfin_median_sale_price_psf": 254.141449576,
-   "zhvi": 405821.83191007463
+   "zhvi": 410644.536100415
   },
   {
-   "month": "2023-10-01",
+   "month": "2023-10-01T00:00:00",
    "mls_median_close_price": 492000.0,
    "mls_median_list_price": 505450.0,
    "mls_median_dom": 22.5,
@@ -4575,10 +4575,10 @@
    "redfin_homes_sold": 117.0,
    "redfin_sale_to_list_ratio": 97.77973045,
    "redfin_median_sale_price_psf": 261.790567546,
-   "zhvi": 406466.358295144
+   "zhvi": 411296.72190608137
   },
   {
-   "month": "2023-11-01",
+   "month": "2023-11-01T00:00:00",
    "mls_median_close_price": 450000.0,
    "mls_median_list_price": 450000.0,
    "mls_median_dom": 33.0,
@@ -4591,10 +4591,10 @@
    "redfin_homes_sold": 113.0,
    "redfin_sale_to_list_ratio": 96.58745938999999,
    "redfin_median_sale_price_psf": 257.104194858,
-   "zhvi": 406355.5299592871
+   "zhvi": 411184.5765088008
   },
   {
-   "month": "2023-12-01",
+   "month": "2023-12-01T00:00:00",
    "mls_median_close_price": 419000.0,
    "mls_median_list_price": 429000.0,
    "mls_median_dom": 33.0,
@@ -4607,10 +4607,10 @@
    "redfin_homes_sold": 105.0,
    "redfin_sale_to_list_ratio": 95.2204144,
    "redfin_median_sale_price_psf": 252.066115702,
-   "zhvi": 405724.8410935397
+   "zhvi": 410546.39266472426
   },
   {
-   "month": "2024-01-01",
+   "month": "2024-01-01T00:00:00",
    "mls_median_close_price": 484950.0,
    "mls_median_list_price": 504950.0,
    "mls_median_dom": 64.0,
@@ -4623,10 +4623,10 @@
    "redfin_homes_sold": 125.0,
    "redfin_sale_to_list_ratio": 95.30227107,
    "redfin_median_sale_price_psf": 254.103915663,
-   "zhvi": 405295.97814866604
+   "zhvi": 410112.43319975556
   },
   {
-   "month": "2024-02-01",
+   "month": "2024-02-01T00:00:00",
    "mls_median_close_price": 542450.0,
    "mls_median_list_price": 544450.0,
    "mls_median_dom": 28.5,
@@ -4639,10 +4639,10 @@
    "redfin_homes_sold": 145.0,
    "redfin_sale_to_list_ratio": 96.48574071,
    "redfin_median_sale_price_psf": 262.944983819,
-   "zhvi": 405677.88715766714
+   "zhvi": 410498.8807378185
   },
   {
-   "month": "2024-03-01",
+   "month": "2024-03-01T00:00:00",
    "mls_median_close_price": 449900.0,
    "mls_median_list_price": 494900.0,
    "mls_median_dom": 18.0,
@@ -4655,10 +4655,10 @@
    "redfin_homes_sold": 172.0,
    "redfin_sale_to_list_ratio": 97.10356877000001,
    "redfin_median_sale_price_psf": 280.018348356,
-   "zhvi": 406536.04274851707
+   "zhvi": 411367.234475339
   },
   {
-   "month": "2024-04-01",
+   "month": "2024-04-01T00:00:00",
    "mls_median_close_price": 539900.0,
    "mls_median_list_price": 539999.0,
    "mls_median_dom": 17.0,
@@ -4671,10 +4671,10 @@
    "redfin_homes_sold": 172.0,
    "redfin_sale_to_list_ratio": 97.86265061,
    "redfin_median_sale_price_psf": 283.784315867,
-   "zhvi": 407593.3608258529
+   "zhvi": 412437.1175058664
   },
   {
-   "month": "2024-05-01",
+   "month": "2024-05-01T00:00:00",
    "mls_median_close_price": 575000.0,
    "mls_median_list_price": 599000.0,
    "mls_median_dom": 15.0,
@@ -4687,10 +4687,10 @@
    "redfin_homes_sold": 158.0,
    "redfin_sale_to_list_ratio": 97.68236431,
    "redfin_median_sale_price_psf": 298.265970756,
-   "zhvi": 407858.49977592006
+   "zhvi": 412705.4073133419
   },
   {
-   "month": "2024-06-01",
+   "month": "2024-06-01T00:00:00",
    "mls_median_close_price": 489950.0,
    "mls_median_list_price": 494900.0,
    "mls_median_dom": 16.5,
@@ -4703,10 +4703,10 @@
    "redfin_homes_sold": 141.0,
    "redfin_sale_to_list_ratio": 97.88123717,
    "redfin_median_sale_price_psf": 271.841019873,
-   "zhvi": 406970.98456769
+   "zhvi": 411807.345054714
   },
   {
-   "month": "2024-07-01",
+   "month": "2024-07-01T00:00:00",
    "mls_median_close_price": 506500.0,
    "mls_median_list_price": 519500.0,
    "mls_median_dom": 17.5,
@@ -4719,10 +4719,10 @@
    "redfin_homes_sold": 129.0,
    "redfin_sale_to_list_ratio": 97.46239337,
    "redfin_median_sale_price_psf": 294.649313087,
-   "zhvi": 405600.89901265333
+   "zhvi": 410420.97768133273
   },
   {
-   "month": "2024-08-01",
+   "month": "2024-08-01T00:00:00",
    "mls_median_close_price": 429000.0,
    "mls_median_list_price": 429000.0,
    "mls_median_dom": 23.0,
@@ -4735,10 +4735,10 @@
    "redfin_homes_sold": 128.0,
    "redfin_sale_to_list_ratio": 97.90331087,
    "redfin_median_sale_price_psf": 263.391894205,
-   "zhvi": 403777.1990745124
+   "zhvi": 408575.6052636897
   },
   {
-   "month": "2024-09-01",
+   "month": "2024-09-01T00:00:00",
    "mls_median_close_price": 511500.0,
    "mls_median_list_price": 534475.0,
    "mls_median_dom": 21.0,
@@ -4751,10 +4751,10 @@
    "redfin_homes_sold": 123.0,
    "redfin_sale_to_list_ratio": 97.67860735000001,
    "redfin_median_sale_price_psf": 268.469154608,
-   "zhvi": 402831.43288041215
+   "zhvi": 407618.59977631154
   },
   {
-   "month": "2024-10-01",
+   "month": "2024-10-01T00:00:00",
    "mls_median_close_price": 479000.0,
    "mls_median_list_price": 479900.0,
    "mls_median_dom": 25.0,
@@ -4767,10 +4767,10 @@
    "redfin_homes_sold": 135.0,
    "redfin_sale_to_list_ratio": 96.80918214,
    "redfin_median_sale_price_psf": 271.760001323,
-   "zhvi": 402204.1867154444
+   "zhvi": 406983.8995453711
   },
   {
-   "month": "2024-11-01",
+   "month": "2024-11-01T00:00:00",
    "mls_median_close_price": 473000.0,
    "mls_median_list_price": 485000.0,
    "mls_median_dom": 26.0,
@@ -4783,10 +4783,10 @@
    "redfin_homes_sold": 130.0,
    "redfin_sale_to_list_ratio": 96.23774479000001,
    "redfin_median_sale_price_psf": 295.321637427,
-   "zhvi": 401930.9306572872
+   "zhvi": 406707.3961677424
   },
   {
-   "month": "2024-12-01",
+   "month": "2024-12-01T00:00:00",
    "mls_median_close_price": 485000.0,
    "mls_median_list_price": 499000.0,
    "mls_median_dom": 47.0,
@@ -4799,10 +4799,10 @@
    "redfin_homes_sold": 129.0,
    "redfin_sale_to_list_ratio": 96.14478453999999,
    "redfin_median_sale_price_psf": 290.018915511,
-   "zhvi": 401731.3091156359
+   "zhvi": 406505.40236425184
   },
   {
-   "month": "2025-01-01",
+   "month": "2025-01-01T00:00:00",
    "mls_median_close_price": 499000.0,
    "mls_median_list_price": 525000.0,
    "mls_median_dom": 31.0,
@@ -4815,10 +4815,10 @@
    "redfin_homes_sold": 112.0,
    "redfin_sale_to_list_ratio": 96.86611529,
    "redfin_median_sale_price_psf": 286.710722619,
-   "zhvi": 401044.16504100274
+   "zhvi": 405810.09240905853
   },
   {
-   "month": "2025-02-01",
+   "month": "2025-02-01T00:00:00",
    "mls_median_close_price": 599450.0,
    "mls_median_list_price": 599900.0,
    "mls_median_dom": 24.5,
@@ -4831,10 +4831,10 @@
    "redfin_homes_sold": 111.0,
    "redfin_sale_to_list_ratio": 97.34067453,
    "redfin_median_sale_price_psf": 320.023487962,
-   "zhvi": 400469.82433480024
+   "zhvi": 405228.9263546054
   },
   {
-   "month": "2025-03-01",
+   "month": "2025-03-01T00:00:00",
    "mls_median_close_price": 635350.0,
    "mls_median_list_price": 645000.0,
    "mls_median_dom": 16.0,
@@ -4847,10 +4847,10 @@
    "redfin_homes_sold": 140.0,
    "redfin_sale_to_list_ratio": 97.63665508,
    "redfin_median_sale_price_psf": 319.716596407,
-   "zhvi": 398861.1548549438
+   "zhvi": 403601.13977352047
   },
   {
-   "month": "2025-04-01",
+   "month": "2025-04-01T00:00:00",
    "mls_median_close_price": 684500.0,
    "mls_median_list_price": 699450.0,
    "mls_median_dom": 22.5,
@@ -4863,10 +4863,10 @@
    "redfin_homes_sold": 154.0,
    "redfin_sale_to_list_ratio": 98.20981014,
    "redfin_median_sale_price_psf": 310.262390979,
-   "zhvi": 396895.73809216684
+   "zhvi": 401612.3663972931
   },
   {
-   "month": "2025-05-01",
+   "month": "2025-05-01T00:00:00",
    "mls_median_close_price": 593500.0,
    "mls_median_list_price": 590000.0,
    "mls_median_dom": 16.5,
@@ -4879,10 +4879,10 @@
    "redfin_homes_sold": 185.0,
    "redfin_sale_to_list_ratio": 97.73036822,
    "redfin_median_sale_price_psf": 284.708893154,
-   "zhvi": 394298.95211001596
+   "zhvi": 398984.7207381786
   },
   {
-   "month": "2025-06-01",
+   "month": "2025-06-01T00:00:00",
    "mls_median_close_price": 571250.0,
    "mls_median_list_price": 594450.0,
    "mls_median_dom": 19.0,
@@ -4895,10 +4895,10 @@
    "redfin_homes_sold": 175.0,
    "redfin_sale_to_list_ratio": 97.55012383,
    "redfin_median_sale_price_psf": 271.96,
-   "zhvi": 391567.1559162307
+   "zhvi": 396220.46043350775
   },
   {
-   "month": "2025-07-01",
+   "month": "2025-07-01T00:00:00",
    "mls_median_close_price": 515000.0,
    "mls_median_list_price": 525000.0,
    "mls_median_dom": 25.0,
@@ -4911,10 +4911,10 @@
    "redfin_homes_sold": 161.0,
    "redfin_sale_to_list_ratio": 96.76016453,
    "redfin_median_sale_price_psf": 259.162303665,
-   "zhvi": 388910.10964964103
+   "zhvi": 393531.83836897864
   },
   {
-   "month": "2025-08-01",
+   "month": "2025-08-01T00:00:00",
    "mls_median_close_price": 456000.0,
    "mls_median_list_price": 474500.0,
    "mls_median_dom": 20.0,
@@ -4927,10 +4927,10 @@
    "redfin_homes_sold": 128.0,
    "redfin_sale_to_list_ratio": 96.86730537,
    "redfin_median_sale_price_psf": 249.546279492,
-   "zhvi": 385942.00701191736
+   "zhvi": 390528.4634026053
   },
   {
-   "month": "2025-09-01",
+   "month": "2025-09-01T00:00:00",
    "mls_median_close_price": 505750.0,
    "mls_median_list_price": 562450.0,
    "mls_median_dom": 26.0,
@@ -4943,10 +4943,10 @@
    "redfin_homes_sold": 117.0,
    "redfin_sale_to_list_ratio": 96.74526739,
    "redfin_median_sale_price_psf": 259.496710802,
-   "zhvi": 383640.626774477
+   "zhvi": 388199.7340300472
   },
   {
-   "month": "2025-10-01",
+   "month": "2025-10-01T00:00:00",
    "mls_median_close_price": 416100.0,
    "mls_median_list_price": 433400.0,
    "mls_median_dom": 40.0,
@@ -4959,10 +4959,10 @@
    "redfin_homes_sold": 112.0,
    "redfin_sale_to_list_ratio": 96.47086893,
    "redfin_median_sale_price_psf": 266.666666667,
-   "zhvi": 382214.64070717175
+   "zhvi": 386756.80183406826
   },
   {
-   "month": "2025-11-01",
+   "month": "2025-11-01T00:00:00",
    "mls_median_close_price": 581500.0,
    "mls_median_list_price": 579950.0,
    "mls_median_dom": 34.0,
@@ -4975,10 +4975,10 @@
    "redfin_homes_sold": 95.0,
    "redfin_sale_to_list_ratio": 96.32511063,
    "redfin_median_sale_price_psf": 291.332847779,
-   "zhvi": 383018.5304543534
+   "zhvi": 387570.2448436607
   },
   {
-   "month": "2025-12-01",
+   "month": "2025-12-01T00:00:00",
    "mls_median_close_price": 414000.0,
    "mls_median_list_price": 449000.0,
    "mls_median_dom": 16.0,
@@ -4991,10 +4991,10 @@
    "redfin_homes_sold": 85.0,
    "redfin_sale_to_list_ratio": 96.36618009,
    "redfin_median_sale_price_psf": 295.389048991,
-   "zhvi": 384558.1647681887
+   "zhvi": 389128.175858839
   },
   {
-   "month": "2026-01-01",
+   "month": "2026-01-01T00:00:00",
    "mls_median_close_price": 632500.0,
    "mls_median_list_price": 660000.0,
    "mls_median_dom": 17.0,
@@ -5007,10 +5007,10 @@
    "redfin_homes_sold": 100.0,
    "redfin_sale_to_list_ratio": 97.60627515,
    "redfin_median_sale_price_psf": 295.187149864,
-   "zhvi": 385851.0505627568
+   "zhvi": 390436.42604548455
   },
   {
-   "month": "2026-02-01",
+   "month": "2026-02-01T00:00:00",
    "mls_median_close_price": 539950.0,
    "mls_median_list_price": 577449.5,
    "mls_median_dom": 20.5,
@@ -5023,10 +5023,10 @@
    "redfin_homes_sold": 140.0,
    "redfin_sale_to_list_ratio": 98.19224798,
    "redfin_median_sale_price_psf": 292.190572377,
-   "zhvi": 386278.90704922256
+   "zhvi": 390869.36709149816
   },
   {
-   "month": "2026-03-01",
+   "month": "2026-03-01T00:00:00",
    "mls_median_close_price": 540500.0,
    "mls_median_list_price": 544000.0,
    "mls_median_dom": 19.0,
@@ -5039,10 +5039,10 @@
    "redfin_homes_sold": 152.0,
    "redfin_sale_to_list_ratio": 98.3808315,
    "redfin_median_sale_price_psf": 283.754706832,
-   "zhvi": 385893.16693087266
+   "zhvi": 390479.0429159615
   },
   {
-   "month": "2026-04-01",
+   "month": "2026-04-01T00:00:00",
    "mls_median_close_price": 589900.0,
    "mls_median_list_price": 589900.0,
    "mls_median_dom": 12.0,
@@ -5055,10 +5055,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": 384948.0938091457
+   "zhvi": 389522.73873728793
   },
   {
-   "month": "2026-05-01",
+   "month": "2026-05-01T00:00:00",
    "mls_median_close_price": 497500.0,
    "mls_median_list_price": 507500.0,
    "mls_median_dom": 30.5,
@@ -5071,10 +5071,10 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": null
+   "zhvi": 387769.24484898825
   },
   {
-   "month": "2026-06-01",
+   "month": "2026-06-01T00:00:00",
    "mls_median_close_price": 569850.0,
    "mls_median_list_price": 570000.0,
    "mls_median_dom": 8.0,
@@ -5087,7 +5087,7 @@
    "redfin_homes_sold": null,
    "redfin_sale_to_list_ratio": null,
    "redfin_median_sale_price_psf": null,
-   "zhvi": null
+   "zhvi": 386605.3895277164
   }
  ]
 }
