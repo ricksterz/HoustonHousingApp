@@ -1,42 +1,42 @@
 {
  "mortgage_rate_30yr": {
-  "value": 6.66,
-  "date": "2026-07-30",
+  "value": 6.71,
+  "date": "2026-09-03",
   "series": "MORTGAGE30US"
  },
  "houston_hpi": {
-  "value": 410.73,
-  "date": "2026-01-01",
+  "value": 414.19,
+  "date": "2026-04-01",
   "series": "ATNHPIUS26420Q"
  },
  "houston_median_list_price": {
-  "value": 362265.0,
-  "date": "2026-06-01",
+  "value": 359000.0,
+  "date": "2026-08-01",
   "series": "MEDLISPRI26420"
  },
  "houston_active_listings": {
-  "value": 34721.0,
-  "date": "2026-06-01",
+  "value": 35920.0,
+  "date": "2026-08-01",
   "series": "ACTLISCOU26420"
  },
  "houston_new_listings": {
-  "value": 11388.0,
-  "date": "2026-06-01",
+  "value": 9512.0,
+  "date": "2026-08-01",
   "series": "NEWLISCOU26420"
  },
  "houston_price_reduced": {
-  "value": 11614.0,
-  "date": "2026-06-01",
+  "value": 11876.0,
+  "date": "2026-08-01",
   "series": "PRIREDCOU26420"
  },
  "houston_median_dom": {
-  "value": 50.0,
-  "date": "2026-06-01",
+  "value": 52.0,
+  "date": "2026-08-01",
   "series": "MEDDAYONMAR26420"
  },
  "houston_list_price_sqft": {
-  "value": 172.0,
-  "date": "2026-06-01",
+  "value": 169.0,
+  "date": "2026-08-01",
   "series": "MEDLISPRIPERSQUFEE26420"
  }
 }
