@@ -13,16 +13,16 @@ import re
 import sys
 from bisect import bisect_left
 from collections import defaultdict
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from backend.db import get_connection  # noqa: E402
-from backend.fred_client import get_macro_snapshot  # noqa: E402
-from backend.routers.market import VALID_ZIPS, _zip_trend  # noqa: E402
-from backend.valuation import estimate_all  # noqa: E402
+from backend.db import get_connection
+from backend.fred_client import get_macro_snapshot
+from backend.routers.market import VALID_ZIPS, _zip_trend
+from backend.valuation import estimate_all
 
 OUT_DIR = ROOT / "frontend" / "public" / "data"
 
@@ -218,7 +218,7 @@ def main() -> None:
     write_json(
         OUT_DIR / "meta.json",
         {
-            "generated": datetime.now(timezone.utc).isoformat(),
+            "generated": datetime.now(UTC).isoformat(),
             "property_count": count,
             "owner_names_redacted": REDACT_OWNER_NAMES,
         },

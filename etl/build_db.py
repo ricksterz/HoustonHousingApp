@@ -1,12 +1,11 @@
 """Build housing.duckdb from local raw data files, filtered to ZIPs 77007/77008/77009."""
 
 import duckdb
-
 import load_har
-import load_zhvi
-import load_redfin
 import load_hcad
 import load_ownership_permits
+import load_redfin
+import load_zhvi
 
 DB_PATH = "housing.duckdb"
 

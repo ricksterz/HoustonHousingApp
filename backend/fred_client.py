@@ -73,7 +73,7 @@ def get_macro_snapshot() -> dict:
         for key, sid in FRED_SERIES.items():
             try:
                 result[key] = _fred_latest(sid)
-            except Exception as e:
+            except (requests.RequestException, KeyError, IndexError, ValueError) as e:
                 result[key] = {"value": None, "date": None, "series": sid, "error": str(e)}
 
     _cache["data"] = result
