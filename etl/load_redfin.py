@@ -3,6 +3,13 @@
 Source is Redfin's public Data Center zip-code market tracker (a national feed,
 rolling 3-month windows stepped monthly). Override with the REDFIN_SOURCE env var
 to point at a local file instead (e.g. for offline development).
+
+Fail-soft (Nov 2026): Redfin closed the public ``redfin-public-data`` S3 bucket
+(403 on every tracker file) and replaced it with an interactive Download Hub
+that exposes no direct file URLs, so the feed can no longer be fetched by a
+scheduled job. When the fetch fails but a previous ``redfin_market`` table
+exists, the load warns and keeps the previous data instead of failing the
+whole monthly refresh. A fresh database with no previous table still fails hard.
 """
 
 import os
@@ -19,11 +26,21 @@ DEFAULT_SOURCE = (
 REGIONS = tuple(f"Zip Code: {z}" for z in ZIPS)
 
 
-def load(con: duckdb.DuckDBPyConnection):
+def _table_exists(con: duckdb.DuckDBPyConnection, name: str) -> bool:
+    return (
+        con.execute(
+            "SELECT COUNT(*) FROM information_schema.tables WHERE table_name = ?",
+            [name],
+        ).fetchone()[0]
+        > 0
+    )
+
+
+def load(con: duckdb.DuckDBPyConnection) -> int:
     path = os.environ.get("REDFIN_SOURCE", DEFAULT_SOURCE)
 
     sql = f"""
-    CREATE OR REPLACE TABLE redfin_market AS
+    CREATE OR REPLACE TEMP TABLE _redfin_new AS
     SELECT
         PERIOD_BEGIN AS period_begin,
         PERIOD_END AS period_end,
@@ -54,9 +71,28 @@ def load(con: duckdb.DuckDBPyConnection):
       AND REGION IN {REGIONS}
     ORDER BY zip_code, period_begin
     """
-    con.execute(sql)
+    try:
+        con.execute(sql)
+        count = con.execute("SELECT COUNT(*) FROM _redfin_new").fetchone()[0]
+        if count == 0:
+            raise ValueError("Redfin load returned 0 rows")
+    except Exception as e:  # one dead upstream must not kill the refresh
+        if not _table_exists(con, "redfin_market"):
+            raise
+        previous = con.execute("SELECT COUNT(*) FROM redfin_market").fetchone()[0]
+        print(
+            "  WARNING: Redfin refresh failed "
+            f"({type(e).__name__}: {str(e)[:200]}); "
+            f"keeping previous redfin_market data ({previous} rows)"
+        )
+        return previous
+    con.execute(
+        "CREATE OR REPLACE TABLE redfin_market AS SELECT * FROM _redfin_new "
+        "ORDER BY zip_code, period_begin"
+    )
     count = con.execute("SELECT COUNT(*) FROM redfin_market").fetchone()[0]
     print(f"  redfin_market: {count} rows")
+    return count
 
 
 if __name__ == "__main__":
