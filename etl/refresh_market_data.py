@@ -16,9 +16,9 @@ import duckdb
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-import load_redfin  # noqa: E402
-import load_zhvi  # noqa: E402
-import export_static  # noqa: E402
+import export_static
+import load_redfin
+import load_zhvi
 
 DB_PATH = ROOT / "etl" / "housing.duckdb"
 
